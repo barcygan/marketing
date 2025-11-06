@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agencja Marketingowa NovaGrowth – Marketing, Edukacja, Analityka</title>
+
+  <!-- SEO meta -->
+  <meta name="description" content="Agencja marketingowa NovaGrowth – marketing cyfrowy, konsulting, analityka i edukacja online. Pomagamy firmom rosnąć dzięki skutecznym strategiom digital.">
+  <meta name="keywords" content="agencja marketingowa, marketing cyfrowy, konsulting, analityka, reklama internetowa, szkolenia online, SEO, social media">
+  <meta name="author" content="NovaGrowth">
+
+  <!-- Open Graph (dla social media) -->
+  <meta property="og:title" content="NovaGrowth – Agencja Marketingowa" />
+  <meta property="og:description" content="Pomagamy firmom rozwijać się w sieci: marketing, edukacja, konsulting, analityka." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://twojadomena.pl/og-image.jpg" />
+  <meta property="og:url" content="https://twojadomena.pl/" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "NovaGrowth",
+    "url": "https://twojadomena.pl/",
+    "logo": "https://twojadomena.pl/logo.png",
+    "sameAs": [],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "email": "kontakt@novagrowth.pl",
+      "contactType": "customer service",
+      "areaServed": "PL",
+      "availableLanguage": ["Polish", "English"]
+    }]
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --text: #333;
+      --bg: #fff;
+      --light-bg: #f5f7fa;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 64px 20px;
+    }
+
+    header h1 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      margin: 0 0 10px;
+    }
+
+    header p {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      opacity: 0.95;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 12px 16px;
+      background: #fff;
+      border-bottom: 1px solid #e7ebf0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    section {
+      padding: 56px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--primary);
+      margin: 0 0 32px;
+      font-size: clamp(1.4rem, 3vw, 1.8rem);
+    }
+
+    .lead {
+      max-width: 800px;
+      margin: 0 auto 32px;
+      text-align: center;
+      opacity: 0.9;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--light-bg);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .cta {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: 700;
+      margin-top: 24px;
+      transition: background 0.25s;
+    }
+
+    .cta:hover {
+      background: #0a56d1;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .benefit {
+      background: #fff;
+      border: 1px solid #e7ebf0;
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 28px 10px;
+      font-size: 0.95rem;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    /* Accessibility helpers */
+    a:focus, button:focus, .cta:focus { outline: 3px solid #ffd166; outline-offset: 2px; }
+    @media (prefers-reduced-motion: reduce) {
+      .card { transition: none; }
+      .cta { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav aria-label="Główna nawigacja">
+    <a href="#about">O nas</a>
+    <a href="#services">Usługi</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+
+  <header role="banner">
+    <h1>Agencja Marketingowa NovaGrowth</h1>
+    <p>Skuteczny marketing, edukacja cyfrowa, konsulting i analityka danych – wszystko, czego potrzebujesz, by rosnąć.</p>
+  </header>
+
+  <main id="content">
+    <section id="about">
+      <h2>Kim jesteśmy</h2>
+      <p class="lead">NovaGrowth to zespół specjalistów łączących marketing, technologię i dane. Projektujemy strategie digital, wdrażamy kampanie i mierzymy to, co ma znaczenie.</p>
+
+      <div class="benefits" aria-label="Korzyści">
+        <div class="benefit"><strong>Mobile‑first</strong><br/>Strona szybka i responsywna</div>
+        <div class="benefit"><strong>SEO‑friendly</strong><br/>Czysty kod i meta dane</div>
+        <div class="benefit"><strong>Dane → decyzje</strong><br/>Raporty i analityka BI</div>
+        <div class="benefit"><strong>Prosty kontakt</strong><br/>Szybkie wdrożenie bez serwera</div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Nasze usługi</h2>
+      <div class="services">
+        <article class="card" aria-labelledby="svc1">
+          <h3 id="svc1">Marketing</h3>
+          <p>Strategie, kampanie Google & Meta, SEO/SEM, e‑mail marketing, copywriting i content.</p>
+        </article>
+        <article class="card" aria-labelledby="svc2">
+          <h3 id="svc2">Edukacja cyfrowa</h3>
+          <p>Szkolenia i warsztaty z marketingu internetowego, social media i analityki – online i stacjonarnie.</p>
+        </article>
+        <article class="card" aria-labelledby="svc3">
+          <h3 id="svc3">Konsulting</h3>
+          <p>Audyt działań digital, roadmapy wzrostu, doradztwo strategiczne i operacyjne.</p>
+        </article>
+        <article class="card" aria-labelledby="svc4">
+          <h3 id="svc4">Analityka</h3>
+          <p>Konfiguracja GA4, tagowanie, dashboardy i raporty BI – decyzje oparte na danych.</p>
+        </article>
+      </div>
+      <p style="text-align:center;">
+        <a href="mailto:kontakt@novagrowth.pl?subject=Zapytanie%20ze%20strony" class="cta" aria-label="Wyślij wiadomość e-mail do NovaGrowth">Skontaktuj się z nami</a>
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Kontakt</h2>
+      <p class="lead">Masz projekt lub pytanie? Napisz do nas – odpowiemy szybko.</p>
+      <p style="text-align:center;">
+        <a href="mailto:kontakt@novagrowth.pl" rel="noopener">kontakt@novagrowth.pl</a><br/>
+        <small>Adres i NIP – do uzupełnienia</small>
+      </p>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>© 2025 NovaGrowth • <a href="mailto:kontakt@novagrowth.pl">kontakt@novagrowth.pl</a></p>
+  </footer>
+
+</body>
+</html>
