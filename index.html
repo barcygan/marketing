@@ -1,133 +1,209 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NovaGrowth – Agencja Marketingowa | Strategia • SEO • Analityka</title>
-  <meta name="description" content="NovaGrowth – designerska agencja marketingowa. Strategia, SEO, kampanie digital i analityka danych. Minimalizm, precyzja i wzrost – jak wejście na szczyt.">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katarzyna Cygan | Digital Marketing & HR Expert</title>
+  <meta name="description"
+    content="Katarzyna Cygan - Expert in Digital Marketing, E-commerce, and HR. Specializing in Social Media for Sport & Tourism.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-  <nav class="nav" aria-label="Główna nawigacja">
-    <div class="container nav-inner">
-      <div class="brand">
-        <img src="assets/logo.svg" alt="NovaGrowth logo" width="26" height="26">
-        <span>NovaGrowth</span>
-      </div>
-      <div>
-        <a class="btn ghost" href="#uslugi">Usługi</a>
-        <a class="btn" href="#kontakt">Skontaktuj się</a>
-      </div>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <div class="container hero-inner">
-      <h1 class="reveal">Strategiczny marketing w minimalistycznej formie</h1>
-      <p class="reveal" style="transition-delay:.08s">Pomagamy markom rosnąć dzięki połączeniu <strong>strategii</strong>, <strong>SEO</strong> i <strong>analityki danych</strong>. 
-        Projektujemy proste, skuteczne kampanie digital i treści, które zdobywają pozycje w Google i uwagę klientów.</p>
-      <div class="hero-cta reveal" style="transition-delay:.12s">
-        <a href="#kontakt" class="btn">Wyślij zapytanie</a>
-        <a href="#dlaczego" class="btn ghost">Dlaczego my?</a>
-      </div>
-    </div>
-    <div class="hero-art">
-      <img src="assets/mountains-layered.svg" alt="" aria-hidden="true">
-    </div>
-  </header>
-
-  <section class="section" id="uslugi">
-    <div class="container">
-      <h2 class="section-title reveal">Nasze filary</h2>
-      <p class="section-lead reveal">Zamiast szumu – klarowna strategia i działania, które widać w wynikach. 
-        Minimalizm w formie, maksymalizm w skuteczności.</p>
-
-      <div class="grid">
-        <div class="card reveal" style="grid-column: span 6;">
-          <img class="icon" src="assets/icon-strategy.svg" alt="" aria-hidden="true">
-          <h3>Strategia marketingowa</h3>
-          <p>Precyzyjne pozycjonowanie marki, mapa komunikacji i roadmap wzrostu. Marketing strategiczny oparty na insightach, nie na intuicji.</p>
+  <div id="app">
+    <header class="header">
+      <nav class="nav container">
+        <a href="#" class="logo">KC.</a>
+        <div class="nav-links">
+          <a href="#expertise">Expertise</a>
+          <a href="#about">About Me</a>
+          <a href="#contact" class="btn btn-primary">Let's Connect</a>
+          <div class="lang-switch">
+            <a href="index.html" class="lang-link active">EN</a>
+            <span class="lang-separator">|</span>
+            <a href="index-pl.html" class="lang-link">PL</a>
+          </div>
         </div>
-        <div class="card reveal" style="grid-column: span 6;">
-          <img class="icon" src="assets/icon-seo.svg" alt="" aria-hidden="true">
-          <h3>SEO i Content</h3>
-          <p>Techniczne SEO, architektura informacji i treści eksperckie. Budujemy widoczność tam, gdzie klienci zaczynają podróż – w wyszukiwarce.</p>
+        <button class="mobile-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content container">
+          <h1 class="hero-title">Katarzyna Cygan</h1>
+          <p class="hero-subtitle">Mastering the digital landscape. <br>Expert in Marketing, E-commerce, and Human
+            Resources.</p>
+          <a href="#contact" class="btn btn-primary btn-large">Work With Me</a>
         </div>
-        <div class="card reveal" style="grid-column: span 6;">
-          <img class="icon" src="assets/icon-analytics.svg" alt="" aria-hidden="true">
-          <h3>Analityka i dane</h3>
-          <p>GA4, tagowanie zdarzeń, dashboardy BI. Podejmujesz decyzje w oparciu o dane, nie wrażenia. 
-          Mierzymy to, co przybliża do celu.</p>
+        <div class="scroll-indicator">
+          <span>Discover</span>
+          <div class="line"></div>
         </div>
-        <div class="card reveal" style="grid-column: span 6;">
-          <img class="icon" src="assets/icon-campaigns.svg" alt="" aria-hidden="true">
-          <h3>Kampanie digital</h3>
-          <p>Google, Meta i LinkedIn – kampanie performance i awareness, które łączą efektywność z estetyką.</p>
+      </section>
+
+      <section id="expertise" class="services section">
+        <div class="container">
+          <h2 class="section-title">My Expertise</h2>
+          <div class="grid-3">
+            <div class="card">
+              <h3>Social Media & Content</h3>
+              <p>Comprehensive management of Facebook and Instagram. I create high-quality visual and written content
+                (photos, videos) that engages audiences and builds brand visibility.</p>
+            </div>
+            <div class="card">
+              <h3>Performance & Ads</h3>
+              <p>Expert in paid Facebook campaigns and Google Business Profiles. I analyze metrics and competitor
+                activity to maximize reach and ROI, ensuring your business is found locally.</p>
+            </div>
+            <div class="card">
+              <h3>E-commerce & Strategy</h3>
+              <p>Hands-on experience managing operations for <em>trendbuty.pl</em>. With a background in accounting, I
+                assess profitability and make data-driven decisions to boost online sales.</p>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <section id="advantages" class="section">
+        <div class="container">
+          <h2 class="section-title">Why Work With Me?</h2>
+          <div class="grid-3">
+            <div class="advantage-card">
+              <div class="adv-icon-wrapper">
+                <img src="./assets/icon-roi.png" alt="ROI Strategy Icon" class="adv-icon-img">
+              </div>
+              <h3>ROI-Driven Strategy</h3>
+              <p>My background in <strong>accounting and controlling</strong> means I don't just post content; I analyze
+                profitability. I ensure every marketing zloty spent brings a return on investment.</p>
+            </div>
+            <div class="advantage-card">
+              <div class="adv-icon-wrapper">
+                <img src="./assets/icon-ecommerce.png" alt="E-commerce Icon" class="adv-icon-img">
+              </div>
+              <h3>E-commerce Insider</h3>
+              <p>Managing operations for a large footwear store gives me a unique "merchant's perspective." I understand
+                the full sales cycle, from attraction to conversion.</p>
+            </div>
+            <div class="advantage-card">
+              <div class="adv-icon-wrapper">
+                <img src="./assets/icon-content.png" alt="Content Creation Icon" class="adv-icon-img">
+              </div>
+              <h3>Content Powerhouse</h3>
+              <p>I produce complete visual assets—photos and videos—tailored for social platforms. You get a strategist
+                and a content creator in one.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="recommendations" class="section">
+        <div class="container">
+          <h2 class="section-title">Words from the Summit</h2>
+          <div class="slider-wrapper">
+            <div class="slider-container">
+              <div class="slider-track">
+                <div class="testimonial-card slide">
+                  <p class="testimonial-text">"Katarzyna is a true visionary. Her ability to blend creative storytelling
+                    with data-driven strategy transformed our social media presence. A game-changer for our tourism
+                    board."</p>
+                  <div class="testimonial-author">
+                    <h4>Anna Nowak</h4>
+                    <span>Marketing Director, Alpine Tourism</span>
+                  </div>
+                </div>
+                <div class="testimonial-card slide">
+                  <p class="testimonial-text">"Working with Katarzyna on our e-commerce platform was a breath of fresh
+                    air. She understands the customer journey like no one else. Sales increased by 40% in just three
+                    months."</p>
+                  <div class="testimonial-author">
+                    <h4>Mark Stevens</h4>
+                    <span>CEO, Peak Gear</span>
+                  </div>
+                </div>
+                <div class="testimonial-card slide">
+                  <p class="testimonial-text">"Her insight into digital HR helped us attract top talent in a competitive
+                    market. She knows how to showcase company culture in a way that resonates with the right people."
+                  </p>
+                  <div class="testimonial-author">
+                    <h4>Sarah Jenkins</h4>
+                    <span>HR Manager, TechSport</span>
+                  </div>
+                </div>
+                <!-- Duplicate slides for infinite loop effect if needed, or just add more real ones -->
+                <div class="testimonial-card slide">
+                  <p class="testimonial-text">"Professional, analytical, and creative. Katarzyna brought a level of
+                    sophistication to our brand that we didn't know we needed."</p>
+                  <div class="testimonial-author">
+                    <h4>Robert Kowalski</h4>
+                    <span>Owner, Mountain Resort</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-dots"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about section">
+        <div class="container grid-2">
+          <div class="about-content">
+            <h2 class="section-title">About Me</h2>
+            <p>I specialize in comprehensive, professional social media management that helps businesses build
+              visibility, engage their audience, and effectively attract new customers.</p>
+            <p class="mt-4">With an educational background in <strong>accounting and controlling</strong>,
+              I bring a unique analytical perspective to marketing. I accurately assess the profitability of activities
+              and estimate ROI, supporting better business decisions.</p>
+            <p class="mt-4">In addition to social media, I handle e-commerce operations for a large online
+              footwear store, giving me extensive hands-on experience in online sales and customer behavior.</p>
+            <a href="#contact" class="btn btn-primary mt-8">Get in Touch</a>
+          </div>
+          <div class="about-image">
+            <img src="./assets/social-media-graphic.png" alt="Social Media Marketing" class="about-img">
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section">
+        <div class="container">
+          <div class="contact-box">
+            <h2 class="section-title">Get in Touch</h2>
+            <p>Ready to elevate your brand or team? Let's discuss your goals.</p>
+            <form class="contact-form">
+              <div class="form-group">
+                <input type="text" placeholder="Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Email" required>
+              </div>
+              <div class="form-group">
+                <textarea placeholder="How can I help you?" rows="4"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Katarzyna Cygan. All rights reserved.</p>
       </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="kpis reveal">
-        <div class="kpi"><strong>+120%</strong><span>ruchu organicznego (SEO)</span></div>
-        <div class="kpi"><strong>-35%</strong><span>koszt pozyskania leadów</span></div>
-        <div class="kpi"><strong>+3.2x</strong><span>ROI kampanii performance</span></div>
-        <div class="kpi"><strong>98%</strong><span>Core Web Vitals (Lighthouse)</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="dlaczego">
-    <div class="container">
-      <div class="block-why reveal">
-        <div>
-          <h2 class="section-title" style="text-align:left;margin-bottom:12px">Dlaczego NovaGrowth?</h2>
-          <p class="section-lead" style="text-align:left;margin:0 0 16px">
-            Projektujemy marketing jak wejście na szczyt: prostą ścieżką, z planem i asekuracją.
-            Minimalizm pomaga skupić uwagę na tym, co działa – strategii, treści i danych.
-          </p>
-          <p style="color:var(--muted);margin:0 0 18px">
-            Nasze podejście łączy <strong>marketing strategiczny</strong>, <strong>SEO</strong> i <strong>analitykę</strong>. 
-            To miks, który zwiększa widoczność w Google, poprawia konwersję i skraca dystans do celu.
-          </p>
-          <a class="btn" href="#kontakt">Porozmawiajmy</a>
-        </div>
-        <div class="illus">
-          <img src="assets/mark-peak.svg" alt="Ilustracja: wzrost jak droga na szczyt">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="kontakt">
-    <div class="container">
-      <div class="contact reveal">
-        <p><strong>Gotowy na ruch w górę?</strong><br> Napisz kilka słów o projekcie – wrócimy do Ciebie jeszcze dziś.</p>
-        <a class="btn" href="mailto:kontakt@novagrowth.pl?subject=Zapytanie%20ze%20strony">kontakt@novagrowth.pl</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      © 2025 NovaGrowth • <a href="mailto:kontakt@novagrowth.pl">kontakt@novagrowth.pl</a>
-    </div>
-  </footer>
-
-  <script>
-    // Scroll reveal – lekki efekt "fade-up" dla elementów z klasą .reveal
-    const els = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); }
-      });
-    }, {threshold:.12});
-    els.forEach(el=>io.observe(el));
-  </script>
+    </footer>
+  </div>
+  <script type="module" src="/main.js"></script>
 </body>
+
 </html>
