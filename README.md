@@ -1,27 +1,36 @@
-# NovaGrowth Blocks – designerski minimalizm
+# Katarzyna Cygan - Personal Marketing Portfolio
 
-Repozytorium zawiera lekki, modularny landing page agencji marketingowej w układzie **block layout**.
-Kolorystyka: biało–szaro–niebieska. Motyw gór w tle hero.
+A professional, high-performance portfolio website for Katarzyna Cygan, an expert in Digital Marketing, E-commerce, and HR.
 
-## Struktura
-- `index.html` – strona główna
-- `style.css` – style (Inter, layout blokowy, animacje reveal)
-- `assets/` – logo i ikony SVG + tło gór
+## Features
+- **Bilingual Support**: Full support for English (`index.html`) and Polish (`index-pl.html`).
+- **Smart Language Detection**: Automatically detects the user's browser language and redirects Polish users to the Polish version (once per session).
+- **Manual Language Switcher**: Users can easily toggle between EN and PL.
+- **Responsive Design**: Fully responsive layout that works on mobile, tablet, and desktop.
+- **Custom Aesthetic**: A unique "Cream, Salmon, and Dark Brown" color palette inspired by modern digital trends.
+- **Performance**: Built with vanilla HTML, CSS, and JavaScript for maximum speed and minimal bloat.
 
-## Jak uruchomić lokalnie
-1. Otwórz `index.html` w przeglądarce – działa bez serwera.
-2. (Opcjonalnie) serwer lokalny:
-   ```bash
-   python3 -m http.server 8000
-   # http://localhost:8000
-   ```
+## Project Structure
+- `index.html`: Main English homepage.
+- `index-pl.html`: Polish homepage.
+- `style.css`: Global styles, variables, and responsive definitions.
+- `main.js`: Logic for mobile menu, slider, and language detection.
+- `assets/`: Images and icons.
 
-## GitHub Pages
-1. Wgraj pliki do repo **barcygan/marketing** (zastąp stare).
-2. Upewnij się, że w `Settings → Pages` masz: Source: *Deploy from a branch*, Branch: `main`, Folder: `/ (root)`.
-3. Strona: https://barcygan.github.io/marketing/
+## How to Run Locally
+You can run this project with any static file server.
 
-## SEO
-- Metadane (title, description)
-- Sekcje z frazami: strategia marketingowa, SEO, kampanie digital, analityka danych
-- Szybkie ładowanie (brak frameworków, wektory SVG)
+**Using Python:**
+```bash
+python3 -m http.server 8000
+# Open http://localhost:8000
+```
+
+**Using Node/NPM (if Vite is set up):**
+```bash
+npm run dev
+```
+
+## Deployment
+This project is ready for deployment on GitHub Pages, Netlify, or Vercel.
+Ensure the build settings serve the root directory.
