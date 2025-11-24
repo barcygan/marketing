@@ -120,6 +120,19 @@ h6 {
   box-shadow: 0 4px 12px rgba(255, 82, 94, 0.3);
 }
 
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 82, 94, 0.3);
+}
+
 .btn-block {
   display: block;
   width: 100%;
