@@ -40,7 +40,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-document.querySelectorAll('.section-title, .card, .about-content, .contact-box').forEach(el => {
+document.querySelectorAll('.section-title, .card, .about-content, .contact-box, .fade-in-section').forEach(el => {
     el.classList.add('fade-in-section');
     observer.observe(el);
 });
@@ -202,14 +202,13 @@ const isPolish = userLang.startsWith('pl');
 // Let's use sessionStorage to prevent loop or annoying redirects.
 
 if (!sessionStorage.getItem('langRedirected')) {
-    const isPolishPage = currentPath.endsWith('index-pl.html');
-    // Assume anything that isn't index-pl.html is the English version (since it's a 1-page site)
-    // But to be safe, check for index.html or trailing slash
-    const isEnglishPage = currentPath.endsWith('index.html') || currentPath.endsWith('/');
+    const isPolishPage = currentPath.includes('/pl/');
+    // Assume anything that isn't in /pl/ is the English version
+    const isEnglishPage = !isPolishPage;
 
     if (isPolish && isEnglishPage) {
         sessionStorage.setItem('langRedirected', 'true');
-        window.location.href = 'index-pl.html';
+        window.location.href = '/pl/index.html';
     }
 }
 

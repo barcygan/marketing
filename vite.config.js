@@ -9,7 +9,9 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: 'index.html',
-                pl: 'index-pl.html',
+                offer: 'offer.html',
+                pl: 'pl/index.html',
+                plOffer: 'pl/offer.html',
             },
         },
     },

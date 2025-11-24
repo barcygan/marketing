@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Websites & Local SEO Offer | Katarzyna Cygan</title>
+    <meta name="description"
+        content="Affordable, high-performance websites and Google My Business optimization to boost your local visibility.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://katarzynacygan.pl/offer.html">
+    <meta property="og:title" content="Local Growth Accelerator | Katarzyna Cygan">
+    <meta property="og:description"
+        content="The ultimate combination: A stunning website AND a top-ranking Google Business Profile. Everything you need to dominate your local market.">
+    <meta property="og:image" content="https://katarzynacygan.pl/assets/hero-bg-light.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://katarzynacygan.pl/offer.html">
+    <meta property="twitter:title" content="Local Growth Accelerator | Katarzyna Cygan">
+    <meta property="twitter:description"
+        content="The ultimate combination: A stunning website AND a top-ranking Google Business Profile. Everything you need to dominate your local market.">
+    <meta property="twitter:image" content="https://katarzynacygan.pl/assets/hero-bg-light.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Local Growth Accelerator",
+      "description": "A combined package of a professional website and Google Business Profile optimization for local businesses.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Katarzyna Cygan"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "PLN",
+        "availability": "https://schema.org/InStock",
+        "price": "0.00",
+        "priceValidUntil": "2025-12-31"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Why do I need both a website and Google Maps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A website builds credibility, but Google Maps gets you found. Together, they create a powerful engine for local growth. You get maximum visibility by appearing in both standard results and the Local Pack."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is included in the Local Growth Accelerator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The package includes a custom modern website design, mobile-first approach, SEO friendly structure, Google Business Profile setup & verification, local keyword optimization, photo & content enhancement, and a review generation strategy."
+        }
+      }]
+    }
+    </script>
+    <style>
+        /* Page specific styles */
+        .offer-hero {
+            background: linear-gradient(rgba(248, 239, 224, 0.9), rgba(248, 239, 224, 0.9)), url('./assets/hero-bg-light.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            padding-top: var(--header-height);
+        }
+
+        .offer-card {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: 2rem;
+            padding: 3rem;
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--color-primary);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .offer-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+        }
+
+        .price-tag {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--color-heading);
+            margin: 1.5rem 0;
+        }
+
+        .price-tag span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--color-text-muted);
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .feature-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-text-muted);
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            color: var(--color-primary);
+            font-weight: 800;
+        }
+
+        .google-maps-section {
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map-graphic {
+            width: 100%;
+            border-radius: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.5s ease;
+        }
+
+        .map-graphic:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <header class="header">
+            <nav class="nav container">
+                <a href="index.html" class="logo">KC.</a>
+                <div class="nav-links">
+                    <a href="index.html#expertise">Expertise</a>
+                    <a href="index.html#about">About Me</a>
+                    <a href="offer.html" class="active" style="color: var(--color-primary);">Offer</a>
+                    <a href="index.html#contact" class="btn btn-primary">Let's Connect</a>
+                    <div class="lang-switch">
+                        <a href="#" class="lang-link active">EN</a>
+                        <span class="lang-separator">|</span>
+                        <a href="/pl/offer.html" class="lang-link">PL</a>
+                    </div>
+                </div>
+                <button class="mobile-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="offer-hero">
+                <div class="container">
+                    <div class="hero-content" style="max-width: 900px;">
+                        <h1 class="hero-title">Boost Your Business Locally.</h1>
+                        <p class="hero-subtitle">The ultimate combination: A stunning website AND a top-ranking Google
+                            Business Profile. Everything you need to dominate your local market.</p>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="#package" class="btn btn-primary btn-large">View The Package</a>
+                            <a href="#details" class="btn"
+                                style="border: 1px solid var(--color-text); background: transparent;">See What's
+                                Included</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="package" class="section">
+                <div class="container">
+                    <h2 class="section-title" style="text-align: center;">One Complete Solution</h2>
+                    <p
+                        style="text-align: center; max-width: 600px; margin: 0 auto 4rem auto; color: var(--color-text-muted);">
+                        Stop managing multiple providers. Get your website and local SEO sorted in one go.
+                    </p>
+
+                    <!-- Unified Offer Card -->
+                    <div class="offer-card fade-in-section"
+                        style="max-width: 900px; margin: 0 auto; border: 2px solid var(--color-primary); background: linear-gradient(to bottom right, #fff, rgba(248, 239, 224, 0.3));">
+                        <div style="text-align: center; margin-bottom: 2rem;">
+                            <div class="offer-icon">🚀 + 📍</div>
+                            <h3>Local Growth Accelerator</h3>
+                            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">The all-in-one package
+                                designed to put your business on the map—literally and digitally.</p>
+                        </div>
+
+                        <div class="grid-2" style="align-items: start; gap: 3rem;">
+                            <div>
+                                <h4 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-heading);">Website
+                                    Features</h4>
+                                <ul class="feature-list">
+                                    <li>Custom Modern Design</li>
+                                    <li>Mobile-First & Fast Loading</li>
+                                    <li>SEO Friendly Structure</li>
+                                    <li>Contact & Social Integration</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-heading);">Google
+                                    Maps Features</h4>
+                                <ul class="feature-list">
+                                    <li>Profile Setup & Verification</li>
+                                    <li>Local Keyword Optimization</li>
+                                    <li>Photo & Content Enhancement</li>
+                                    <li>Review Generation Strategy</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div
+                            style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
+                            <div class="price-tag">Best Value <span>/ combined offer</span></div>
+                            <a href="index.html#contact" class="btn btn-primary btn-large">Get Started Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="details" class="section google-maps-section">
+                <div class="container grid-2">
+                    <div class="fade-in-section">
+                        <h2 class="section-title">Why You Need Both?</h2>
+                        <p class="mt-4" style="font-size: 1.2rem;">
+                            A website builds credibility, but Google Maps gets you found. Together, they create a
+                            powerful engine for local growth.
+                        </p>
+                        <div class="mt-8">
+                            <div class="advantage-card" style="border: none; padding: 1rem 0;">
+                                <h3>🔍 Maximum Visibility</h3>
+                                <p>Dominate the search results by appearing in both the standard organic listings and
+                                    the high-traffic "Local Pack".</p>
+                            </div>
+                            <div class="advantage-card" style="border: none; padding: 1rem 0;">
+                                <h3>🤝 Instant Trust</h3>
+                                <p>Customers trust businesses that look professional on their website and have verified,
+                                    reviewed profiles on Maps.</p>
+                            </div>
+                            <div class="advantage-card" style="border: none; padding: 1rem 0;">
+                                <h3>📈 Seamless Experience</h3>
+                                <p>Guide customers smoothly from finding you on a map to browsing your services on your
+                                    site.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fade-in-section">
+                        <div
+                            style="background: var(--color-surface); padding: 3rem; border-radius: 2rem; border: 1px solid var(--color-border); height: 100%;">
+                            <h3 style="font-size: 2rem; margin-bottom: 2rem;">What We Deliver</h3>
+                            <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.5rem;">
+                                <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                                    <span
+                                        style="color: var(--color-primary); font-weight: bold; font-size: 1.2rem;">01.</span>
+                                    <div>
+                                        <strong
+                                            style="display: block; margin-bottom: 0.2rem; color: var(--color-heading);">The
+                                            Foundation (Website)</strong>
+                                        <span style="color: var(--color-text-muted);">We build a fast, beautiful, and
+                                            responsive website that converts visitors into paying customers.</span>
+                                    </div>
+                                </li>
+                                <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                                    <span
+                                        style="color: var(--color-primary); font-weight: bold; font-size: 1.2rem;">02.</span>
+                                    <div>
+                                        <strong
+                                            style="display: block; margin-bottom: 0.2rem; color: var(--color-heading);">The
+                                            Visibility (Maps)</strong>
+                                        <span style="color: var(--color-text-muted);">We optimize your Google Business
+                                            Profile with the right keywords to ensure you appear in local
+                                            searches.</span>
+                                    </div>
+                                </li>
+                                <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                                    <span
+                                        style="color: var(--color-primary); font-weight: bold; font-size: 1.2rem;">03.</span>
+                                    <div>
+                                        <strong
+                                            style="display: block; margin-bottom: 0.2rem; color: var(--color-heading);">The
+                                            Content</strong>
+                                        <span style="color: var(--color-text-muted);">Professional presentation of your
+                                            products, services, and photos across both platforms.</span>
+                                    </div>
+                                </li>
+                                <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                                    <span
+                                        style="color: var(--color-primary); font-weight: bold; font-size: 1.2rem;">04.</span>
+                                    <div>
+                                        <strong
+                                            style="display: block; margin-bottom: 0.2rem; color: var(--color-heading);">The
+                                            Reputation</strong>
+                                        <span style="color: var(--color-text-muted);">A proven strategy to generate
+                                            5-star reviews and manage your online reputation effectively.</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" style="background: var(--color-surface); text-align: center;">
+                <div class="container">
+                    <h2 class="section-title">Ready to Grow?</h2>
+                    <p style="max-width: 600px; margin: 0 auto 2rem auto; font-size: 1.2rem;">
+                        Whether you need a new website or better local visibility, I'm here to help you succeed online.
+                    </p>
+                    <a href="index.html#contact" class="btn btn-primary btn-large">Get a Free Quote</a>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 Katarzyna Cygan. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>
