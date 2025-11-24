@@ -1,17 +1,18 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    // Base path for custom domain
-    // When using a custom domain, the site is served from the root
-    // So we use '/' instead of '/marketing/'
-    base: '/',
+    // Base path for GitHub Pages subdirectory
+    // Will change to '/' once custom domain is configured
+    base: '/marketing/',
     build: {
         rollupOptions: {
             input: {
                 main: 'index.html',
-                offer: 'offer.html',
                 pl: 'pl/index.html',
+                offer: 'offer.html',
                 plOffer: 'pl/offer.html',
+                socialMedia: 'social-media.html',
+                plSocialMedia: 'pl/social-media.html',
             },
         },
     },
