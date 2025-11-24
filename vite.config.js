@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    // Base path for GitHub Pages (repo name)
-    // If your repo is https://github.com/username/my-repo, set this to '/my-repo/'
-    // For now, we use './' which works for most relative deployments
-    base: './',
+    // Base path for GitHub Pages
+    // Your repo is at https://github.com/barcygan/marketing
+    // So the site is served at https://barcygan.github.io/marketing/
+    base: '/marketing/',
     build: {
         rollupOptions: {
             input: {
