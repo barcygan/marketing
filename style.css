@@ -139,6 +139,11 @@ h6 {
   text-align: center;
 }
 
+.btn-large {
+  padding: 1.2rem 3rem;
+  font-size: 1.1rem;
+}
+
 /* Header */
 .header {
   position: fixed;

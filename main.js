@@ -190,31 +190,64 @@ if (sliderTrack && slides.length > 0) {
     updateSlides();
 }
 
-// Language Auto-detection
-const userLang = navigator.language || navigator.userLanguage;
-const currentPath = window.location.pathname;
-const isPolish = userLang.startsWith('pl');
+// Language Auto-detection and Redirection
+function checkLanguage() {
+    const userLang = localStorage.getItem('user_lang');
+    const browserLang = navigator.language || navigator.userLanguage;
+    const currentPath = window.location.pathname;
+    const baseUrl = import.meta.env.BASE_URL; // e.g., '/marketing/' or '/'
 
-// Check if we are on the root path or index.html and user is Polish
-// Avoid redirecting if user explicitly switched (we can use localStorage or just simple logic for now)
-// Simple logic: if on index.html (or root) and Polish -> go to index-pl.html
-// If on index-pl.html and NOT Polish -> stay (user might have clicked) - actually auto-detect is usually only on first visit.
-// Let's use sessionStorage to prevent loop or annoying redirects.
+    // Determine preferred language
+    let preferredLang = userLang;
+    if (!preferredLang) {
+        preferredLang = browserLang.startsWith('pl') ? 'pl' : 'en';
+    }
 
-if (!sessionStorage.getItem('langRedirected')) {
-    const isPolishPage = currentPath.includes('/pl/');
-    // Assume anything that isn't in /pl/ is the English version
-    const isEnglishPage = !isPolishPage;
+    // Determine current language based on path
+    // We check if the path includes the English subdirectory relative to base
+    // Construct the expected English prefix: baseUrl + 'en/'
+    const enPrefix = baseUrl + 'en/';
+    const isEnglishPath = currentPath.includes(enPrefix);
+    const isPolishPath = !isEnglishPath;
 
-    if (isPolish && isEnglishPage) {
-        sessionStorage.setItem('langRedirected', 'true');
-        window.location.href = '/pl/index.html';
+    // Redirect logic
+    if (preferredLang === 'pl' && isEnglishPath) {
+        // Redirect to Polish (Root)
+        // Replace '/marketing/en/' with '/marketing/'
+        let newPath = currentPath.replace(enPrefix, baseUrl);
+        window.location.href = newPath;
+    } else if (preferredLang === 'en' && isPolishPath) {
+        // Redirect to English (/en/)
+        // Replace '/marketing/' with '/marketing/en/'
+        // We need to be careful not to replace multiple occurrences if any, 
+        // but usually base is at start.
+        // Also handle if currentPath is exactly baseUrl
+
+        let newPath;
+        if (currentPath === baseUrl) {
+            newPath = enPrefix;
+        } else {
+            // If currentPath is /marketing/index.html, we want /marketing/en/index.html
+            // We can replace the first occurrence of baseUrl with enPrefix
+            newPath = currentPath.replace(baseUrl, enPrefix);
+        }
+
+        window.location.href = newPath;
     }
 }
 
-// Handle manual switch to update session storage so we don't redirect back
+// Run check on load
+checkLanguage();
+
+// Handle manual switch
 document.querySelectorAll('.lang-link').forEach(link => {
-    link.addEventListener('click', () => {
-        sessionStorage.setItem('langRedirected', 'true');
+    link.addEventListener('click', (e) => {
+        // Determine which language was clicked
+        const lang = link.textContent.trim();
+        if (lang === 'PL') {
+            localStorage.setItem('user_lang', 'pl');
+        } else if (lang === 'EN') {
+            localStorage.setItem('user_lang', 'en');
+        }
     });
 });
