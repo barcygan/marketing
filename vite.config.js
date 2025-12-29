@@ -15,6 +15,7 @@ export default defineConfig({
                 enMain: 'en/index.html',
                 enOffer: 'en/offer.html',
                 enSocialMedia: 'en/social-media.html',
+                challenge: 'challenge/index.html',
             },
         },
     },
