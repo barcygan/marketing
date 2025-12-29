@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glute Rebellion - Challenge | Katarzyna Cygan</title>
+    <meta name="description"
+        content="Dołącz do 4-tygodniowego wyzwania na pośladki. Plan treningowy oparty na nauce i progresywnym przeładowaniu.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Standard Site CSS -->
+    <link rel="icon" type="image/svg+xml" href="../vite.svg" />
+    <!-- Challenge Specific Overrides -->
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Glute Rebellion Challenge">
+    <meta property="og:description" content="Dołącz do 4-tygodniowego wyzwania na pośladki.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kcygan.eu/challenge.html">
+  <script type="module" crossorigin src="/assets/main-C_P19A32.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-Dp4ULJgV.css">
+  <link rel="stylesheet" crossorigin href="/assets/challenge-DGTkfe56.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <nav class="nav container">
+                <a href="../" class="logo">KC.</a>
+                <div class="nav-links">
+                    <a href="../#expertise">Doświadczenie</a>
+                    <a href="../#about">O mnie</a>
+                    <a href="../offer.html">Lokalny Rozwój</a>
+                    <a href="../social-media.html">Social Media</a>
+                    <a href="../#contact" class="btn btn-primary">Skontaktuj się</a>
+                    <div class="lang-switch">
+                        <a href="#" class="lang-link active">PL</a>
+                    </div>
+                </div>
+                <button class="mobile-toggle" aria-label="Przełącz menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </header>
+
+        <main style="padding-top: var(--header-height);">
+            <section class="section" style="padding-top: 4rem;">
+                <div class="container container-narrow">
+                    <div class="challenge-header text-center">
+                        <span class="week-badge" id="week-badge">Loading...</span>
+                        <h1 class="challenge-title">Glute Rebellion</h1>
+                        <h2 class="challenge-subtitle">Powered by Gemini AI</h2>
+                    </div>
+
+                    <!-- Equipment Section -->
+                    <div class="equipment-box fade-in-section">
+                        <h3 class="equipment-title">🎒 Wymagany Sprzęt</h3>
+                        <div class="equipment-grid">
+                            <div class="equipment-item">
+                                <span class="eq-icon">🔔</span>
+                                <div class="eq-text">
+                                    <strong>Kettlebell</strong>
+                                    <span>12kg oraz 18kg</span>
+                                </div>
+                            </div>
+                            <div class="equipment-item">
+                                <span class="eq-icon">💪</span>
+                                <div class="eq-text">
+                                    <strong>Hantel</strong>
+                                    <span>6kg</span>
+                                </div>
+                            </div>
+                            <div class="equipment-item">
+                                <span class="eq-icon">📐</span>
+                                <div class="eq-text">
+                                    <strong>2x Stopnie</strong>
+                                    <span>Trójkątne (10cm)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Week Selector -->
+                    <div class="week-selector-container">
+                        <div class="week-tabs" id="week-tabs">
+                            <!-- Injected by JS -->
+                        </div>
+                    </div>
+
+                    <div id="challenge-content">
+                        <!-- Content Injected by JS -->
+                    </div>
+
+                    <div style="text-align: center; margin-top: 4rem;">
+                        <a href="https://instagram.com/barcygan" class="btn btn-outline">← Wróć na Instagram</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Katarzyna Cygan. Wszelkie prawa zastrzeżone.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; opacity: 0.7;">
+                    🍪 Dobra wiadomość! Ta strona nie używa plików cookie ani skryptów śledzących, więc nie musisz
+                    klikać w irytujące bannery. Po prostu czysta, szybka strona internetowa.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Data Structure for Weeks
+        const challengeData = {
+            1: {
+                title: "Tydzień 1: Fundament Siły",
+                days: [
+                    {
+                        id: 1,
+                        focus: "Napięcie Mechaniczne",
+                        subfocus: "(Siła & Lewar)",
+                        goal: "Wykorzystanie 18kg tak, by mięsień „myślał”, że dźwigasz 40kg.",
+                        exercises: [
+                            { name: "1. Goblet Squat (Heels Up 10cm)", details: "4 x 10 | 18kg | Tempo 3-2-1-0", note: "Zasada: Pięty wysoko na stopniu. Maksymalnie głęboki siad – rozciągamy dół pośladka." },
+                            { name: "2. Deficit B-Stance RDL", details: "3 x 12/nogę | 18kg | Tempo 3-0-1-0", note: "Zasada: Noga pracująca stoi na stopniu – hantel schodzi niżej, rozciągając pośladek." },
+                            { name: "3. Kas Glute Bridge (Feet Elevated)", details: "4 x 15 | 18kg + 12kg | Tempo 2-1-1-2" }
+                        ]
+                    },
+                    {
+                        id: 2,
+                        focus: "Active Stretch",
+                        subfocus: "(Deficyt & Zasięg)",
+                        goal: "Rozciągnięcie włókien poza ich naturalny zakres dzięki 10cm deficytowi.",
+                        exercises: [
+                            { name: "1. Deficit Reverse Lunges", details: "3 x 12/nogę | 12kg | Tempo 3-1-1-0", note: "Zasada: Stoisz na stopniu, kolano zakroczne schodzi poniżej poziomu stopy." },
+                            { name: "2. Kettlebell RDL (Deficit)", details: "4 x 12 | 18kg | Tempo 4-0-1-0", note: "Zasada: Stoisz na stopniu, KB schodzi poniżej linii stóp." },
+                            { name: "3. Elevated Frog Pumps", details: "3 x MAX | 6kg DB | Tempo 1-0-1-1", note: "Zasada: Stopy oparte na stopniu – biodra startują z niższego poziomu (większy ROM)." }
+                        ]
+                    },
+                    {
+                        id: 3,
+                        focus: "Unilateral Strength",
+                        subfocus: "(Siła Jednostronna)",
+                        goal: "Przeciążenie jednej strony i stabilizacja.",
+                        exercises: [
+                            { name: "1. Bulgarian Split Squat (Front Heel Elevated)", details: "3 x 10/nogę | 12kg | Tempo 3-2-1-0", note: "Zasada: Przednia noga na stopniu (lewar) – ekstremalne zgięcie biodra." },
+                            { name: "2. Single Leg Glute Bridge (Foot on 10cm)", details: "3 x 15/nogę | 6kg | Tempo 2-1-1-0" },
+                            { name: "3. Single Arm Swing", details: "4 x 15/rękę | 12kg | Dynamika" }
+                        ]
+                    },
+                    {
+                        id: 4,
+                        focus: "Metabolic Stress",
+                        subfocus: "(Dobicie)",
+                        goal: "Napompowanie mięśnia krwią i metabolitami.",
+                        exercises: [
+                            { name: "1. Sumo Squat (Heels Elevated)", details: "3 x 20 | 18kg | Tempo 2-0-1-0 (pulsowanie)" },
+                            { name: "2. KB Swings (Oburącz)", details: "4 x 25 | 12kg | Dynamika" },
+                            { name: "3. Glute Medius Kickbacks (Standing on Step)", details: "3 x 20/nogę | 6kg", note: "Zasada: Stoisz na stopniu, noga pracująca macha swobodnie (większy TUT)." }
+                        ]
+                    }
+                ]
+            }
+            // Placeholders for Week 2, 3, 4
+        };
+
+        function renderWeek(weekNum) {
+            const contentDiv = document.getElementById('challenge-content');
+            const data = challengeData[weekNum];
+
+            if (!data) {
+                contentDiv.innerHTML = `<div class="day-card" style="text-align:center; padding: 4rem;"><h3>🔒 Tydzień ${weekNum} jest jeszcze niedostępny.</h3><p>Wróć później lub sprawdź Instagrama!</p></div>`;
+                return;
+            }
+
+            let html = '';
+            data.days.forEach(day => {
+                html += `
+                    <div class="day-card fade-in-section">
+                        <div class="day-header">
+                            <span class="day-focus">DZIEŃ ${day.id}</span>
+                            <h3 class="day-title">${day.focus} <span style="font-size: 0.8em; opacity: 0.8; font-weight: 400; display:block; margin-top:0.2rem;">${day.subfocus || ''}</span></h3>
+                        </div>
+                        <div class="goal-box">
+                            <div class="goal-header">🎯 CEL & STRATEGIA</div>
+                            <p class="goal-text">${day.goal}</p>
+                        </div>
+                        <ul class="exercise-list">
+                            ${day.exercises.map(ex => `
+                                <li class="exercise-item">
+                                    <div class="exercise-name">${ex.name}</div>
+                                    <div class="exercise-details">${ex.details}</div>
+                                    ${ex.note ? `<div class="exercise-note">${ex.note}</div>` : ''}
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                `;
+            });
+            contentDiv.innerHTML = html;
+
+            // Re-trigger animations if needed, or simple opacity fade
+            const cards = contentDiv.querySelectorAll('.day-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.5s ease ' + (index * 0.1) + 's';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 50);
+            });
+        }
+
+        function renderTabs(currentWeek, activeWeek) {
+            const tabsDiv = document.getElementById('week-tabs');
+            let html = '';
+            for (let i = 1; i <= 4; i++) {
+                const isLocked = i > currentWeek && false; // Disable lock for testing if needed, or set true
+                const isActive = i === activeWeek;
+                html += `<button class="week-tab ${isActive ? 'active' : ''}" onclick="selectWeek(${i})" ${isLocked ? 'disabled' : ''}>Tydzień ${i}</button>`;
+            }
+            tabsDiv.innerHTML = html;
+        }
+
+        window.selectWeek = function (week) {
+            renderWeek(week);
+            // Update tabs visual state
+            const tabs = document.querySelectorAll('.week-tab');
+            tabs.forEach((tab, index) => {
+                if (index + 1 === week) tab.classList.add('active');
+                else tab.classList.remove('active');
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const startDate = new Date('2026-01-01T00:00:00');
+            const now = new Date();
+
+            // Calculate week number (1 to 4)
+            let weekNum = 1;
+            if (now >= startDate) {
+                const diffTime = Math.abs(now - startDate);
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                weekNum = Math.floor(diffDays / 7) + 1;
+            }
+
+            if (weekNum > 4) weekNum = 4;
+
+            const badgeElement = document.getElementById('week-badge');
+            if (now < startDate) {
+                const diffTime = Math.abs(startDate - now);
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                badgeElement.textContent = `START ZA ${diffDays} DNI`;
+            } else {
+                badgeElement.textContent = `TYDZIEŃ ${weekNum} / 4`;
+            }
+
+            // Initial Render
+            renderTabs(weekNum, weekNum); // Pass current, active
+            renderWeek(weekNum);
+        });
+    </script>
+</body>
+
+</html>
