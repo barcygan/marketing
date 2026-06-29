@@ -251,3 +251,82 @@ document.querySelectorAll('.lang-link').forEach(link => {
         }
     });
 });
+
+// Social Embeds Carousel Logic
+const initEmbedsCarousel = () => {
+    const containers = document.querySelectorAll('.embeds-carousel-container');
+    containers.forEach(container => {
+        const track = container.querySelector('.embeds-carousel-track');
+        const prevBtn = container.querySelector('.prev-arrow');
+        const nextBtn = container.querySelector('.next-arrow');
+        const dotsContainer = container.querySelector('.carousel-dots-container');
+        
+        if (!track) return;
+        
+        const slides = track.querySelectorAll('.embed-slide');
+        const slideCount = slides.length;
+        if (slideCount === 0) return;
+        
+        // Generate navigation dots
+        if (dotsContainer) {
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < slideCount; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('carousel-dot');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    const slideWidth = slides[0].offsetWidth;
+                    track.scrollTo({
+                        left: i * slideWidth,
+                        behavior: 'smooth'
+                    });
+                });
+                dotsContainer.appendChild(dot);
+            }
+        }
+        
+        // Arrow navigation
+        if (prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', () => {
+                const slideWidth = slides[0].offsetWidth;
+                track.scrollBy({
+                    left: -slideWidth,
+                    behavior: 'smooth'
+                });
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                const slideWidth = slides[0].offsetWidth;
+                track.scrollBy({
+                    left: slideWidth,
+                    behavior: 'smooth'
+                });
+            });
+        }
+        
+        // Sync dots on scroll
+        track.addEventListener('scroll', () => {
+            const slideWidth = slides[0].offsetWidth;
+            const scrollIndex = Math.round(track.scrollLeft / slideWidth);
+            if (dotsContainer) {
+                const dots = dotsContainer.querySelectorAll('.carousel-dot');
+                dots.forEach((dot, idx) => {
+                    if (idx === scrollIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+        });
+    });
+};
+
+// Initialize after document is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initEmbedsCarousel);
+} else {
+    initEmbedsCarousel();
+}
+
+
