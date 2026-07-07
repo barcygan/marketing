@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://kcygan.eu/barometr/</loc>
-        <lastmod>2026-06-29</lastmod>
+        <lastmod>2026-07-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/barometr/" />
@@ -12,7 +12,7 @@
     </url>
     <url>
         <loc>https://kcygan.eu/challenge/</loc>
-        <lastmod>2026-01-22</lastmod>
+        <lastmod>2026-07-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/challenge/" />
@@ -20,7 +20,7 @@
     </url>
     <url>
         <loc>https://kcygan.eu/en/barometr/</loc>
-        <lastmod>2026-06-29</lastmod>
+        <lastmod>2026-07-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/barometr/" />
@@ -29,7 +29,7 @@
     </url>
     <url>
         <loc>https://kcygan.eu/en/</loc>
-        <lastmod>2026-06-29</lastmod>
+        <lastmod>2026-07-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/" />
@@ -37,35 +37,35 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://kcygan.eu/" />
     </url>
     <url>
-        <loc>https://kcygan.eu/en/marketing.html</loc>
-        <lastmod>2026-06-29</lastmod>
+        <loc>https://kcygan.eu/en/marketing</loc>
+        <lastmod>2026-07-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/marketing.html" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://kcygan.eu/en/marketing.html" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://kcygan.eu/marketing.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/marketing" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://kcygan.eu/en/marketing" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://kcygan.eu/marketing" />
     </url>
     <url>
-        <loc>https://kcygan.eu/en/offer.html</loc>
-        <lastmod>2026-06-29</lastmod>
+        <loc>https://kcygan.eu/en/offer</loc>
+        <lastmod>2026-07-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/offer.html" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://kcygan.eu/en/offer.html" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://kcygan.eu/offer.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/offer" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://kcygan.eu/en/offer" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://kcygan.eu/offer" />
     </url>
     <url>
-        <loc>https://kcygan.eu/en/social-media.html</loc>
-        <lastmod>2026-06-29</lastmod>
+        <loc>https://kcygan.eu/en/social-media</loc>
+        <lastmod>2026-07-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/social-media.html" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://kcygan.eu/en/social-media.html" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://kcygan.eu/social-media.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/social-media" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://kcygan.eu/en/social-media" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://kcygan.eu/social-media" />
     </url>
     <url>
         <loc>https://kcygan.eu/</loc>
-        <lastmod>2026-06-29</lastmod>
+        <lastmod>2026-07-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/" />
@@ -73,30 +73,30 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://kcygan.eu/" />
     </url>
     <url>
-        <loc>https://kcygan.eu/marketing.html</loc>
-        <lastmod>2026-06-29</lastmod>
+        <loc>https://kcygan.eu/marketing</loc>
+        <lastmod>2026-07-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/marketing.html" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://kcygan.eu/en/marketing.html" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://kcygan.eu/marketing.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/marketing" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://kcygan.eu/en/marketing" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://kcygan.eu/marketing" />
     </url>
     <url>
-        <loc>https://kcygan.eu/offer.html</loc>
-        <lastmod>2026-06-29</lastmod>
+        <loc>https://kcygan.eu/offer</loc>
+        <lastmod>2026-07-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/offer.html" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://kcygan.eu/en/offer.html" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://kcygan.eu/offer.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/offer" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://kcygan.eu/en/offer" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://kcygan.eu/offer" />
     </url>
     <url>
-        <loc>https://kcygan.eu/social-media.html</loc>
-        <lastmod>2026-06-29</lastmod>
+        <loc>https://kcygan.eu/social-media</loc>
+        <lastmod>2026-07-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/social-media.html" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://kcygan.eu/en/social-media.html" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://kcygan.eu/social-media.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/social-media" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://kcygan.eu/en/social-media" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://kcygan.eu/social-media" />
     </url>
 </urlset>

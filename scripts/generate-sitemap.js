@@ -36,6 +36,8 @@ function getUrlFromPath(urlPath) {
     return '/';
   } else if (urlPath.endsWith('/index.html')) {
     return '/' + urlPath.slice(0, -10);
+  } else if (urlPath.endsWith('.html')) {
+    return '/' + urlPath.slice(0, -5);
   } else {
     return '/' + urlPath;
   }
