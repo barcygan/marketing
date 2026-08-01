@@ -2,6 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dlaczego po latach partner lub partnerka zaczyna nas odpychać? | Katarzyna Cygan</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +29,60 @@
       print-color-adjust: exact;
     }
 
+    @media screen and (max-width: 768px) {
+      .page {
+        width: 100% !important;
+        max-width: 100vw !important;
+        height: auto !important;
+        min-height: unset !important;
+        padding: 24px 18px !important;
+        margin-bottom: 20px !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        border-bottom: 2px dashed rgba(229,147,149,0.3) !important;
+        overflow: visible !important;
+      }
+
+      .cover-page {
+        padding: 36px 20px !important;
+        min-height: 85vh !important;
+      }
+
+      .cover-main-title {
+        font-size: 1.6rem !important;
+      }
+
+      .cover-main-title span {
+        font-size: 1.3rem !important;
+      }
+
+      .cover-subtitle {
+        font-size: 1.1rem !important;
+        max-width: 100% !important;
+      }
+
+      .chapter-title {
+        font-size: 1.4rem !important;
+      }
+
+      p {
+        text-align: left !important;
+        font-size: 10.5pt !important;
+        line-height: 1.7 !important;
+      }
+
+      .author-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+      }
+
+      .author-photo {
+        max-width: 150px;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+
     /* Page Container for PDF */
     .page {
       width: 210mm;
@@ -42,6 +97,9 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      margin: 0 auto 30px auto;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border-radius: 4px;
     }
 
     /* Background decor elements */
