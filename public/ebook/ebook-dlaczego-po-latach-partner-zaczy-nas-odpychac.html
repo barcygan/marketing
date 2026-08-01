@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Dlaczego po latach partner lub partnerka zaczyna nas odpychać? | Katarzyna Cygan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      background-color: #FDFBF7;
+      color: #2D2825;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.6;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Page Container for PDF */
+    .page {
+      width: 210mm;
+      height: 297mm;
+      box-sizing: border-box;
+      padding: 22mm 20mm 20mm 20mm;
+      position: relative;
+      page-break-after: always;
+      page-break-inside: avoid;
+      overflow: hidden;
+      background: #FDFBF7;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Background decor elements */
+    .page-bg-decor {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .bg-circle-1 {
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 320px; height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(229,147,149,0.14) 0%, rgba(253,251,247,0) 70%);
+    }
+
+    .bg-circle-2 {
+      position: absolute;
+      bottom: -60px; left: -60px;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,165,116,0.12) 0%, rgba(253,251,247,0) 70%);
+    }
+
+    /* Headers & Footers */
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 8.5pt;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #9E8E85;
+      border-bottom: 1px solid rgba(229, 147, 149, 0.3);
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      z-index: 10;
+      position: relative;
+    }
+
+    .page-header span.author {
+      font-weight: 600;
+      color: #7A5C5E;
+    }
+
+    .page-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 8.5pt;
+      color: #9E8E85;
+      border-top: 1px solid rgba(229, 147, 149, 0.3);
+      padding-top: 8px;
+      margin-top: 16px;
+      z-index: 10;
+      position: relative;
+    }
+
+    .page-footer .domain {
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: #8C6A6C;
+    }
+
+    .page-body {
+      position: relative;
+      z-index: 5;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    /* Headings & Typography */
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #1A1715;
+      font-weight: 600;
+    }
+
+    .chapter-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 12pt;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #D4A574;
+      font-weight: 600;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .chapter-title {
+      font-size: 20pt;
+      line-height: 1.25;
+      color: #2C1E21;
+      margin-bottom: 16px;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    .chapter-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(90deg, #E59395, #D4A574);
+    }
+
+    p {
+      margin-bottom: 12px;
+      text-align: justify;
+      color: #38322E;
+      font-weight: 400;
+    }
+
+    p.lead {
+      font-size: 12pt;
+      line-height: 1.65;
+      color: #4A3E38;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    /* Special Elements */
+    .quote-box {
+      margin: 14px 0;
+      padding: 14px 20px;
+      background: linear-gradient(135deg, rgba(255, 245, 245, 0.95) 0%, rgba(253, 240, 235, 0.8) 100%);
+      border-left: 4px solid #E59395;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .quote-box p {
+      font-family: 'Playfair Display', serif;
+      font-size: 12pt;
+      font-style: italic;
+      color: #593537;
+      line-height: 1.5;
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    .insight-box {
+      margin: 14px 0;
+      padding: 14px 18px;
+      background: #FFFFFF;
+      border: 1px solid rgba(212, 165, 116, 0.35);
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    }
+
+    .insight-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8C6A6C;
+      margin-bottom: 8px;
+    }
+
+    .insight-list {
+      list-style: none;
+    }
+
+    .insight-list li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 6px;
+      font-size: 10pt;
+      color: #3D3531;
+    }
+
+    .insight-list li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: #E59395;
+      font-size: 8.5pt;
+    }
+
+    /* COVER PAGE */
+    .cover-page {
+      background: url('/assets/cover-bg-vzldrcUp.png') no-repeat center center;
+      background-size: cover;
+      padding: 24mm 20mm;
+      justify-content: space-between;
+    }
+
+    .cover-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(180deg, rgba(253,251,247,0.78) 0%, rgba(253,251,247,0.90) 50%, rgba(253,251,247,0.97) 100%);
+      z-index: 2;
+    }
+
+    .cover-content {
+      position: relative;
+      z-index: 5;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .cover-header {
+      text-align: center;
+      margin-top: 10mm;
+    }
+
+    .cover-tag {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8.5pt;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #8C6A6C;
+      font-weight: 600;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .cover-main-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 25pt;
+      line-height: 1.25;
+      color: #1A1715;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .cover-main-title span {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19pt;
+      font-style: italic;
+      font-weight: 500;
+      color: #A36B6E;
+      margin-top: 6px;
+    }
+
+    .cover-subtitle {
+      font-family: 'Playfair Display', serif;
+      font-size: 14pt;
+      line-height: 1.35;
+      color: #5C4A4D;
+      font-style: italic;
+      max-width: 85%;
+      margin: 0 auto;
+    }
+
+    .cover-divider {
+      width: 50px;
+      height: 2px;
+      background: linear-gradient(90deg, #E59395, #D4A574);
+      margin: 20px auto;
+    }
+
+    .cover-author-card {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(229, 147, 149, 0.35);
+      padding: 16px 24px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      max-width: 460px;
+      margin: 0 auto;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.03);
+    }
+
+    .cover-author-avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #E59395;
+    }
+
+    .cover-author-info h3 {
+      font-size: 13pt;
+      color: #2C1E21;
+      margin-bottom: 2px;
+    }
+
+    .cover-author-info p {
+      font-size: 8.5pt;
+      color: #7A696B;
+      margin-bottom: 0;
+      text-align: left;
+      line-height: 1.35;
+    }
+
+    .cover-footer {
+      text-align: center;
+      font-size: 9.5pt;
+      letter-spacing: 0.1em;
+      color: #8C6A6C;
+      font-weight: 600;
+      margin-bottom: 5mm;
+    }
+
+    /* AUTHOR PAGE LAYOUT */
+    .author-grid {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 20px;
+      margin-top: 10px;
+      align-items: start;
+    }
+
+    .author-photo {
+      width: 100%;
+      border-radius: 12px;
+      border: 2px solid #FFF;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+
+    .author-badge {
+      background: #E59395;
+      color: #FFF;
+      font-size: 8pt;
+      font-weight: 600;
+      text-align: center;
+      padding: 5px 8px;
+      border-radius: 16px;
+      margin-top: 10px;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1: COVER -->
+  <div class="page cover-page">
+    <div class="cover-overlay"></div>
+    <div class="cover-content">
+      <div class="cover-header">
+        <span class="cover-tag">E-book Relacyjny • Katarzyna Cygan</span>
+        <h1 class="cover-main-title">
+          Najpierw budujemy wspólne życie.
+          <span>Potem zapominamy budować związek.</span>
+        </h1>
+        <div class="cover-divider"></div>
+        <h2 class="cover-subtitle">Dlaczego po latach partner lub partnerka zaczyna nas odpychać?</h2>
+      </div>
+
+      <div class="cover-author-card">
+        <img src="/assets/kasia-CNFy4XR6.png" alt="Katarzyna Cygan" class="cover-author-avatar">
+        <div class="cover-author-info">
+          <h3>Katarzyna Cygan</h3>
+          <p>Księgowa, przedsiębiorca & specjalistka seksuologii. Pomagam odbudowywać bliskość i szczery dialog w relacjach.</p>
+        </div>
+      </div>
+
+      <div class="cover-footer">
+        kcygan.eu
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 2: WSTĘP & O AUTORCE -->
+  <div class="page">
+    <div class="page-bg-decor"><div class="bg-circle-1"></div></div>
+    <div class="page-header">
+      <span class="author">Katarzyna Cygan</span>
+      <span>Odbuduj Bliskość w Związku</span>
+    </div>
+
+    <div class="page-body">
+      <span class="chapter-number">Wstęp</span>
+      <h2 class="chapter-title">Dlaczego tak niewielu uczy się budować relację?</h2>
+
+      <p class="lead">
+        Przez większość życia obserwowałam ludzi i ich relacje. Być może dlatego, że wychowałam się w bardzo dużej rodzinie. Od dziecka widziałam różne charaktery, różne małżeństwa, różne sposoby okazywania sobie miłości i różne sposoby oddalania się od siebie.
+      </p>
+
+      <div class="author-grid">
+        <div>
+          <img src="/assets/kasia-CNFy4XR6.png" alt="Katarzyna Cygan" class="author-photo">
+          <div class="author-badge">kcygan.eu</div>
+        </div>
+        <div>
+          <p>
+            Dziś pracuję jako księgowa, prowadzę sklep internetowy i jestem w trakcie specjalizacji z seksuologii. Nie jestem osobą, która całe życie spędziła w mediach społecznościowych. Jestem kobietą, która od lat zadaje sobie pytanie, <strong>dlaczego tak wielu ludzi marzy o szczęśliwej relacji, a jednocześnie tak niewielu naprawdę uczy się, jak ją budować.</strong>
+          </p>
+          <p>
+            Przez długi czas wydawało mi się, że większość z nas ma podobny plan na życie: znaleźć odpowiednią osobę, założyć rodzinę, kupić mieszkanie lub dom, wychować dzieci i zapewnić sobie bezpieczeństwo finansowe. I nie ma w tym nic złego.
+          </p>
+        </div>
+      </div>
+
+      <div class="quote-box" style="margin-top: 14px;">
+        <p>„Problem zaczyna się wtedy, gdy wszystkie te rzeczy stają się ważniejsze niż człowiek, dla którego miały powstać.”</p>
+      </div>
+
+      <p style="margin-top: 12px;">
+        Bo przecież to partner lub partnerka byli kiedyś najważniejsi. Spośród setek spotkanych osób wybraliśmy właśnie tę jedną. To przed nią pokazaliśmy swoje słabości, lęki, marzenia i pragnienia. To z nią dzielimy łóżko, codzienność, obowiązki i najważniejsze momenty naszego życia. A jednak po latach wiele par żyje bardziej jak współlokatorzy niż jak partnerzy. Nie dzieje się to nagle. I właśnie o tym jest ten e-book.
+      </p>
+    </div>
+
+    <div class="page-footer">
+      <span class="domain">kcygan.eu</span>
+      <span>Strona 2</span>
+    </div>
+  </div>
+
+  <!-- PAGE 3: ROZDZIAŁ 1 - NIKT NIE BUDZI SIĘ PEWNEGO DNIA... -->
+  <div class="page">
+    <div class="page-bg-decor"><div class="bg-circle-2"></div></div>
+    <div class="page-header">
+      <span class="author">Katarzyna Cygan</span>
+      <span>E-book Relacyjny</span>
+    </div>
+
+    <div class="page-body">
+      <span class="chapter-number">Rozdział 01</span>
+      <h2 class="chapter-title">Nikt nie budzi się pewnego dnia i nie przestaje kochać</h2>
+
+      <p>
+        Kiedy słyszę od kobiet, że partner zaczął je odpychać albo że same przestały odczuwać wobec niego dawną bliskość, bardzo często słyszę podobne zdania:
+      </p>
+
+      <div class="insight-box">
+        <div class="insight-title">✦ Najczęściej powtarzane zdania w kryzysie:</div>
+        <ul class="insight-list">
+          <li>„Nie wiem, kiedy to się stało.”</li>
+          <li>„Kiedyś było inaczej...”</li>
+          <li>„Już nic między nami nie ma.”</li>
+        </ul>
+      </div>
+
+      <p>
+        Prawda jest jednak taka, że większość relacji nie rozpada się przez jedno wydarzenie. Nie przez jedną kłótnię. Nie przez jeden gorszy miesiąc. Oddalamy się od siebie stopniowo.
+      </p>
+      <p>
+        Najpierw pojawia się zmęczenie. Potem coraz więcej obowiązków: dzieci, praca, kredyty, niezałatwione sprawy, wieczny pośpiech. Relacja schodzi na dalszy plan nie dlatego, że przestaje być ważna, ale dlatego, że <strong>wydaje się bezpieczna</strong>. Zakładamy, że skoro jesteśmy razem od lat, to nic złego nie może się wydarzyć.
+      </p>
+
+      <div class="quote-box" style="margin-top: 14px;">
+        <p>„A jednak właśnie wtedy zaczyna się proces oddalania. Nie wtedy, gdy przestajemy się kochać — tylko wtedy, gdy przestajemy się sobą interesować.”</p>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span class="domain">kcygan.eu</span>
+      <span>Strona 3</span>
+    </div>
+  </div>
+
+  <!-- PAGE 4: ROZDZIAŁ 2 - KIEDY PARTNER STAJE SIĘ CZĘŚCIĄ LOGISTYKI -->
+  <div class="page">
+    <div class="page-bg-decor"><div class="bg-circle-1"></div></div>
+    <div class="page-header">
+      <span class="author">Katarzyna Cygan</span>
+      <span>E-book Relacyjny</span>
+    </div>
+
+    <div class="page-body">
+      <span class="chapter-number">Rozdział 02</span>
+      <h2 class="chapter-title">Kiedy partner staje się częścią codziennej logistyki</h2>
+
+      <p>
+        Na początku związku jesteśmy sobą zafascynowani. Pytamy. Słuchamy. Chcemy wiedzieć, jak minął dzień drugiej osoby. Zauważamy drobiazgi. Po latach rozmowy coraz częściej dotyczą wyłącznie organizacji życia:
+      </p>
+
+      <div class="insight-box" style="background: #FFF9F7;">
+        <div class="insight-title">✦ Rozmowy sprowadzone do organizacji:</div>
+        <ul class="insight-list">
+          <li>Kto odbierze dzieci?</li>
+          <li>Czy opłaciliśmy rachunki?</li>
+          <li>Co kupić na obiad?</li>
+          <li>Kiedy trzeba jechać do mechanika?</li>
+        </ul>
+      </div>
+
+      <p>
+        To wszystko są ważne sprawy. Problem pojawia się wtedy, gdy stają się <strong>jedynymi tematami naszych rozmów</strong>. Zaczynamy funkcjonować jak dobrze zarządzane przedsiębiorstwo. Tylko że związek nie jest firmą. Firma może działać bez bliskości. Relacja nie.
+      </p>
+
+      <p class="lead" style="margin-top: 14px; margin-bottom: 0;">
+        W pewnym momencie orientujemy się, że znamy harmonogram partnera, ale nie znamy jego aktualnych marzeń. Wiemy, jakie ma obowiązki, ale nie wiemy, czego się boi. Znamy jego plan dnia, ale nie wiemy, co dzieje się w jego sercu. A bez ciekawości trudno utrzymać bliskość.
+      </p>
+    </div>
+
+    <div class="page-footer">
+      <span class="domain">kcygan.eu</span>
+      <span>Strona 4</span>
+    </div>
+  </div>
+
+  <!-- PAGE 5: ROZDZIAŁ 3 - KIEDY SUKCES NIE WYSTARCZA -->
+  <div class="page">
+    <div class="page-bg-decor"><div class="bg-circle-2"></div></div>
+    <div class="page-header">
+      <span class="author">Katarzyna Cygan</span>
+      <span>E-book Relacyjny</span>
+    </div>
+
+    <div class="page-body">
+      <span class="chapter-number">Rozdział 03</span>
+      <h2 class="chapter-title">Kiedy sukces nie wystarcza</h2>
+
+      <p>
+        Kilka lat temu obserwowałam historię pary, której wiele osób mogło zazdrościć. Oboje byli atrakcyjni, ambitni i dobrze zarabiali. Mieli piękny ślub, rozwijali kariery zawodowe i sprawiali wrażenie idealnie dobranych. Z zewnątrz wszystko wyglądało perfekcyjnie.
+      </p>
+
+      <p>
+        Przez długi czas żyli bardzo intensywnie. Praca, spotkania, wyjazdy, kolejne cele do osiągnięcia. Później ich życie się zmieniło. Coraz częściej pracowali z domu. Zaczęli spędzać ze sobą więcej czasu niż kiedykolwiek wcześniej.
+      </p>
+
+      <p>
+        I wtedy wydarzyło się coś, czego nikt się nie spodziewał. Okazało się, że kiedy zniknęły zawodowe obowiązki, spotkania i ciągły pośpiech, niewiele zostało między nimi:
+      </p>
+
+      <div class="insight-box">
+        <ul class="insight-list">
+          <li>Nie potrafili ze sobą rozmawiać.</li>
+          <li>Nie mieli wspólnych zainteresowań.</li>
+          <li>Nie czerpali przyjemności z samego przebywania razem.</li>
+        </ul>
+      </div>
+
+      <div class="quote-box" style="margin-top: 10px;">
+        <p>„Zrozumieli, że przez lata budowali wspólne życie, ale nie budowali relacji. Ta historia przypomina, że nawet największy sukces nie zastąpi bliskości.”</p>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span class="domain">kcygan.eu</span>
+      <span>Strona 5</span>
+    </div>
+  </div>
+
+  <!-- PAGE 6: ROZDZIAŁ 4 - ATRAKCYJNOŚĆ TO COŚ WIĘCEJ NIŻ WYGLĄD -->
+  <div class="page">
+    <div class="page-bg-decor"><div class="bg-circle-1"></div></div>
+    <div class="page-header">
+      <span class="author">Katarzyna Cygan</span>
+      <span>E-book Relacyjny</span>
+    </div>
+
+    <div class="page-body">
+      <span class="chapter-number">Rozdział 04</span>
+      <h2 class="chapter-title">Atrakcyjność to coś więcej niż wygląd</h2>
+
+      <p>
+        Bardzo często, gdy mówimy o oddaleniu w związku, skupiamy się wyłącznie na wyglądzie: <em>„Przytył”, „Przestała o siebie dbać”, „Nie ubiera się już tak jak kiedyś”</em>. Oczywiście wygląd ma znaczenie. Tak samo jak higiena, zdrowie czy troska o własne ciało. Nie udawajmy, że jest inaczej. Jeżeli przez lata całkowicie przestajemy dbać o siebie, druga osoba może to odczuwać.
+      </p>
+
+      <p>
+        Jednak w moim przekonaniu atrakcyjność jest czymś znacznie szerszym:
+      </p>
+
+      <div class="insight-box">
+        <div class="insight-title">✦ Oblicza prawdziwej atrakcyjności:</div>
+        <ul class="insight-list">
+          <li>Atrakcyjny jest człowiek, który nadal jest ciekawy świata.</li>
+          <li>Który potrafi rozmawiać i okazuje szacunek.</li>
+          <li>Który rozwija się i nie rezygnuje z siebie.</li>
+          <li>Który pamięta, że partner nie jest obowiązkiem, ale człowiekiem.</li>
+        </ul>
+      </div>
+
+      <p style="margin-top: 14px;">
+        Bo trudno czuć pożądanie wobec osoby, która od lat nie okazuje zainteresowania. Trudno czuć bliskość wobec osoby, która przestała słuchać. Trudno czuć zachwyt wobec osoby, która całkowicie zrezygnowała z dbania o siebie i o relację.
+      </p>
+    </div>
+
+    <div class="page-footer">
+      <span class="domain">kcygan.eu</span>
+      <span>Strona 6</span>
+    </div>
+  </div>
+
+  <!-- PAGE 7: ROZDZIAŁ 5 - DOM MARZEŃ -->
+  <div class="page">
+    <div class="page-bg-decor"><div class="bg-circle-2"></div></div>
+    <div class="page-header">
+      <span class="author">Katarzyna Cygan</span>
+      <span>E-book Relacyjny</span>
+    </div>
+
+    <div class="page-body">
+      <span class="chapter-number">Rozdział 05</span>
+      <h2 class="chapter-title">Dom marzeń, który nie uratował związku</h2>
+
+      <p>
+        Znam również historię małżeństwa, które przez wiele lat miało jeden wspólny cel: własny dom. Oszczędzali na wszystkim. Rzadko wyjeżdżali. Odkładali własne przyjemności. Kupowali tańsze rzeczy, bo każda nadwyżka trafiała do budżetu przeznaczonego na budowę. Przez lata żyli marzeniem o przyszłości.
+      </p>
+
+      <p>
+        W końcu osiągnęli cel: piękny dom, duża przestrzeń, ogród. Wszystko tak, jak planowali. I wtedy wydarzyło się coś, czego nie przewidzieli. Gdy zniknęły kolejne etapy budowy, remontów i wykańczania, zabrakło tematu, wokół którego kręciło się ich życie.
+      </p>
+
+      <p>
+        Po raz pierwszy od wielu lat zostali sami ze sobą — bez projektu, bez kolejnego celu, bez ciągłego działania. I wtedy okazało się, że przez lata nauczyli się budować dom, ale <strong>nie nauczyli się budować relacji</strong>. Niedługo później ich drogi się rozeszły.
+      </p>
+
+      <div class="quote-box" style="margin-top: 12px;">
+        <p>„Wspólne cele są ważne, ale nie mogą być jedynym fundamentem związku. Bo kiedy cel zostanie osiągnięty, zostają już tylko dwie osoby i pytanie: Czy nadal lubimy być ze sobą?”</p>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span class="domain">kcygan.eu</span>
+      <span>Strona 7</span>
+    </div>
+  </div>
+
+  <!-- PAGE 8: ROZDZIAŁ 6 & 7 - PUŁAPKA STARANIA SIĘ & TRUDNE ROZMOWY -->
+  <div class="page">
+    <div class="page-bg-decor"><div class="bg-circle-1"></div></div>
+    <div class="page-header">
+      <span class="author">Katarzyna Cygan</span>
+      <span>E-book Relacyjny</span>
+    </div>
+
+    <div class="page-body">
+      <span class="chapter-number">Rozdział 06</span>
+      <h2 class="chapter-title">Największa pułapka: „Przecież ja się staram”</h2>
+
+      <p>
+        To jedno z najczęstszych zdań, jakie słyszę od ludzi będących w kryzysie. On pracuje po godzinach, żeby rodzinie niczego nie brakowało. Ona ogarnia dom, dzieci i setki spraw, których często nikt nawet nie zauważa. Oboje są zmęczeni, oboje mają poczucie, że dają z siebie wszystko i oboje czują się niedocenieni.
+      </p>
+      <p>
+        Problem polega na tym, że bardzo często widzimy wyłącznie własne starania, zmęczenie i poświęcenie. Znacznie trudniej dostrzec wysiłek drugiej osoby. A jeszcze trudniej powiedzieć: <em>„Widzę, ile robisz. Dziękuję.”</em> Tymczasem wdzięczność jest jednym z najbardziej niedocenianych elementów relacji.
+      </p>
+
+      <div style="margin-top: 14px;">
+        <span class="chapter-number">Rozdział 07</span>
+        <h3 style="font-size: 15pt; margin-bottom: 10px; font-family: 'Playfair Display', serif; color: #2C1E21;">Dlaczego tak trudno rozmawiać z najbliższą osobą?</h3>
+
+        <p>
+          Jak to możliwe, że człowiek, przed którym potrafimy się rozebrać fizycznie i emocjonalnie, staje się osobą, z którą boimy się poruszyć ważny temat? Najczęściej odkładamy trudne rozmowy o potrzebach, rozczarowaniach i samotności. A niewypowiedziane emocje nie znikają — one odkładają się warstwa po warstwie, aż w końcu pojawia się mur.
+        </p>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span class="domain">kcygan.eu</span>
+      <span>Strona 8</span>
+    </div>
+  </div>
+
+  <!-- PAGE 9: ROZDZIAŁ 8 & PODSUMOWANIE -->
+  <div class="page">
+    <div class="page-bg-decor"><div class="bg-circle-2"></div></div>
+    <div class="page-header">
+      <span class="author">Katarzyna Cygan</span>
+      <span>E-book Relacyjny</span>
+    </div>
+
+    <div class="page-body">
+      <span class="chapter-number">Rozdział 08</span>
+      <h2 class="chapter-title">Od czego zacząć?</h2>
+
+      <p>
+        Jeżeli po przeczytaniu tego e-booka oczekujesz magicznego rozwiązania, niestety go nie mam. Mam za to coś prostszego:
+      </p>
+
+      <div class="insight-box" style="background: linear-gradient(135deg, #FFFDFB 0%, #FFF5F2 100%); border-color: #E59395;">
+        <div class="insight-title" style="color: #6E3B3E;">✦ Pierwsze krok do odbudowy kontaktu:</div>
+        <ul class="insight-list">
+          <li>Zacznij od zainteresowania i rozmowy bez telefonu.</li>
+          <li>Idźcie na wspólny spacer.</li>
+          <li>Zadaj pytanie i naprawdę wysłuchaj odpowiedzi.</li>
+          <li>Zauważ to, co partner robi dobrze.</li>
+          <li>Przypomnij sobie, dlaczego kiedyś właśnie tę osobę wybrałaś.</li>
+        </ul>
+      </div>
+
+      <p style="margin-top: 10px;">
+        Nie musisz naprawiać całego związku w jeden weekend. Czasami wystarczy zacząć od odbudowania codziennego kontaktu.
+      </p>
+
+      <div style="margin-top: 16px;">
+        <span class="chapter-number">Podsumowanie</span>
+        <h3 style="font-size: 15pt; margin-bottom: 8px; font-family: 'Playfair Display', serif; color: #2C1E21;">Na zakończenie</h3>
+
+        <p>
+          Współczesny świat uczy nas zarabiania pieniędzy, osiągania celów i produktywności. Niewiele mówi natomiast o tym, jak przez lata pozostać blisko człowieka, którego kochamy.
+        </p>
+
+        <div class="quote-box" style="margin: 10px 0;">
+          <p style="font-size: 11pt;">
+            „Miłość bardzo rzadko znika nagle. Najpierw znikają rozmowy. Potem ciekawość. Potem wspólny czas. Potem bliskość.”
+          </p>
+        </div>
+
+        <p>
+          Jeżeli po przeczytaniu tego e-booka spojrzysz dziś na swojego partnera lub partnerkę z większą ciekawością niż wczoraj, to znaczy, że osiągnął on swój cel. Bo relacja nie jest czymś, co dostajemy raz na zawsze — relacja jest czymś, o co warto dbać każdego dnia.
+        </p>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span class="domain">kcygan.eu</span>
+      <span>Strona 9</span>
+    </div>
+  </div>
+
+</body>
+</html>
