@@ -29,11 +29,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: 'index.html',
-                offer: 'offer.html',
-                socialMedia: 'social-media.html',
                 enMain: 'en/index.html',
-                enOffer: 'en/offer.html',
-                enSocialMedia: 'en/social-media.html',
                 challenge: path.resolve(__dirname, 'challenge/index.html'),
                 barometr: path.resolve(__dirname, 'barometr/index.html'),
                 'en/barometr': path.resolve(__dirname, 'en/barometr/index.html'),
