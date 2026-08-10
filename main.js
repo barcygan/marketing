@@ -329,4 +329,30 @@ if (document.readyState === 'loading') {
     initEmbedsCarousel();
 }
 
+// GA4 E-commerce Tracking
+document.addEventListener('DOMContentLoaded', () => {
+    const ebookButtons = document.querySelectorAll('.js-track-ebook');
+    
+    ebookButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const itemId = button.getAttribute('data-item-id');
+            const itemName = button.getAttribute('data-item-name');
+            const itemPrice = button.getAttribute('data-item-price');
+            
+            if (typeof gtag === 'function') {
+                gtag('event', 'select_item', {
+                    item_list_id: "ebook_list",
+                    item_list_name: "E-Books",
+                    items: [{
+                        item_id: itemId,
+                        item_name: itemName,
+                        currency: "PLN",
+                        price: parseFloat(itemPrice)
+                    }]
+                });
+            }
+        });
+    });
+});
+
 
