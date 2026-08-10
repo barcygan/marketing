@@ -104,6 +104,58 @@ const CONFIG = {
       back: "Wstecz",
       scoreTitle: "Twój Wynik",
       sharePreFill: "Wyniki mojego Barometru Małżeńskiego:\n- Wynik ogólny: {score}/36 ({status})\n- Komunikacja: {comm}%\n- Intymność i Seks: {intim}%\n- Zaufanie: {trust}%\n- Wspólna Wizja: {vision}%\n\nSiła związku: {strength}\nObszar do pracy: {work}\nChcemy umówić konsultację partnerską."
+    },
+    ebookRecommendations: {
+      communication: {
+        title: "E-Book: Trudne Rozmowy i Dojrzałe Zaangażowanie",
+        subtitle: "Jak rozmawiać o potrzebach i emocjach bez oskarżeń oraz cichych dni",
+        desc: "Z diagnozy wynika, że komunikacja jest sferą wymagającą uwagi. Ten skondensowany e-book zawiera syntezę kluczowych myśli i pytań refleksyjnych dla par, które chcą nauczyć się szczerego dialogu.",
+        badge: "Dopasowane do Twojego Wyniku",
+        price: "39 PLN",
+        discountPrice: "27 PLN",
+        cta: "Kup E-Book ze Zniżką (-30%)",
+        link: "../#sklep-ebook-trudne-rozmowy"
+      },
+      intimacy: {
+        title: "E-Book: Bliskość i Namiętność po latach",
+        subtitle: "Jak odbudować pożądanie, dotyk i intymność w codzienności",
+        desc: "Wasz wynik wskazuje na potrzebę odbudowy sfery fizycznej i namiętności. Poznaj esencję wiedzy o tym, dlaczego bliskość gaśnie oraz jak w prostych krokach przywrócić pożądanie.",
+        badge: "Dopasowane do Twojego Wyniku",
+        price: "39 PLN",
+        discountPrice: "27 PLN",
+        cta: "Kup E-Book ze Zniżką (-30%)",
+        link: "../#sklep-ebook-bliskosc-namietnosc"
+      },
+      trust: {
+        title: "E-Book: Dwójka jako centrum świata",
+        subtitle: "Jak odbudować oparcie emocjonalne i poczucie bezpieczeństwa",
+        desc: "Zaufanie i poczucie bezpieczeństwa rozwijają się, gdy partner znów staje się centrum świata. Zobacz skondensowane myśli o tym, jak nie zagubić siebie pod jednym dachem.",
+        badge: "Dopasowane do Twojego Wyniku",
+        price: "39 PLN",
+        discountPrice: "27 PLN",
+        cta: "Kup E-Book ze Zniżką (-30%)",
+        link: "../#sklep-ebook-dwojka-centrum"
+      },
+      vision: {
+        title: "E-Book: Dwójka jako centrum świata",
+        subtitle: "Partner czy dzieci? Jak nie zgubić relacji w prozie codzienności",
+        desc: "Spójność wizji i dbanie o czas tylko we dwoje to fundament rodziny. Przeczytaj skondensowany przewodnik, który pomógł wielu parom odzyskać właściwą hierarchię i bliskość.",
+        badge: "Dopasowane do Twojego Wyniku",
+        price: "39 PLN",
+        discountPrice: "27 PLN",
+        cta: "Kup E-Book ze Zniżką (-30%)",
+        link: "../#sklep-ebook-dwojka-centrum"
+      },
+      crisisBundle: {
+        title: "Pakiet 3 E-Booków: Kompletna Więź",
+        subtitle: "Trzy skondensowane przewodniki relacyjne (Esencja + Pytania dla Pary)",
+        desc: "Twój wynik wskazuje na głęboki kryzys w relacji. Rekomendujemy kompletny pakiet 3 przewodników ze specjalnym rabatem z Barometru, aby kompleksowo odbudować związek.",
+        badge: "Rekomendacja Główna • Rabat z Barometru (-33%)",
+        price: "89 PLN",
+        discountPrice: "59 PLN",
+        cta: "Kup Pakiet 3 E-Booków (59 PLN)",
+        link: "../#sklep-pakiet"
+      }
     }
   },
   en: {
@@ -209,6 +261,58 @@ const CONFIG = {
       back: "Back",
       scoreTitle: "Your Score",
       sharePreFill: "My Marriage Barometer results:\n- Overall Score: {score}/36 ({status})\n- Communication: {comm}%\n- Intimacy & Sex: {intim}%\n- Trust & Support: {trust}%\n- Shared Vision: {vision}%\n\nRelationship Strength: {strength}\nArea to work on: {work}\nWe would like to book a partner consultation."
+    },
+    ebookRecommendations: {
+      communication: {
+        title: "E-Book: Difficult Conversations & Mature Commitment",
+        subtitle: "How to discuss needs and emotions without blame or silent treatment",
+        desc: "Your diagnostic results show communication needs focus. This condensed guide offers core takeaways and reflection questions for couples.",
+        badge: "Recommended for Your Result",
+        price: "$9.99",
+        discountPrice: "$6.99",
+        cta: "Get E-Book with Discount (-30%)",
+        link: "../en/#sklep-ebook-trudne-rozmowy"
+      },
+      intimacy: {
+        title: "E-Book: Intimacy & Passion Over the Years",
+        subtitle: "How to rebuild desire, physical affection and intimacy in daily life",
+        desc: "Your score points to a need to nurture physical intimacy and passion. Learn the essence of keeping closeness alive.",
+        badge: "Recommended for Your Result",
+        price: "$9.99",
+        discountPrice: "$6.99",
+        cta: "Get E-Book with Discount (-30%)",
+        link: "../en/#sklep-ebook-bliskosc-namietnosc"
+      },
+      trust: {
+        title: "E-Book: The Couple as the Center of the World",
+        subtitle: "How to rebuild emotional support and feeling of safety",
+        desc: "Trust and security flourish when your partner becomes your primary focus again.",
+        badge: "Recommended for Your Result",
+        price: "$9.99",
+        discountPrice: "$6.99",
+        cta: "Get E-Book with Discount (-30%)",
+        link: "../en/#sklep-ebook-dwojka-centrum"
+      },
+      vision: {
+        title: "E-Book: The Couple as the Center of the World",
+        subtitle: "Partner or children? How not to lose your bond in daily routine",
+        desc: "Shared vision and quality time for just the two of you is the true core of a resilient family.",
+        badge: "Recommended for Your Result",
+        price: "$9.99",
+        discountPrice: "$6.99",
+        cta: "Get E-Book with Discount (-30%)",
+        link: "../en/#sklep-ebook-dwojka-centrum"
+      },
+      crisisBundle: {
+        title: "Bundle: Complete Relationship Bond (3 E-Books)",
+        subtitle: "All 3 condensed guides (Essence + Reflection Questions for Couples)",
+        desc: "Your score indicates a deep crisis. We recommend our complete 3-guide bundle with a Barometer discount to rebuild your bond.",
+        badge: "Top Recommendation • Barometer Discount (-33%)",
+        price: "$22.99",
+        discountPrice: "$14.99",
+        cta: "Get 3 E-Book Bundle",
+        link: "../en/#sklep-pakiet"
+      }
     }
   }
 };
@@ -262,6 +366,10 @@ document.addEventListener("DOMContentLoaded", () => {
         showQuestion();
       }, 50);
     }, 400);
+
+    if (typeof gtag === 'function') {
+      gtag('event', 'barometr_start');
+    }
   }
 
   function showQuestion() {
@@ -276,6 +384,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const progressPercent = (currentQuestionIndex / totalQuestions) * 100;
     progressBarFill.style.width = `${progressPercent}%`;
+
+    if (typeof gtag === 'function') {
+      gtag('event', 'barometr_step', { step: currentQuestionIndex + 1 });
+    }
 
     // Render options (fallback to global options if no custom options are provided)
     const options = qObj.options || t.options;
@@ -344,6 +456,10 @@ document.addEventListener("DOMContentLoaded", () => {
     resultStatus.className = `result-status-badge ${overallResult.class}`;
     resultFeedbackTitle.textContent = overallResult.title;
     resultFeedbackText.textContent = overallResult.feedback;
+
+    if (typeof gtag === 'function') {
+      gtag('event', 'barometr_complete', { score: totalScore, status: overallResult.status });
+    }
 
     // Calculate Category Scores
     const categoryScores = {
@@ -425,6 +541,35 @@ document.addEventListener("DOMContentLoaded", () => {
           ⚠ ${t.categories[minCat]} (${minVal}%) — Obszar wymagający pracy
         </strong>
         <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.5;">${workFeedback}</p>
+      `;
+    }
+
+    // Render Dynamic E-book Recommendation Box
+    const recommendationContainer = document.getElementById("recommendation-box");
+    if (recommendationContainer && t.ebookRecommendations) {
+      let recKey = minCat;
+      if (totalScore <= 12) {
+        recKey = "crisisBundle";
+      }
+      const rec = t.ebookRecommendations[recKey] || t.ebookRecommendations.communication;
+
+      recommendationContainer.innerHTML = `
+        <div class="recommendation-card">
+          <span class="recommendation-badge">✦ ${rec.badge}</span>
+          <h3 class="recommendation-title">${rec.title}</h3>
+          <div class="recommendation-subtitle">${rec.subtitle}</div>
+          <p class="recommendation-desc">${rec.desc}</p>
+          <div class="recommendation-pricing-row">
+            <div class="recommendation-price">
+              <span class="price-regular">${rec.price}</span>
+              <span class="price-discount">${rec.discountPrice}</span>
+            </div>
+            <a href="${rec.link}" class="btn-recommendation">
+              <span>${rec.cta}</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
       `;
     }
 
