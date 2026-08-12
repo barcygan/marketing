@@ -541,18 +541,33 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Handle tie cases (optional, defaults to first processed category)
+    // Handle tie cases and ensure we don't display a very low score as a "strength"
     const strengthFeedback = t.categoryFeedback[maxCat].strength;
     const workFeedback = t.categoryFeedback[minCat].work;
+    const isGlobalCrisis = totalScore <= 12;
 
     // Render Dynamic Diagnostic Boxes
     if (diagnosticStrengthBox) {
-      diagnosticStrengthBox.innerHTML = `
-        <strong style="display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 1.15rem; margin-bottom: 0.5rem; color: #10b981;">
-          ✓ ${t.categories[maxCat]} (${maxVal}%) — Siła Waszej relacji
-        </strong>
-        <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.5;">${strengthFeedback}</p>
-      `;
+      if (maxVal < 35 || isGlobalCrisis) {
+        // If the best category is still very low, or there is a general deep crisis, don't show a fake "strength"
+        diagnosticStrengthBox.innerHTML = `
+          <strong style="display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 1.15rem; margin-bottom: 0.5rem; color: #3b82f6;">
+            ℹ Budowanie fundamentów
+          </strong>
+          <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.5;">
+            ${document.documentElement.lang === 'en' 
+              ? 'Your relationship is currently in a phase where all key pillars require attention and rebuilding. Focus on small steps to restore connection.' 
+              : 'Wasza relacja znajduje się obecnie w fazie, w której wszystkie kluczowe filary wymagają uwagi i odbudowy. Skupcie się na małych krokach, aby powoli przywracać bliskość.'}
+          </p>
+        `;
+      } else {
+        diagnosticStrengthBox.innerHTML = `
+          <strong style="display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 1.15rem; margin-bottom: 0.5rem; color: #10b981;">
+            ✓ ${t.categories[maxCat]} (${maxVal}%) — Siła Waszej relacji
+          </strong>
+          <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.5;">${strengthFeedback}</p>
+        `;
+      }
     }
 
     if (diagnosticWorkBox) {

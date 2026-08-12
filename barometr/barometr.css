@@ -570,7 +570,39 @@
   .result-secondary-actions {
     flex-direction: column;
   }
-  
+
+  /* Karta rekomendacji: okładka na górze, tekst pod spodem */
+  .recommendation-card {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    padding: 1.25rem !important;
+  }
+
+  .recommendation-card > div:first-child img {
+    width: 90px !important;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .recommendation-card > div:first-child {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Badge: mniejszy font, łamie się ładnie */
+  .recommendation-badge {
+    font-size: 0.68rem !important;
+    letter-spacing: 0.04em !important;
+    padding: 0.3rem 0.65rem !important;
+    white-space: normal;
+    line-height: 1.4;
+  }
+
+  .recommendation-title {
+    font-size: 1.15rem;
+  }
+
   .recommendation-pricing-row {
     flex-direction: column;
     align-items: flex-start;
@@ -579,6 +611,9 @@
   .btn-recommendation {
     width: 100%;
     justify-content: center;
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 0.85rem 1rem;
   }
 }
 
