@@ -125,7 +125,92 @@
                 </div>
             </section>
 
+            <!-- ════ BAROMETR TEASER ════ -->
+            <section id="barometr-teaser" style="background: linear-gradient(135deg, #2D2825 0%, #1A1715 100%); padding: 3.5rem 0; position: relative; overflow: hidden;">
+                <!-- Dekoracyjne tło -->
+                <div style="position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(229,147,149,0.12) 0%, transparent 70%); pointer-events: none;"></div>
+                <div style="position: absolute; top: -60px; right: -60px; width: 300px; height: 300px; border-radius: 50%; border: 1px solid rgba(229,147,149,0.08); pointer-events: none;"></div>
+                <div style="position: absolute; bottom: -80px; left: -40px; width: 220px; height: 220px; border-radius: 50%; border: 1px solid rgba(229,147,149,0.06); pointer-events: none;"></div>
+
+                <div class="container">
+                    <div style="display: grid; grid-template-columns: 1fr auto; gap: 2.5rem; align-items: center;">
+
+                        <!-- Lewa: Tekst -->
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.2rem;">
+                                <div style="width: 10px; height: 10px; border-radius: 50%; background: #E59395; box-shadow: 0 0 0 4px rgba(229,147,149,0.25); animation: barometr-pulse 2s infinite;"></div>
+                                <span style="color: #E59395; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;">Bezpłatne narzędzie diagnostyczne</span>
+                            </div>
+                            <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); color: #FFF; font-weight: 700; margin-bottom: 0.8rem; line-height: 1.3;">
+                                Nie wiesz, od czego zacząć?<br>
+                                <span style="color: #E59395;">Zbadaj kondycję swojego związku.</span>
+                            </h2>
+                            <p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.7; max-width: 520px; margin-bottom: 1.8rem;">
+                                12 pytań · 3 minuty · 100% anonimowo. Otrzymasz natychmiastową diagnozę 4 filarów Waszej relacji: komunikacji, intymności, zaufania i wspólnej wizji.
+                            </p>
+                            <!-- Stats -->
+                            <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem;">
+                                <div>
+                                    <div style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: #E59395;">12</div>
+                                    <div style="font-size: 0.78rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em;">pytań</div>
+                                </div>
+                                <div style="width: 1px; background: rgba(255,255,255,0.1);"></div>
+                                <div>
+                                    <div style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: #E59395;">4</div>
+                                    <div style="font-size: 0.78rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em;">filary relacji</div>
+                                </div>
+                                <div style="width: 1px; background: rgba(255,255,255,0.1);"></div>
+                                <div>
+                                    <div style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: #E59395;">3 min</div>
+                                    <div style="font-size: 0.78rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em;">wystarczą</div>
+                                </div>
+                            </div>
+                            <a href="/barometr/" class="btn btn-primary btn-large" style="display: inline-flex; align-items: center; gap: 0.6rem;">
+                                Zrób Barometr Małżeński — bezpłatnie
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+
+                        <!-- Prawa: Mini wizualizacja wykresu -->
+                        <div style="display: flex; flex-direction: column; gap: 0.6rem; min-width: 200px;" class="barometr-bars-preview">
+                            <div style="font-size: 0.75rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem;">Przykładowy wynik</div>
+                            <div>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-bottom: 0.3rem;"><span>Komunikacja</span><span>72%</span></div>
+                                <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 99px; overflow: hidden;"><div style="height: 100%; width: 72%; background: linear-gradient(90deg, #E59395, #c97b7d); border-radius: 99px;"></div></div>
+                            </div>
+                            <div>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-bottom: 0.3rem;"><span>Intymność</span><span>45%</span></div>
+                                <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 99px; overflow: hidden;"><div style="height: 100%; width: 45%; background: linear-gradient(90deg, #E59395, #c97b7d); border-radius: 99px;"></div></div>
+                            </div>
+                            <div>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-bottom: 0.3rem;"><span>Zaufanie</span><span>83%</span></div>
+                                <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 99px; overflow: hidden;"><div style="height: 100%; width: 83%; background: linear-gradient(90deg, #E59395, #c97b7d); border-radius: 99px;"></div></div>
+                            </div>
+                            <div>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-bottom: 0.3rem;"><span>Wspólna Wizja</span><span>61%</span></div>
+                                <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: 99px; overflow: hidden;"><div style="height: 100%; width: 61%; background: linear-gradient(90deg, #E59395, #c97b7d); border-radius: 99px;"></div></div>
+                            </div>
+                            <div style="margin-top: 0.8rem; padding: 0.6rem 0.9rem; background: rgba(229,147,149,0.12); border: 1px solid rgba(229,147,149,0.25); border-radius: 0.6rem; font-size: 0.78rem; color: rgba(255,255,255,0.6); text-align: center;">
+                                Twój wynik będzie tu za 3 min ↑
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <style>
+                  @keyframes barometr-pulse {
+                    0%, 100% { box-shadow: 0 0 0 4px rgba(229,147,149,0.25); }
+                    50% { box-shadow: 0 0 0 8px rgba(229,147,149,0.08); }
+                  }
+                  @media (max-width: 768px) {
+                    .barometr-bars-preview { display: none !important; }
+                    #barometr-teaser > .container > div { grid-template-columns: 1fr !important; }
+                  }
+                </style>
+            </section>
+
             <!-- Specializations Section -->
+
             <section id="services" class="section" style="background: #fff;">
                 <div class="container">
                     <div style="text-align: center; margin-bottom: 4rem;">
