@@ -114,7 +114,9 @@ const CONFIG = {
         price: "19,99 PLN",
         discountPrice: "14,99 PLN",
         cta: "Kup E-Book ze Zniżką 25% →",
-        link: "https://cart.easy.tools/checkout/kcygan/trudne-rozmowy-jak-sluchac-mowic-i-zostac-razem?promo=BAROMETR"
+        link: "https://cart.easy.tools/checkout/kcygan/trudne-rozmowy-jak-sluchac-mowic-i-zostac-razem?promo=BAROMETR",
+        coverImage: "../ebook/okladka-trudne-rozmowy.jpg",
+        coverAlt: "Okładka e-booka Trudne Rozmowy"
       },
       intimacy: {
         title: "E-Book: Bliskość i Namiętność po latach",
@@ -124,7 +126,9 @@ const CONFIG = {
         price: "19,99 PLN",
         discountPrice: "14,99 PLN",
         cta: "Kup E-Book ze Zniżką 25% →",
-        link: "https://cart.easy.tools/checkout/kcygan/bliskosc-i-namietnosc-po-latach-jak-znow-chciec-i-byc-chcianaym?promo=BAROMETR"
+        link: "https://cart.easy.tools/checkout/kcygan/bliskosc-i-namietnosc-po-latach-jak-znow-chciec-i-byc-chcianaym?promo=BAROMETR",
+        coverImage: "../ebook/okladka-bliskosc-i-namietnosc.jpg",
+        coverAlt: "Okładka e-booka Bliskość i Namiętność po latach"
       },
       trust: {
         title: "E-Book: Partner czy dzieci?",
@@ -134,7 +138,9 @@ const CONFIG = {
         price: "19,99 PLN",
         discountPrice: "14,99 PLN",
         cta: "Kup E-Book ze Zniżką 25% →",
-        link: "https://cart.easy.tools/checkout/kcygan/partner-czy-dzieci-jak-nie-zgubic-dwojki-w-rodzinie?promo=BAROMETR"
+        link: "https://cart.easy.tools/checkout/kcygan/partner-czy-dzieci-jak-nie-zgubic-dwojki-w-rodzinie?promo=BAROMETR",
+        coverImage: "../ebook/okladka-partner-czy-dzieci.jpg",
+        coverAlt: "Okładka e-booka Partner czy dzieci?"
       },
       vision: {
         title: "E-Book: Partner czy dzieci?",
@@ -144,7 +150,9 @@ const CONFIG = {
         price: "19,99 PLN",
         discountPrice: "14,99 PLN",
         cta: "Kup E-Book ze Zniżką 25% →",
-        link: "https://cart.easy.tools/checkout/kcygan/partner-czy-dzieci-jak-nie-zgubic-dwojki-w-rodzinie?promo=BAROMETR"
+        link: "https://cart.easy.tools/checkout/kcygan/partner-czy-dzieci-jak-nie-zgubic-dwojki-w-rodzinie?promo=BAROMETR",
+        coverImage: "../ebook/okladka-partner-czy-dzieci.jpg",
+        coverAlt: "Okładka e-booka Partner czy dzieci?"
       },
       crisisBundle: {
         title: "Pakiet 3 E-Booków: Kompletna Więź",
@@ -154,7 +162,9 @@ const CONFIG = {
         price: "44,99 PLN",
         discountPrice: "33,74 PLN",
         cta: "Kup Pakiet 3 E-Booków ze Zniżką →",
-        link: "https://cart.easy.tools/checkout/kcygan/kompletna-wiez-wszystkie-3-e-booki-o-relacji-partnerskiej?promo=BAROMETR"
+        link: "https://cart.easy.tools/checkout/kcygan/kompletna-wiez-wszystkie-3-e-booki-o-relacji-partnerskiej?promo=BAROMETR",
+        coverImage: "../ebook/okladka-partner-czy-dzieci.jpg",
+        coverAlt: "Okładki wszystkich 3 e-booków"
       }
     }
   },
@@ -271,7 +281,9 @@ const CONFIG = {
         price: "19,99 PLN",
         discountPrice: "14,99 PLN",
         cta: "Buy E-Book with 25% Discount →",
-        link: "https://cart.easy.tools/checkout/kcygan/trudne-rozmowy-jak-sluchac-mowic-i-zostac-razem?promo=BAROMETR"
+        link: "https://cart.easy.tools/checkout/kcygan/trudne-rozmowy-jak-sluchac-mowic-i-zostac-razem?promo=BAROMETR",
+        coverImage: "../ebook/okladka-trudne-rozmowy.jpg",
+        coverAlt: "Difficult Conversations e-book cover"
       },
       intimacy: {
         title: "E-Book: Intimacy & Passion Over the Years",
@@ -281,7 +293,9 @@ const CONFIG = {
         price: "19,99 PLN",
         discountPrice: "14,99 PLN",
         cta: "Buy E-Book with 25% Discount →",
-        link: "https://cart.easy.tools/checkout/kcygan/bliskosc-i-namietnosc-po-latach-jak-znow-chciec-i-byc-chcianaym?promo=BAROMETR"
+        link: "https://cart.easy.tools/checkout/kcygan/bliskosc-i-namietnosc-po-latach-jak-znow-chciec-i-byc-chcianaym?promo=BAROMETR",
+        coverImage: "../ebook/okladka-bliskosc-i-namietnosc.jpg",
+        coverAlt: "Intimacy & Passion e-book cover"
       },
       trust: {
         title: "E-Book: Partner or Children?",
@@ -291,7 +305,9 @@ const CONFIG = {
         price: "19,99 PLN",
         discountPrice: "14,99 PLN",
         cta: "Buy E-Book with 25% Discount →",
-        link: "https://cart.easy.tools/checkout/kcygan/partner-czy-dzieci-jak-nie-zgubic-dwojki-w-rodzinie?promo=BAROMETR"
+        link: "https://cart.easy.tools/checkout/kcygan/partner-czy-dzieci-jak-nie-zgubic-dwojki-w-rodzinie?promo=BAROMETR",
+        coverImage: "../ebook/okladka-partner-czy-dzieci.jpg",
+        coverAlt: "Partner or Children e-book cover"
       },
       vision: {
         title: "E-Book: Partner or Children?",
@@ -301,7 +317,9 @@ const CONFIG = {
         price: "19,99 PLN",
         discountPrice: "14,99 PLN",
         cta: "Buy E-Book with 25% Discount →",
-        link: "https://cart.easy.tools/checkout/kcygan/partner-czy-dzieci-jak-nie-zgubic-dwojki-w-rodzinie?promo=BAROMETR"
+        link: "https://cart.easy.tools/checkout/kcygan/partner-czy-dzieci-jak-nie-zgubic-dwojki-w-rodzinie?promo=BAROMETR",
+        coverImage: "../ebook/okladka-partner-czy-dzieci.jpg",
+        coverAlt: "Partner or Children e-book cover"
       },
       crisisBundle: {
         title: "Bundle: Complete Relationship Bond (3 E-Books)",
@@ -311,7 +329,9 @@ const CONFIG = {
         price: "44,99 PLN",
         discountPrice: "33,74 PLN",
         cta: "Buy 3 E-Book Bundle with 25% Discount →",
-        link: "https://cart.easy.tools/checkout/kcygan/kompletna-wiez-wszystkie-3-e-booki-o-relacji-partnerskiej?promo=BAROMETR"
+        link: "https://cart.easy.tools/checkout/kcygan/kompletna-wiez-wszystkie-3-e-booki-o-relacji-partnerskiej?promo=BAROMETR",
+        coverImage: "../ebook/okladka-partner-czy-dzieci.jpg",
+        coverAlt: "All 3 e-book covers"
       }
     }
   }
@@ -554,23 +574,29 @@ document.addEventListener("DOMContentLoaded", () => {
       const rec = t.ebookRecommendations[recKey] || t.ebookRecommendations.communication;
 
       recommendationContainer.innerHTML = `
-        <div class="recommendation-card">
-          <span class="recommendation-badge">✦ ${rec.badge}</span>
-          <h3 class="recommendation-title">${rec.title}</h3>
-          <div class="recommendation-subtitle">${rec.subtitle}</div>
-          <p class="recommendation-desc">${rec.desc}</p>
-          <div class="recommendation-pricing-row">
-            <div class="recommendation-price">
-              <span class="price-regular">${rec.price}</span>
-              <span class="price-discount">${rec.discountPrice}</span>
+        <div class="recommendation-card" style="display: flex; gap: 1.5rem; align-items: flex-start;">
+          ${rec.coverImage ? `
+          <div style="flex-shrink: 0;">
+            <img src="${rec.coverImage}" alt="${rec.coverAlt}" style="width: 110px; border-radius: 0.6rem; box-shadow: 0 8px 24px rgba(0,0,0,0.15); display: block;">
+          </div>` : ''}
+          <div style="flex: 1; min-width: 0;">
+            <span class="recommendation-badge">✦ ${rec.badge}</span>
+            <h3 class="recommendation-title">${rec.title}</h3>
+            <div class="recommendation-subtitle">${rec.subtitle}</div>
+            <p class="recommendation-desc">${rec.desc}</p>
+            <div class="recommendation-pricing-row">
+              <div class="recommendation-price">
+                <span class="price-regular">${rec.price}</span>
+                <span class="price-discount">${rec.discountPrice}</span>
+              </div>
+              <a href="${rec.link}" target="_blank" rel="noopener" class="btn-recommendation">
+                <span>${rec.cta}</span>
+                <span>→</span>
+              </a>
             </div>
-            <a href="${rec.link}" target="_blank" rel="noopener" class="btn-recommendation">
-              <span>${rec.cta}</span>
-              <span>→</span>
-            </a>
-          </div>
-          <div style="margin-top: 0.85rem; background: rgba(229,147,149,0.12); border: 1px dashed #E59395; border-radius: 0.75rem; padding: 0.6rem 1rem; text-align: center; font-size: 0.82rem; color: #2D2825;">
-            ✅ Rabat 25% zostanie zastosowany <strong>automatycznie</strong> po kliknięciu przycisku
+            <div style="margin-top: 0.85rem; background: rgba(229,147,149,0.12); border: 1px dashed #E59395; border-radius: 0.75rem; padding: 0.6rem 1rem; text-align: center; font-size: 0.82rem; color: #2D2825;">
+              ✅ Rabat 25% zostanie zastosowany <strong>automatycznie</strong> po kliknięciu przycisku
+            </div>
           </div>
         </div>
       `;
