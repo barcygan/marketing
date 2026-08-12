@@ -14,11 +14,11 @@
 
 ## Vite Build — kopiowanie plików ebooków do dist
 
-Po każdym `npm run build` należy ręcznie skopiować pliki statyczne ebooków do `dist/ebook/`, ponieważ Vite nie kopiuje automatycznie podfolderów zagnieżdżonych w `public/`:
+Po każdym `npm run build` należy ręcznie skopiować pliki statyczne do `dist/ebook/`, ponieważ Vite nie kopiuje automatycznie podfolderów zagnieżdżonych w `public/`:
 
 ```bash
 cp public/ebook/okladka-*.jpg dist/ebook/
-cp public/ebook/ebook-*.html dist/ebook/
+cp public/ebook/ebook-dlaczego-po-latach-partner-zaczy-nas-odpychac.html dist/ebook/
 ```
 
-Dotyczy to katalogu `public/ebook/` — okładek (`.jpg`) i stron ebooków (`.html`).
+Dotyczy to katalogu `public/ebook/` — okładek (`.jpg`) oraz darmowego e-booka (lead magnet). Landingi płatnych e-booków zostały usunięte z projektu. Pliki podglądu HTML zostały usunięte z projektu.
