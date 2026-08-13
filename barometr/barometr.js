@@ -103,7 +103,7 @@ const CONFIG = {
       progress: "Pytanie {current} z {total}",
       back: "Wstecz",
       scoreTitle: "Twój Wynik",
-      sharePreFill: "Wyniki mojego Barometru Małżeńskiego:\n- Wynik ogólny: {score}/36 ({status})\n- Komunikacja: {comm}%\n- Intymność i Seks: {intim}%\n- Zaufanie: {trust}%\n- Wspólna Wizja: {vision}%\n\nSiła związku: {strength}\nObszar do pracy: {work}\nChcemy umówić konsultację partnerską."
+      sharePreFill: "Wyniki mojego Barometru Relacji:\n- Wynik ogólny: {score}/36 ({status})\n- Komunikacja: {comm}%\n- Intymność i Seks: {intim}%\n- Zaufanie: {trust}%\n- Wspólna Wizja: {vision}%\n\nSiła związku: {strength}\nObszar do pracy: {work}\nChcemy umówić konsultację partnerską."
     },
     ebookRecommendations: {
       communication: {
@@ -270,7 +270,7 @@ const CONFIG = {
       progress: "Question {current} of {total}",
       back: "Back",
       scoreTitle: "Your Score",
-      sharePreFill: "My Marriage Barometer results:\n- Overall Score: {score}/36 ({status})\n- Communication: {comm}%\n- Intimacy & Sex: {intim}%\n- Trust & Support: {trust}%\n- Shared Vision: {vision}%\n\nRelationship Strength: {strength}\nArea to work on: {work}\nWe would like to book a partner consultation."
+      sharePreFill: "My Relationship Barometer results:\n- Overall Score: {score}/36 ({status})\n- Communication: {comm}%\n- Intimacy & Sex: {intim}%\n- Trust & Support: {trust}%\n- Shared Vision: {vision}%\n\nRelationship Strength: {strength}\nArea to work on: {work}\nWe would like to book a partner consultation."
     },
     ebookRecommendations: {
       communication: {

@@ -3,20 +3,12 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://kcygan.eu/barometr/</loc>
-        <lastmod>2026-08-10</lastmod>
+        <lastmod>2026-08-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/barometr/" />
         <xhtml:link rel="alternate" hreflang="en" href="https://kcygan.eu/en/barometr/" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://kcygan.eu/barometr/" />
-    </url>
-    <url>
-        <loc>https://kcygan.eu/barometr_index_backup</loc>
-        <lastmod>2026-08-10</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/barometr_index_backup" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://kcygan.eu/barometr_index_backup" />
     </url>
     <url>
         <loc>https://kcygan.eu/challenge/</loc>
@@ -28,7 +20,7 @@
     </url>
     <url>
         <loc>https://kcygan.eu/en/barometr/</loc>
-        <lastmod>2026-08-10</lastmod>
+        <lastmod>2026-08-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/barometr/" />
@@ -46,7 +38,7 @@
     </url>
     <url>
         <loc>https://kcygan.eu/</loc>
-        <lastmod>2026-08-12</lastmod>
+        <lastmod>2026-08-13</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="pl" href="https://kcygan.eu/" />
