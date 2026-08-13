@@ -12,13 +12,14 @@
 - Kod rabatowy dla użytkowników Barometru: **BAROMETR** (25% zniżki)
 - Linki w barometrze (`barometr/barometr.js`) ZAWSZE powinny zawierać `?promo=BAROMETR` w adresie URL.
 
-## Vite Build — kopiowanie plików ebooków do dist
+## Vite Build — kopiowanie plików do dist
 
-Po każdym `npm run build` należy ręcznie skopiować pliki statyczne do `dist/ebook/`, ponieważ Vite nie kopiuje automatycznie podfolderów zagnieżdżonych w `public/`:
+Po każdym `npm run build` należy ręcznie skopiować pliki statyczne do `dist/`, ponieważ Vite nie kopiuje automatycznie podfolderów zagnieżdżonych w `public/` oraz chcemy zapewnić poprawność niektórych plików w głównym katalogu:
 
 ```bash
 cp public/ebook/okladka-*.jpg dist/ebook/
 cp public/ebook/ebook-dlaczego-po-latach-partner-zaczy-nas-odpychac.html dist/ebook/
+cp public/llms.txt dist/
 ```
 
-Dotyczy to katalogu `public/ebook/` — okładek (`.jpg`) oraz darmowego e-booka (lead magnet). Landingi płatnych e-booków zostały usunięte z projektu. Pliki podglądu HTML zostały usunięte z projektu.
+Dotyczy to katalogu `public/ebook/` (okładek i darmowego e-booka) oraz pliku `public/llms.txt` w głównym folderze `dist/` (dla crawlerów AI). Pliki podglądu HTML zostały usunięte z projektu. Pliki podglądu HTML zostały usunięte z projektu.
