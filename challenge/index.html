@@ -3,20 +3,38 @@
 
 <head>
     <meta charset="UTF-8" />
-    <!-- Google Consent Mode v2 -->
+    <!-- Google Consent Mode v2 — must be first, before GA4 loads -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+
+      // 1. Set safe defaults (all denied)
       gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+        'ad_storage':          'denied',
+        'ad_user_data':        'denied',
+        'ad_personalization':  'denied',
+        'analytics_storage':   'denied',
+        'wait_for_update':     500
       });
+
+      // 2. Restore previously saved consent SYNCHRONOUSLY before GA4 loads
+      (function() {
+        try {
+          var saved = JSON.parse(localStorage.getItem('kcygan_consent'));
+          if (saved !== null) {
+            gtag('consent', 'update', {
+              'analytics_storage':  saved.analytics ? 'granted' : 'denied',
+              'ad_storage':         'denied',
+              'ad_user_data':       'denied',
+              'ad_personalization': 'denied'
+            });
+          }
+        } catch(e) {}
+      })();
     </script>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="248184b3-7db5-4faf-bdd0-2deacecb88fd" data-blockingmode="auto" type="text/javascript"></script>
-    
-    <!-- Google tag (gtag.js) -->
+    <script defer src="/consent.js"></script>
+
+    <!-- Google tag (gtag.js) — loads after consent defaults are set -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TEXVN0KVB9"></script>
     <script>
       gtag('js', new Date());

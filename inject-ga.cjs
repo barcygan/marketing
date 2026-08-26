@@ -13,7 +13,7 @@ const snippet = `
         'analytics_storage': 'denied'
       });
     </script>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="248184b3-7db5-4faf-bdd0-2deacecb88fd" data-blockingmode="auto" type="text/javascript"></script>
+    <script defer src="/consent.js"></script>
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TEXVN0KVB9"></script>

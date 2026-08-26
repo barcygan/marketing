@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">\n
+    <!-- Google Consent Mode v2 — must be first, before GA4 loads -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      // 1. Set safe defaults (all denied)
+      gtag('consent', 'default', {
+        'ad_storage':          'denied',
+        'ad_user_data':        'denied',
+        'ad_personalization':  'denied',
+        'analytics_storage':   'denied',
+        'wait_for_update':     500
+      });
+
+      // 2. Restore previously saved consent SYNCHRONOUSLY before GA4 loads
+      (function() {
+        try {
+          var saved = JSON.parse(localStorage.getItem('kcygan_consent'));
+          if (saved !== null) {
+            gtag('consent', 'update', {
+              'analytics_storage':  saved.analytics ? 'granted' : 'denied',
+              'ad_storage':         'denied',
+              'ad_user_data':       'denied',
+              'ad_personalization': 'denied'
+            });
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <script defer src="/consent.js"></script>
+
+    <!-- Google tag (gtag.js) — loads after consent defaults are set -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TEXVN0KVB9"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-TEXVN0KVB9');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Złudzenie pod stokiem. Dlaczego w polskim narciarstwie nie wygrywa talent, tylko portfel rodziców z Warszawy? | Akademia Górska Brenna</title>
+    <meta name="description" content="Ekspercka analiza lig narciarskich 2025/2026. Jak Warszawa i wielkie metropolie zdominowały polskie narciarstwo alpejskie dzieci i młodzieży kosztem tradycyjnych regionów górskich.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #0b0f19;
+            --color-surface: #131b2e;
+            --color-surface-hover: #1a253f;
+            --color-border: #243252;
+            --color-primary: #38bdf8;
+            --color-primary-dark: #0284c7;
+            --color-accent: #f59e0b;
+            --color-danger: #ef4444;
+            --color-success: #10b981;
+            --color-text-main: #f1f5f9;
+            --color-text-muted: #94a3b8;
+            --color-text-dim: #64748b;
+            --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-heading: 'Oswald', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--color-bg);
+            color: var(--color-text-main);
+            line-height: 1.75;
+            font-size: 1.05rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        .article-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px 80px 20px;
+        }
+
+        /* Header & Meta */
+        .article-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--color-primary);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 20px;
+        }
+
+        .article-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            line-height: 1.15;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: #ffffff;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+
+        .article-lead {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: #cbd5e1;
+            font-weight: 400;
+            border-left: 4px solid var(--color-primary);
+            padding-left: 20px;
+            margin-bottom: 35px;
+            background: rgba(19, 27, 46, 0.5);
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .author-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 20px;
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: #0b0f19;
+            font-size: 1.1rem;
+        }
+
+        .author-info h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .author-info p {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+        }
+
+        /* Typography */
+        h2 {
+            font-family: var(--font-heading);
+            font-size: 1.9rem;
+            color: #ffffff;
+            margin: 50px 0 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 24px;
+            background: var(--color-primary);
+            border-radius: 4px;
+        }
+
+        h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #e2e8f0;
+            margin: 30px 0 15px 0;
+        }
+
+        p {
+            margin-bottom: 22px;
+            color: #cbd5e1;
+        }
+
+        strong {
+            color: #ffffff;
+        }
+
+        /* Stat Grid Cards */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            padding: 24px;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--color-primary);
+        }
+
+        .stat-card.accent::after {
+            background: var(--color-accent);
+        }
+
+        .stat-card.danger::after {
+            background: var(--color-danger);
+        }
+
+        .stat-number {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+
+        .stat-desc {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin-top: 8px;
+            line-height: 1.4;
+        }
+
+        /* Custom Visual Bars */
+        .visual-bar-container {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            padding: 24px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+
+        .bar-group {
+            margin-bottom: 18px;
+        }
+
+        .bar-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .bar-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .bar-track {
+            height: 14px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 999px;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 999px;
+            transition: width 1s ease-in-out;
+        }
+
+        .fill-warsaw { background: linear-gradient(90deg, #38bdf8, #0284c7); width: 64.1%; }
+        .fill-metropolises { background: linear-gradient(90deg, #818cf8, #4f46e5); width: 75.2%; }
+        .fill-mountains { background: linear-gradient(90deg, #f59e0b, #d97706); width: 24.8%; }
+
+        /* Tables */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            border: 1px solid var(--color-border);
+            background: var(--color-surface);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background: rgba(0, 0, 0, 0.3);
+            color: #f8fafc;
+            padding: 14px 18px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        td {
+            padding: 14px 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: #cbd5e1;
+        }
+
+        tr:hover {
+            background: var(--color-surface-hover);
+        }
+
+        .rank-pill {
+            display: inline-flex;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        .rank-1 { background: #f59e0b; color: #000; }
+        .rank-2 { background: #94a3b8; color: #000; }
+        .rank-3 { background: #b45309; color: #fff; }
+
+        /* Highlight Boxes */
+        .callout-box {
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(245, 158, 11, 0.05));
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 35px 0;
+        }
+
+        .callout-box h4 {
+            color: var(--color-primary);
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .quote-block {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #f1f5f9;
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--color-accent);
+            padding: 20px 24px;
+            margin: 35px 0;
+            border-radius: 0 12px 12px 0;
+        }
+
+        /* Cost Table */
+        .cost-table td:nth-child(2) {
+            text-align: right;
+            font-weight: 700;
+            color: var(--color-accent);
+        }
+
+        .footer-note {
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 1px solid var(--color-border);
+            font-size: 0.9rem;
+            color: var(--color-text-dim);
+            font-style: italic;
+        }
+
+        @media (max-width: 640px) {
+            .article-lead { font-size: 1.1rem; }
+            .stat-number { font-size: 2.2rem; }
+            th, td { padding: 10px 12px; }
+        }
+    </style>
+</head>
+<body>
+
+<article class="article-container">
+
+    <!-- Meta Header -->
+    <div class="article-badge">
+        <span>⚡ Raport Analityczny & Głos Trenerski</span>
+    </div>
+
+    <h1 class="article-title">Złudzenie pod stokiem. Dlaczego w polskim narciarstwie nie wygrywa talent, tylko portfel rodziców z Warszawy?</h1>
+
+    <div class="article-lead">
+        Jako trenerzy od lat powtarzamy dzieciom w Beskidach i Tatrach: trenujcie ciężko, a góry wam odpłacą. Niestety, twarde dane z oficjalnych tabel ligowych za sezon 2025/2026 obnażają brutalną prawdę: polskie narciarstwo zjazdowe stało się sportem skrajnie elitarnym, w którym selekcja naturalna została zastąpiona selekcją portfela. Dzieci z gór przegrywają wyścig, bo ich rodziców nie stać na bilet wstępu do wyczynowego sportu.
+    </div>
+
+    <div class="author-card">
+        <div class="author-avatar">AGB</div>
+        <div class="author-info">
+            <h4>Zespół Trenerski i Analityczny Akademii Górskiej Brenna</h4>
+            <p>Publikacja: Sezon 2025/2026 | Dział: Sport & Publicystyka | Czas czytania: 6 min</p>
+        </div>
+    </div>
+
+    <!-- Wstęp -->
+    <h2>1. Kiedy stok za oknem przestaje cokolwiek znaczyć</h2>
+    <p>
+        Jeszcze kilkadziesiąt lat temu schemat rozwoju talentu w polskich górach był prosty i organiczny. Dziecko rodziło się w Szczyrku, Zakopanem, Krynicy, Ustrzykach czy Brennej, po szkole brało narty z komórki, szło pod wyciąg i dzięki masowym treningom w lokalnych klubach naturalnie wyrastało na mistrza Polski. Narciarstwo było wpisane w DNA regionu, a szkolne kluby sportowe stanowiły naturalne sita wyławiające najzdolniejszych górali.
+    </p>
+    <p>
+        Dziś ten romantyczny mit można włożyć między bajki. 
+    </p>
+    <p>
+        Współczesny sport dziecięcy i młodzieżowy w Polsce przeszedł cichą rewolucję kapitałową. Komercjalizacja stacji narciarskich, postępujące zmiany klimatyczne oraz brak systemowego mecenatu państwa doprowadziły do absurdu: <strong>dziecko mieszkające 200 metrów od stoku w Brennej czy Zakopanem ma dziś bez porównania trudniejszą drogę do profesjonalnego sportu niż jego rówieśnik z warszawskiego Mokotowa, poznańskich Jeżyc czy krakowskiego Podgórza.</strong>
+    </p>
+
+    <!-- Stat Grid -->
+    <div class="stat-grid">
+        <div class="stat-card">
+            <div class="stat-number">64,1%</div>
+            <div class="stat-label">Monopol 2 Miast</div>
+            <div class="stat-desc">Aż 64,1% wszystkich punktów w ogólnopolskiej Lidze MOZN 2026 zdobyły kluby z Krakowa i Warszawy.</div>
+        </div>
+        <div class="stat-card accent">
+            <div class="stat-number">10 799</div>
+            <div class="stat-label">WKN Warszawa</div>
+            <div class="stat-desc">Sam klub z Warszawy zdobył więcej punktów niż całe Podhale i Tatry razem wzięte (9 107 pkt).</div>
+        </div>
+        <div class="stat-card danger">
+            <div class="stat-number">65 000 zł</div>
+            <div class="stat-label">Roczny bilet wstępu</div>
+            <div class="stat-desc">Średni roczny koszt treningu klubowego dziecka U12-U14 (obozy lodowcowe, sprzęt, karnety, trenerzy).</div>
+        </div>
+    </div>
+
+    <!-- Twarde Dane i Liczby -->
+    <h2>2. Twarde liczby sezonu 2025/2026: Anatomia ligi</h2>
+    <p>
+        Aby nie operować na domysłach, przeanalizowaliśmy kompletne dane z najważniejszego cyklu pucharowego w kraju – <strong>XXXVIII Ligi MOZN KrakówSport CUP 2026</strong> (od kategorii U8/U10 do U16/U18) oraz <strong>Śląskiej Ligi Dzieci i Młodzieży (Beskidzkiej)</strong>.
+    </p>
+    <p>
+        Po zsumowaniu i deduplikacji blisko 70 klubów z całego kraju, geograficzna mapa sukcesu wygląda jednoznacznie:
+    </p>
+
+    <!-- Visual Bar -->
+    <div class="visual-bar-container">
+        <div class="bar-group">
+            <div class="bar-header">
+                <span>Warszawa + Kraków (49 030 pkt)</span>
+                <span style="color: var(--color-primary);">64.1%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill fill-warsaw"></div></div>
+        </div>
+        <div class="bar-group">
+            <div class="bar-header">
+                <span>Wszystkie miasta nizinne i aglomeracje (57 588 pkt)</span>
+                <span style="color: #818cf8;">75.2%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill fill-metropolises"></div></div>
+        </div>
+        <div class="bar-group">
+            <div class="bar-header">
+                <span>Całe polskie pasmo górskie łącznie (18 958 pkt)</span>
+                <span style="color: var(--color-accent);">24.8%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill fill-mountains"></div></div>
+        </div>
+    </div>
+
+    <h3>Czołówka Zunifikowanego Rankingu Klubowego w Polsce (Sezon 2025/2026):</h3>
+    
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>Msc</th>
+                    <th>Klub</th>
+                    <th>Siedziba</th>
+                    <th>Typ Ośrodka</th>
+                    <th>Punkty Razem</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="rank-pill rank-1">1</span></td>
+                    <td><strong>Warszawski Klub Narciarski (WKN)</strong></td>
+                    <td>Warszawa</td>
+                    <td>Metropolia nizinna</td>
+                    <td><strong>10 799</strong></td>
+                </tr>
+                <tr>
+                    <td><span class="rank-pill rank-2">2</span></td>
+                    <td><strong>BiegunSport</strong></td>
+                    <td>Kraków</td>
+                    <td>Wielkie miasto</td>
+                    <td><strong>8 567</strong></td>
+                </tr>
+                <tr>
+                    <td><span class="rank-pill rank-3">3</span></td>
+                    <td><strong>KS LIVE Bielsko-Biała</strong></td>
+                    <td>Bielsko-Biała</td>
+                    <td>Podbeskidzie (Miasto)</td>
+                    <td><strong>6 995</strong></td>
+                </tr>
+                <tr>
+                    <td><span class="rank-pill">4</span></td>
+                    <td><strong>KS Beskidy Bielsko-Biała</strong></td>
+                    <td>Bielsko-Biała</td>
+                    <td>Podbeskidzie (Miasto)</td>
+                    <td><strong>6 309</strong></td>
+                </tr>
+                <tr>
+                    <td><span class="rank-pill">5</span></td>
+                    <td><strong>Frajda Zakopane</strong></td>
+                    <td>Zakopane</td>
+                    <td>Góry (Akademia prywatna)</td>
+                    <td><strong>6 128</strong></td>
+                </tr>
+                <tr>
+                    <td><span class="rank-pill">6</span></td>
+                    <td><strong>KS AS Bielsko-Biała</strong></td>
+                    <td>Bielsko-Biała</td>
+                    <td>Podbeskidzie (Miasto)</td>
+                    <td><strong>4 161</strong></td>
+                </tr>
+                <tr>
+                    <td><span class="rank-pill">7</span></td>
+                    <td><strong>SRS Czantoria Ustroń</strong></td>
+                    <td>Ustroń</td>
+                    <td>Beskid Śląski</td>
+                    <td><strong>4 093</strong></td>
+                </tr>
+                <tr>
+                    <td><span class="rank-pill">8</span></td>
+                    <td><strong>UKS 28 Kielce</strong></td>
+                    <td>Kielce</td>
+                    <td>Miasto wojewódzkie</td>
+                    <td><strong>3 943</strong></td>
+                </tr>
+                <tr>
+                    <td><span class="rank-pill">9</span></td>
+                    <td><strong>CDSport Kraków</strong></td>
+                    <td>Kraków</td>
+                    <td>Wielkie miasto</td>
+                    <td><strong>3 874</strong></td>
+                </tr>
+                <tr>
+                    <td><span class="rank-pill">10</span></td>
+                    <td><strong>Ski-Max Kraków</strong></td>
+                    <td>Kraków</td>
+                    <td>Wielkie miasto</td>
+                    <td><strong>3 682</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Przypadek Bielska-Białej -->
+    <h2>3. Bielsko-Biała: Ostateczny dowód na znaczenie kapitału</h2>
+    <p>
+        Ktoś analizujący wyniki pobieżnie mógłby wskazać na Beskid Śląski: <em>„Przecież kluby z Bielska-Białej zgarniają tysiące punktów!”</em>.
+    </p>
+    <p>
+        To prawda, ale Bielsko-Biała to <strong>170-tysięczne, zamożne miasto przemysłowe</strong> o bardzo wysokim PKB per capita. Kluby takie jak <em>KS LIVE</em>, <em>KS Beskidy</em> czy <em>KS AS</em> (które łącznie zdobyły ponad 18,7 tys. punktów!) to nowoczesne akademie wyścigowe o budżetach porównywalnych z warszawskimi. Dzieci trenujące w tych klubach łączą <strong>wielkomiejski portfel rodziców</strong> z <strong>logistyczną przewagą 25 minut dojazdu na stok w Szczyrku czy Wiśle</strong>.
+    </p>
+    <p>
+        Prawdziwy dramat wykluczenia dotyka małe, tradycyjne gminy górskie. W zestawieniu ogólnopolskim historyczne, zasłużone kluby z Podhala, Gorców czy Sudetów – niegdyś kuźnie kadr – walczą dziś o przetrwanie:
+    </p>
+    <ul>
+        <li><strong>SNPTT 1907 Zakopane:</strong> 477 pkt</li>
+        <li><strong>KS AZS Zakopane:</strong> 863 pkt</li>
+        <li><strong>KN Gondola Krynica:</strong> 103 pkt</li>
+        <li><strong>KN Małe Ciche:</strong> 72 pkt</li>
+        <li><strong>UKS Szóstka Kłodzko (Sudety):</strong> 87 pkt</li>
+    </ul>
+
+    <!-- Mechanizm Ekonomiczny -->
+    <h2>4. Rachunek ekonomiczny: Dlaczego góralskie dzieci odpadają?</h2>
+    <p>
+        Dlaczego bliskość stoku przestała decydować o sukcesie? Ponieważ współczesny slalom gigant nie rozstrzyga się w lutym na Kasprowym Wierchu czy Skrzycznem, lecz <strong>w październiku i listopadzie na lodowcach w Austrii i we Włoszech</strong> (Hintertux, Pitztal, Stubai).
+    </p>
+
+    <div class="callout-box">
+        <h4>💰 Roczny Koszt Szkolenia Młodego Narciarza (10-14 lat)</h4>
+        <div class="table-responsive" style="margin: 15px 0 0 0; background: transparent; border: none;">
+            <table class="cost-table">
+                <tbody>
+                    <tr>
+                        <td>Składka klubowa + opieka trenerska</td>
+                        <td>8 000 – 14 000 zł</td>
+                    </tr>
+                    <tr>
+                        <td>Obozy lodowcowe (Alpy: 30–45 dni przed sezonem)</td>
+                        <td>25 000 – 40 000 zł</td>
+                    </tr>
+                    <tr>
+                        <td>Karnety komercyjne na linie tyczkowe</td>
+                        <td>4 000 – 8 000 zł</td>
+                    </tr>
+                    <tr>
+                        <td>Sprzęt zawodniczy (2-3 pary nart GS/SL, buty, gumy, ochraniacze)</td>
+                        <td>8 000 – 15 000 zł</td>
+                    </tr>
+                    <tr>
+                        <td>Serwis, smary fluorowe, opłaty startowe, logistyka</td>
+                        <td>5 000 – 9 000 zł</td>
+                    </tr>
+                    <tr style="border-top: 2px solid var(--color-primary); background: rgba(56, 189, 248, 0.1);">
+                        <td><strong>SZACUNKOWY KOSZT SEZONU (1 DZIECKO)</strong></td>
+                        <td style="font-size: 1.15rem; color: #fff;"><strong>50 000 – 86 000 zł</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <p>
+        Dziecko z Warszawy czy Poznania staje na starcie pierwszych zawodów w styczniu z dorobkiem <strong>40 dni przetrenowanych w bramkach na alpejskim lodowcu</strong>. Dziecko z małej górskiej miejscowości, którego rodzice czekają na naturalny śnieg w Polsce, ma w nogach zaledwie kilka dni jazdy. Ta przepaść jest technicznie i motorycznie niemożliwa do odrobienia.
+    </p>
+
+    <div class="quote-block">
+        „W najmłodszych grupach (U8/U10) dzieci z gór jeszcze nawiązują walkę wrodzoną odwagą i obyciem ze śniegiem. W kategoriach U14 i U16 następuje rzeź niewiniątek – zostają wyłącznie dzieci rodziców, którzy mogą wyłożyć 70 tysięcy złotych rocznie.”
+    </div>
+
+    <!-- Głos Trenerski -->
+    <h2>5. Głos z gniazda trenerskiego: Dlaczego nie dogonimy świata?</h2>
+    <p>
+        Jako trenerzy patrzymy na to z ogromnym niepokojem. Pojedyncze sukcesy na arenie międzynarodowej to dziś <strong>efekt heroizmu i majątku pojedynczych rodzin</strong>, a nie sprawnego systemu.
+    </p>
+    <p>
+        W Austrii, Szwajcarii, Norwegii czy we Włoszech potęga reprezentacji wyrasta z <strong>szerokiej, powszechnej bazy dzieci z alpejskich dolin</strong>. Tam gmina, szkoła i stacja narciarska gwarantują bezpłatny dostęp do stoków, a kluby są dotowane z podatków turystycznych. W ten sposób przez sito przechodzi 10 000 dzieci rocznie, z których wyłaniani są najlepsi atleci o genialnej wydolności i psychice zwycięzcy.
+    </p>
+    <p>
+        W Polsce zrobiliśmy coś dokładnie odwrotnego:
+    </p>
+    <ul>
+        <li>Szkolimy w 90% wąską grupę dzieci z zamożnych domów w wielkich miastach.</li>
+        <li>Drastycznie zawężamy pulę genetyczną i motoryczną sportowców.</li>
+        <li><strong>Filtrem rekrutacyjnym nie jest talent, lecz stan konta rodziców.</strong></li>
+    </ul>
+
+    <!-- Wnioski Końcowe -->
+    <h2>6. Co musimy zmienić?</h2>
+    <p>
+        Jeżeli chcemy, by polskie narciarstwo przestało być wyłącznie kosztowną rekreacją dla elit, musimy natychmiast przywrócić góry polskim dzieciom:
+    </p>
+    <ol style="margin-left: 20px; margin-bottom: 30px; color: #cbd5e1;">
+        <li style="margin-bottom: 12px;"><strong>Dedykowane linie treningowe dla klubów:</strong> Ośrodki narciarskie korzystające z polskich gór powinny mieć ustawowy lub umowny obowiązek udostępniania porannych tras dla lokalnych klubów na preferencyjnych warunkach.</li>
+        <li style="margin-bottom: 12px;"><strong>Gminne stypendia sprzętowe:</strong> Samorządy górskie muszą współfinansować zakup sprzętu i wyjazdy treningowe dla najbardziej utalentowanych dzieci ze szkół podstawowych.</li>
+        <li style="margin-bottom: 12px;"><strong>Powszechne programy narciarskie w ramach WF:</strong> Każde dziecko w Brennej, Szczyrku, Zakopanem czy Krynicy powinno w szkole przejść regularny kurs jazdy sportowej na tyczkach.</li>
+    </ol>
+
+    <p>
+        Góry dają nam idealne ukształtowanie terenu i ludzi naturalnie uodpornionych na trudne warunki. Najwyższy czas stworzyć system, w którym o medalu znowu zadecyduje serce do walki, a nie zasobność portfela.
+    </p>
+
+    <div class="footer-note">
+        Artykuł przygotowany na podstawie oficjalnych komunikatów końcowych XXXVIII Ligi Dzieci i Młodzieży MOZN KrakówSport CUP 2026 oraz Śląskiej Ligi Dzieci i Młodzieży 2026. Materiał edukacyjno-publicystyczny Akademii Górskiej Brenna.
+    </div>
+
+</article>
+
+</body>
+</html>
