@@ -1,73 +1,86 @@
-// Barometr Małżeński / Marriage Barometer Logic with Category Analysis
+// Barometr Relacji / Relationship Barometer Logic
+// Oparty na rzetelnej wiedzy o dynamice par i psychologii relacji (m.in. badania Gottmana i model CSI)
 
 const CONFIG = {
   pl: {
     categories: {
-      communication: "Komunikacja",
-      intimacy: "Intymność i Seks",
-      trust: "Zaufanie i Wsparcie",
-      vision: "Wspólna Wizja"
+      communication: "Rozmowa i konflikty",
+      intimacy: "Bliskość i seks",
+      trust: "Zaufanie i oparcie",
+      vision: "Czas we dwoje i plany"
     },
     questions: [
       {
         category: "communication",
-        text: "Czy czujesz, że partner słucha Cię z uwagą i zrozumieniem, gdy dzielisz się swoimi troskami?"
+        text: "Czy podczas trudnej rozmowy czujesz, że partner naprawdę próbuje Cię zrozumieć, zamiast od razu się bronić, tłumaczyć lub atakować?"
       },
       {
         category: "communication",
-        text: "Czy potraficie rozmawiać o trudnych sprawach (finanse, kryzysy) bez wzajemnego oskarżania się i kłótni?"
+        text: "Gdy pojawia się różnica zdań lub spór, jak najczęściej reagujecie w sytuacjach napięcia?",
+        options: [
+          { text: "Rozmawiamy spokojnie i szukamy porozumienia", score: 3 },
+          { text: "Potrzebujemy chwili na ochłonięcie, ale szybko wracamy do dialogu", score: 2 },
+          { text: "Często pojawia się chłód, wycofanie lub wielogodzinne milczenie", score: 1 },
+          { text: "Prawie zawsze kończy się „cichymi dniami” i emocjonalnym murem", score: 0 }
+        ]
       },
       {
         category: "communication",
-        text: "Czy po konfliktach potraficie wyciągnąć do siebie rękę i szczerze się przeprosić?"
+        text: "Czy po sprzeczce potraficie w porę rozładować napięcie (gestem, przytuleniem, humorem) i wrócić do bliskości bez trzymania urazy?"
       },
       {
         category: "intimacy",
-        text: "Jak oceniasz poziom czułości i fizycznego dotyku (niezwiązanego bezpośrednio z seksem) w Waszej codzienności?",
+        text: "Czy w ciągu dnia jest między Wami spontaniczna czułość (przytulenie, pocałunek, złapanie za rękę), która nie musi prowadzić do seksu?",
         options: [
-          { text: "Bardzo wysoki — czułość jest obecna każdego dnia", score: 3 },
-          { text: "Zadowalający — okazujemy sobie bliskość, ale mogłoby być lepiej", score: 2 },
-          { text: "Niski — dotykamy się rzadko, czuję pewien niedosyt", score: 1 },
-          { text: "Bardzo niski — w naszej relacji prawie w ogóle nie ma czułości", score: 0 }
+          { text: "Bardzo często — czułość i bliskość towarzyszą nam na co dzień", score: 3 },
+          { text: "Umiarkowanie — okazujemy sobie bliskość, ale mogłoby być jej więcej", score: 2 },
+          { text: "Rzadko — dotykamy się sporadycznie, brakuje mi tego", score: 1 },
+          { text: "Prawie wcale — w naszej codzienności prawie zupełnie brakuje czułości", score: 0 }
         ]
       },
       {
         category: "intimacy",
-        text: "Jak często uprawiacie seks i na ile ta częstotliwość oraz jakość odpowiada Waszym potrzebom?",
+        text: "Jak oceniasz Wasze zbliżenia intymne — na ile odpowiadają Waszym potrzebom?",
         options: [
-          { text: "Zdecydowanie satysfakcjonująca", score: 3 },
-          { text: "Umiarkowanie satysfakcjonująca (chcemy popracować)", score: 2 },
-          { text: "Rzadziej niż bym chciał/a (odczuwam frustrację)", score: 1 },
-          { text: "Bardzo rzadko lub wcale (źródło kryzysu)", score: 0 }
+          { text: "Dają nam obojgu spełnienie i poczucie bliskości", score: 3 },
+          { text: "Jest w porządku, choć wkradła się rutyna i chcemy nad tym popracować", score: 2 },
+          { text: "Zbliżenia są zbyt rzadkie lub jednostronne, czuję niedosyt", score: 1 },
+          { text: "Prawie zanikły lub są częstym źródłem napięć i kryzysu", score: 0 }
         ]
       },
       {
         category: "intimacy",
-        text: "Na ile bezpiecznie i swobodnie czujesz się, rozmawiając z partnerem o swoich potrzebach seksualnych i fantazjach?"
+        text: "Czy możesz swobodnie i bez wstydu rozmawiać z partnerem o swoich pragnieniach, fantazjach lub trudnościach w sypialni?"
       },
       {
         category: "trust",
-        text: "Czy możesz w pełni liczyć na emocjonalne i praktyczne wsparcie partnera w trudnych momentach życiowych?"
+        text: "Gdy masz gorszy dzień lub trudny moment, czy czujesz w partnerze oparcie, a nie kolejne źródło krytyki?"
       },
       {
         category: "trust",
-        text: "Czy w Waszej relacji panuje poczucie bezpieczeństwa (brak chorobliwej zazdrości i chęci kontrolowania)?"
+        text: "Czy czujesz w relacji spokój i zaufanie — bez podejrzliwości, ukrytych pretensji i chęci kontroli?"
       },
       {
         category: "trust",
-        text: "Czy czujesz się kochana/y i akceptowana/y przez partnera taka/im jaka/i jesteś, ze wszystkimi słabościami?"
+        text: "Czy czujesz, że jesteś dla partnera ważna/y i akceptowana/y taka/im, jaka/i jesteś — ze wszystkimi słabościami?"
       },
       {
         category: "vision",
-        text: "Czy macie spójną wizję wspólnej przyszłości oraz kluczowych życiowych wartości?"
+        text: "Czy czujesz, że gracie w jednej drużynie i macie spójny kierunek w kluczowych sprawach (rodzina, finanse, plany)?"
       },
       {
         category: "vision",
-        text: "Czy spędzacie wartościowy czas tylko we dwoje (randki, pasje), dbając o związek poza pracą i dziećmi?"
+        text: "Czy dbacie o czas wyłącznie dla Was dwojga (randki, spokojne rozmowy), czy relację zdominowały codzienne obowiązki?",
+        options: [
+          { text: "Regularnie planujemy randki i czas tylko we dwoje", score: 3 },
+          { text: "Miewamy chwile dla siebie, ale często przegrywają z obowiązkami", score: 2 },
+          { text: "Większość energii pochłania dom i praca, rzadko jesteśmy sami", score: 1 },
+          { text: "Funkcjonujemy głównie jak współlokatorzy zarządzający domem", score: 0 }
+        ]
       },
       {
         category: "vision",
-        text: "Czy czujesz, że partner docenia Twój wkład w związek i okazuje Ci wdzięczność?"
+        text: "Czy partner zauważa Twoje codzienne starania i okazuje Ci wdzięczność, sprawiając, że czujesz się doceniona/y?"
       }
     ],
     options: [
@@ -78,39 +91,43 @@ const CONFIG = {
     ],
     categoryFeedback: {
       communication: {
-        strength: "Komunikacja jest filarem Waszego związku. Potraficie słuchać siebie nawzajem i rozwiązywać spory z szacunkiem.",
-        work: "Zwróćcie uwagę na to, jak rozmawiacie. Często pojawiają się oskarżenia lub ciche dni. Warto popracować nad konstruktywnym dialogiem bez oceniania."
+        patternName: "Błędne koło: pretensje i milczenie",
+        strength: "Potraficie ze sobą rozmawiać nawet wtedy, gdy pojawiają się trudne emocje. Słuchacie się nawzajem, potraficie przeprosić i nie zostawiacie sporów bez rozwiązania.",
+        work: "W trudnych chwilach jedno z Was próbuje natychmiast wyjaśnić sprawę, a drugie czuje przytłoczenie i zamyka się w sobie lub milczy. To powszechny mechanizm obronny — nie wynika ze złej woli, ale z bezradności i lęku przed kolejną kłótnią."
       },
       intimacy: {
-        strength: "Bliskość fizyczna i seksualna jest Waszą mocną stroną. Dbacie o dotyk, pożądanie i otwarcie rozmawiacie o potrzebach.",
-        work: "Sfera intymna i seksualna uległa ochłodzeniu lub rodzi frustrację. Rutyna, zmęczenie lub brak dialogu oddalają Was fizycznie. Odbudowa bliskości wymaga uwagi."
+        patternName: "Chłód w sypialni i syndrom współlokatorów",
+        strength: "Czułość i bliskość są naturalną częścią Waszego dnia. Potraficie okazywać sobie czułość bez presji i otwarcie rozmawiać o swoich potrzebach.",
+        work: "Codzienność i zmęczenie zepchnęły bliskość fizyczną na dalszy plan. Dotyk pojawia się rzadko — często w obawie, że będzie odczytany jako zaproszenie do seksu, na który brakuje sił. To rodzi dystans, ale można go stopniowo przełamać."
       },
       trust: {
-        strength: "Czujecie się w związku bezpiecznie i możecie na siebie liczyć. Macie silne oparcie emocjonalne, co daje ogromną stabilność.",
-        work: "Pojawił się kryzys zaufania lub poczucie braku wsparcia w trudnych chwilach. Odbudowa poczucia bezpieczeństwa jest teraz Waszym priorytetem."
+        patternName: "Brak poczucia bezpieczeństwa i oparcia",
+        strength: "Dajecie sobie wzajemne oparcie i poczucie spokoju. Wiecie, że możecie na sobie polegać także w gorszych momentach.",
+        work: "Brakuje Wam poczucia, że w trudnej chwili możecie na sobie bezwarunkowo polegać. Zamiast spokoju pojawia się obawa przed krytyką, oceną albo wzajemne pretensje. Bez poczucia bezpieczeństwa trudno o prawdziwą bliskość."
       },
       vision: {
-        strength: "Patrzycie w tym samym kierunku. Spójne cele życiowe i dbanie o czas tylko we dwoje pozwalają Wam rozwijać relację w harmonii.",
-        work: "Wasze drogi zaczęły się rozchodzić w codziennym pośpiechu. Brakuje wspólnego czasu (randek) lub spójnej wizji przyszłości. Warto usiąść i porozmawiać o priorytetach."
+        patternName: "Pułapka firmy 'Dom i Dzieci'",
+        strength: "Czujecie, że gracie w jednej drużynie. Macie wspólne cele i dbacie o to, by poza codziennymi obowiązkami mieć czas wyłącznie dla siebie.",
+        work: "Obowiązki, praca i dzieci przejęły całą Waszą uwagę. Jako zespół organizacyjny działacie sprawnie, ale zgubiliście czas tylko dla siebie. Długo odkładana relacja we dwoje zaczyna przypominać życie obok siebie."
       }
     },
     thresholds: [
-      { min: 0, max: 12, status: "Głęboki Kryzys", class: "status-crisis", title: "Wasza relacja przechodzi przez trudny czas.", feedback: "Ogólny wynik wskazuje na znaczne osłabienie więzi. Kryzys to jednak punkt wyjścia do zmiany. Analiza filarów poniżej pokaże Wam, od czego zacząć odbudowę." },
-      { min: 13, max: 24, status: "Wymaga Pracy", class: "status-work", title: "Wasza więź jest stabilna, ale wymaga uwagi.", feedback: "Wasza relacja ma solidne fundamenty, ale codzienna rutyna uśpiła czujność. Sprawdźcie poniżej, które obszary wymagają wdrożenia nowych nawyków partnerskich." },
-      { min: 25, max: 36, status: "Silna Więź", class: "status-good", title: "Gratulacje! Wasz związek ma zdrowe i silne podstawy.", feedback: "Wynik pokazuje wysoki poziom zaufania i satysfakcji. Poniższy podział pomoże Wam zidentyfikować drobne niuanse, by wejść na jeszcze wyższy poziom intymności." }
+      { min: 0, max: 12, status: "Głęboki kryzys", class: "status-crisis", title: "Wasz związek przechodzi przez trudny czas", feedback: "Wynik wskazuje na silne napięcie i poczucie oddalenia. Kryzys bywa wyczerpujący, ale jest też wyraźnym sygnałem, że dotychczasowe sposoby radzenia sobie przestały działać. Poniżej zobaczysz, które sfery wymagają najpilniejszej uwagi." },
+      { min: 13, max: 24, status: "Dobra baza, ale rutyna daje znać", class: "status-work", title: "Macie solidne podstawy, ale rutyna uśpiła czujność", feedback: "W Waszym związku jest stabilność, ale codzienne obowiązki i zmęczenie osłabiają Waszą bliskość. Zobacz poniżej, gdzie najłatwiej zacząć wprowadzać małe zmiany." },
+      { min: 25, max: 36, status: "Silna, bliska więź", class: "status-good", title: "Tworzycie bliski i bezpieczny związek", feedback: "Wasz wynik pokazuje wysoki poziom zaufania, wsparcia i satysfakcji. Poniższa analiza podpowie Wam, na czym opiera się Wasza siła i o co warto dbać na co dzień." }
     ],
     labels: {
       progress: "Pytanie {current} z {total}",
       back: "Wstecz",
-      scoreTitle: "Twój Wynik",
-      sharePreFill: "Wyniki mojego Barometru Relacji:\n- Wynik ogólny: {score}/36 ({status})\n- Komunikacja: {comm}%\n- Intymność i Seks: {intim}%\n- Zaufanie: {trust}%\n- Wspólna Wizja: {vision}%\n\nSiła związku: {strength}\nObszar do pracy: {work}\nChcemy umówić konsultację partnerską."
+      scoreTitle: "Wasz Wynik",
+      sharePreFill: "Wyniki mojego Barometru Relacji:\n- Wynik ogólny: {score}/36 ({status})\n- Rozmowa i konflikty: {comm}%\n- Bliskość i seks: {intim}%\n- Zaufanie i oparcie: {trust}%\n- Czas we dwoje i plany: {vision}%\n\nSiła relacji: {strength}\nObszar do poprawy: {work}\nChcemy umówić konsultację partnerską."
     },
     ebookRecommendations: {
       communication: {
         title: "E-Book: Trudne Rozmowy",
         subtitle: "Jak słuchać, mówić i zostać razem",
-        desc: "Z diagnozy wynika, że komunikacja jest sferą wymagającą uwagi. Ten skondensowany e-book zawiera syntezę kluczowych myśli i pytań refleksyjnych dla par, które chcą nauczyć się szczerego dialogu.",
-        badge: "Dopasowane do Twojego Wyniku • Rabat 25% — już w linku!",
+        desc: "Jeśli w trudnych momentach pojawia się u Was mur milczenia lub wzajemne pretensje, ten przewodnik da Wam konkretne wskazówki, jak przerwać błędne koło i spokojnie porozmawiać.",
+        badge: "Rekomendacja na podstawie wyniku • Rabat 25%",
         price: "19,99 PLN",
         discountPrice: "14,99 PLN",
         cta: "Kup E-Book ze Zniżką 25% →",
@@ -121,8 +138,8 @@ const CONFIG = {
       intimacy: {
         title: "E-Book: Bliskość i Namiętność po latach",
         subtitle: "Jak znów chcieć — i być chcianym",
-        desc: "Wasz wynik wskazuje na potrzebę odbudowy sfery fizycznej i namiętności. Poznaj esencję wiedzy o tym, dlaczego bliskość gaśnie oraz jak w prostych krokach przywrócić pożądanie.",
-        badge: "Dopasowane do Twojego Wyniku • Rabat 25% — już w linku!",
+        desc: "Praktyczny przewodnik o tym, jak powoli odbudować czułość i pożądanie, gdy zmęczenie, dzieci i codzienna rutyna zgasiły namiętność w sypialni.",
+        badge: "Rekomendacja na podstawie wyniku • Rabat 25%",
         price: "19,99 PLN",
         discountPrice: "14,99 PLN",
         cta: "Kup E-Book ze Zniżką 25% →",
@@ -131,22 +148,22 @@ const CONFIG = {
         coverAlt: "Okładka e-booka Bliskość i Namiętność po latach"
       },
       trust: {
-        title: "E-Book: Partner czy dzieci?",
-        subtitle: "Jak nie zgubić dwójki w rodzinie",
-        desc: "Zaufanie i poczucie bezpieczeństwa rozwijają się, gdy partner znów staje się centrum. Zobacz skondensowane myśli o tym, jak nie zagubić relacji partnerskiej pod presją codzienności.",
-        badge: "Dopasowane do Twojego Wyniku • Rabat 25% — już w linku!",
+        title: "E-Book: Trudne Rozmowy",
+        subtitle: "Jak słuchać, mówić i zostać razem",
+        desc: "Odbudowa poczucia bezpieczeństwa zaczyna się od szczerego dialogu bez wzajemnej obrony i oskarżeń. Skondensowana wiedza i pytania do wspólnej rozmowy.",
+        badge: "Rekomendacja na podstawie wyniku • Rabat 25%",
         price: "19,99 PLN",
         discountPrice: "14,99 PLN",
         cta: "Kup E-Book ze Zniżką 25% →",
-        link: "https://cart.easy.tools/checkout/kcygan/partner-czy-dzieci-jak-nie-zgubic-dwojki-w-rodzinie?promo=BAROMETR",
-        coverImage: "../ebook/okladka-partner-czy-dzieci.jpg",
-        coverAlt: "Okładka e-booka Partner czy dzieci?"
+        link: "https://cart.easy.tools/checkout/kcygan/trudne-rozmowy-jak-sluchac-mowic-i-zostac-razem?promo=BAROMETR",
+        coverImage: "../ebook/okladka-trudne-rozmowy.jpg",
+        coverAlt: "Okładka e-booka Trudne Rozmowy"
       },
       vision: {
         title: "E-Book: Partner czy dzieci?",
         subtitle: "Jak nie zgubić dwójki w rodzinie",
-        desc: "Spójność wizji i dbanie o czas tylko we dwoje to fundament rodziny. Przeczytaj skondensowany przewodnik, który pomógł wielu parom odzyskać właściwą hierarchię i bliskość.",
-        badge: "Dopasowane do Twojego Wyniku • Rabat 25% — już w linku!",
+        desc: "Dla par, które świetnie zarządzają domem, ale zgubiły w tym bycie razem. Zestaw 10 pytań, które pomagają odzyskać przestrzeń na relację we dwoje.",
+        badge: "Rekomendacja na podstawie wyniku • Rabat 25%",
         price: "19,99 PLN",
         discountPrice: "14,99 PLN",
         cta: "Kup E-Book ze Zniżką 25% →",
@@ -157,8 +174,8 @@ const CONFIG = {
       crisisBundle: {
         title: "Pakiet 3 E-Booków: Kompletna Więź",
         subtitle: "Trzy skondensowane przewodniki relacyjne (Esencja + Pytania dla Pary)",
-        desc: "Twój wynik wskazuje na głęboki kryzys w relacji. Rekomendujemy kompletny pakiet 3 przewodników. Rabat 25% zostanie zastosowany automatycznie!",
-        badge: "Rekomendacja Główna • Rabat 25% — już w linku!",
+        desc: "Kompleksowy pakiet poradników, który krok po kroku pomaga popracować nad rozmową, bliskością w sypialni i przestrzenią dla Waszej dwójki.",
+        badge: "Kompletny pakiet • Rabat 25%",
         price: "44,99 PLN",
         discountPrice: "33,74 PLN",
         cta: "Kup Pakiet 3 E-Booków ze Zniżką →",
@@ -170,71 +187,83 @@ const CONFIG = {
   },
   en: {
     categories: {
-      communication: "Communication",
+      communication: "Communication & Conflict",
       intimacy: "Intimacy & Sex",
       trust: "Trust & Support",
-      vision: "Shared Vision"
+      vision: "Couple Time & Shared Goals"
     },
     questions: [
       {
         category: "communication",
-        text: "Do you feel your partner listens to you with attention and understanding when you share your concerns?"
+        text: "During difficult conversations, do you feel your partner genuinely tries to understand you instead of immediately defending, explaining, or attacking?"
       },
       {
         category: "communication",
-        text: "Are you able to discuss difficult issues (finances, crises) without blaming each other and fighting?"
+        text: "When disagreements or conflicts arise, how do you typically respond in moments of tension?",
+        options: [
+          { text: "We talk calmly and seek understanding without shutting down", score: 3 },
+          { text: "We sometimes need a moment to cool off, but quickly return to dialogue", score: 2 },
+          { text: "Emotional distance, withdrawal, or hours of silence often occur", score: 1 },
+          { text: "It almost always ends in multi-day silent treatments and an emotional wall", score: 0 }
+        ]
       },
       {
         category: "communication",
-        text: "After conflicts, are you able to reach out to each other and sincerely apologize?"
+        text: "After an argument, are you able to ease the tension in time (with a gesture, a hug, humor) and reconnect without holding grudges?"
       },
       {
         category: "intimacy",
-        text: "How do you rate the level of affection and physical touch (not directly related to sex) in your daily life?",
+        text: "Do you share spontaneous, affectionate touch during the day (hugs, kisses, holding hands) that doesn't have to lead to sex?",
         options: [
-          { text: "Very high — affection is present every day", score: 3 },
-          { text: "Satisfying — we show each other closeness, but it could be better", score: 2 },
-          { text: "Low — we rarely touch, I feel a certain lack of connection", score: 1 },
-          { text: "Very low — there is almost no affection in our relationship", score: 0 }
+          { text: "Very often — affection and closeness are part of our everyday life", score: 3 },
+          { text: "Moderately — we show each other affection, but we could use more", score: 2 },
+          { text: "Rarely — we touch infrequently, and I feel a real lack of connection", score: 1 },
+          { text: "Almost never — our daily life is virtually devoid of physical affection", score: 0 }
         ]
       },
       {
         category: "intimacy",
-        text: "How often do you have sex, and to what extent does its frequency and quality meet your needs?",
+        text: "How would you describe your intimate life — to what extent does it meet your needs?",
         options: [
-          { text: "Definitely satisfying", score: 3 },
-          { text: "Moderately satisfying (we want to work on it)", score: 2 },
-          { text: "Less often than I would like (causes frustration)", score: 1 },
-          { text: "Very rarely or not at all (source of crisis)", score: 0 }
+          { text: "It brings fulfillment and emotional connection for both of us", score: 3 },
+          { text: "It is fine, though routine has set in and we want to work on it", score: 2 },
+          { text: "Intimacy is too rare or one-sided, leaving me frustrated", score: 1 },
+          { text: "It has almost stopped or is a frequent source of conflict and crisis", score: 0 }
         ]
       },
       {
         category: "intimacy",
-        text: "How safe and comfortable do you feel discussing your sexual needs and fantasies with your partner?"
+        text: "Do you feel comfortable talking openly with your partner about your desires, fantasies, or bedroom challenges without shame?"
       },
       {
         category: "trust",
-        text: "Can you fully count on your partner's emotional and practical support during difficult life moments?"
+        text: "When you are having a rough day or facing hardship, do you feel your partner is supportive rather than another source of criticism?"
       },
       {
         category: "trust",
-        text: "Is there a sense of security in your relationship (free of unhealthy jealousy and control)?"
+        text: "Do you feel peace and genuine trust in your relationship — free from suspicion, hidden resentment, and control?"
       },
       {
         category: "trust",
-        text: "Do you feel loved and accepted by your partner exactly as you are, with all your weaknesses?"
+        text: "Do you feel truly valued and accepted by your partner as you are, including your vulnerabilities?"
       },
       {
         category: "vision",
-        text: "Do you share an aligned vision of your future and key life values?"
+        text: "Do you feel you are playing on the same team, with an aligned direction for family, finances, and life goals?"
       },
       {
         category: "vision",
-        text: "Do you spend quality time just the two of you (dates, hobbies) to nurture your bond away from work/kids?"
+        text: "Do you deliberately protect time just for the two of you (dates, quiet conversations), or have daily duties taken over?",
+        options: [
+          { text: "We regularly plan dates and couple time to nurture our bond", score: 3 },
+          { text: "We occasionally get time together, but chores often take over", score: 2 },
+          { text: "Most energy goes into work and household logistics; we are rarely alone", score: 1 },
+          { text: "We function mostly like roommates managing a household", score: 0 }
+        ]
       },
       {
         category: "vision",
-        text: "Do you feel your partner appreciates your contribution to the relationship and shows gratitude?"
+        text: "Does your partner notice your daily efforts and show appreciation, making you feel valued?"
       }
     ],
     options: [
@@ -245,39 +274,43 @@ const CONFIG = {
     ],
     categoryFeedback: {
       communication: {
-        strength: "Communication is the cornerstone of your relationship. You listen to each other and resolve issues with mutual respect.",
-        work: "Pay attention to how you communicate. Accusations or silent treatments occur. It is worth working on constructive, judgment-free dialogue."
+        patternName: "Demand-Withdraw Cycle: Pressure & Silence",
+        strength: "You can talk through difficult moments without attacking each other. You listen with care, apologize sincerely, and repair connection quickly.",
+        work: "Under stress, one partner pushes to resolve things right away while the other feels overwhelmed and shuts down. This common defense mechanism stems from exhaustion, not lack of love."
       },
       intimacy: {
-        strength: "Physical and sexual intimacy is a strong suit. You nurture touch, passion, and talk openly about your physical needs.",
-        work: "The intimate and sexual sphere has cooled down or causes frustration. Routine, fatigue, or lack of dialogue are creating physical distance."
+        patternName: "Roommate Mode: Lost Tenderness",
+        strength: "Physical closeness and affection are natural parts of your everyday life. You share touch freely and talk comfortably about your needs.",
+        work: "Daily stress and fatigue have pushed physical intimacy aside. Touch is rare — often out of worry it will be seen as an expectation for sex. This creates distance, but it can be rebuilt step by step."
       },
       trust: {
-        strength: "You feel safe and can rely on each other. You have strong emotional support, which provides immense stability.",
-        work: "A crisis of trust or a feeling of lacking support has arisen. Rebuilding your sense of safety is your primary priority."
+        patternName: "Shaky Ground: Missing Emotional Safety",
+        strength: "You provide a calm, reassuring anchor for each other. You know you can count on each other even during tough times.",
+        work: "You miss feeling that you can lean on each other without reservation. Instead of feeling comforted, moments of vulnerability bring fear of criticism or blame."
       },
       vision: {
-        strength: "You look in the same direction. Aligned life goals and quality time together allow you to grow your relationship in harmony.",
-        work: "Your paths have begun to drift in the daily rush. There is a lack of quality time (dates) or a shared future vision."
+        patternName: "The Household Trap: Roommates Managing Life",
+        strength: "You feel you are on the same team. You share common priorities and protect quality time just for the two of you.",
+        work: "Parenting and household chores have taken over your shared life. You manage daily tasks well, but have lost intentional time as partners."
       }
     },
     thresholds: [
-      { min: 0, max: 12, status: "Deep Crisis", class: "status-crisis", title: "Your relationship is going through a challenging time.", feedback: "The overall score indicates a significant weakening of the bond. However, a crisis is the starting point for change. The breakdown below shows where to start rebuilding." },
-      { min: 13, max: 24, status: "Needs Attention", class: "status-work", title: "Your bond is stable, but requires work.", feedback: "Your relationship has solid foundations, but daily routine has dulled awareness. Check below which areas require introducing new partner habits." },
-      { min: 25, max: 36, status: "Strong Bond", class: "status-good", title: "Congratulations! Your relationship has healthy, strong roots.", feedback: "The score shows a high level of trust and satisfaction. The breakdown below will help you identify small nuances to reach an even higher level of intimacy." }
+      { min: 0, max: 12, status: "Relationship Crisis", class: "status-crisis", title: "Your relationship is going through a difficult time", feedback: "Your score points to significant emotional distance and strain. A crisis can be exhausting, but it is also a clear signal to rethink old patterns. Below is where to start." },
+      { min: 13, max: 24, status: "Good foundation, but routine has set in", class: "status-work", title: "Good foundation, but routine has taken over", feedback: "Your bond is resilient, but daily busyness has created some distance. Check below which areas are most receptive to small, intentional shifts." },
+      { min: 25, max: 36, status: "Strong, close bond", class: "status-good", title: "You share a close and safe partnership", feedback: "Your results show high trust, mutual support, and intimacy. The breakdown below highlights your greatest strengths and what to keep nurturing." }
     ],
     labels: {
       progress: "Question {current} of {total}",
       back: "Back",
       scoreTitle: "Your Score",
-      sharePreFill: "My Relationship Barometer results:\n- Overall Score: {score}/36 ({status})\n- Communication: {comm}%\n- Intimacy & Sex: {intim}%\n- Trust & Support: {trust}%\n- Shared Vision: {vision}%\n\nRelationship Strength: {strength}\nArea to work on: {work}\nWe would like to book a partner consultation."
+      sharePreFill: "My Relationship Barometer results:\n- Overall score: {score}/36 ({status})\n- Communication & Conflict: {comm}%\n- Intimacy & Sex: {intim}%\n- Trust & Support: {trust}%\n- Couple Time & Shared Goals: {vision}%\n\nOur strength: {strength}\nArea to work on: {work}\nWe would like to schedule a couples consultation."
     },
     ebookRecommendations: {
       communication: {
         title: "E-Book: Difficult Conversations",
         subtitle: "How to listen, speak and stay together",
-        desc: "Your diagnostic results show communication needs focus. This condensed guide offers core takeaways and reflection questions for couples.",
-        badge: "Recommended for Your Result • 25% off — already in the link!",
+        desc: "When tough talks turn into silent walls or blame, this guide gives you practical tools to break the cycle and speak without triggering defenses.",
+        badge: "Recommended for your score • 25% off",
         price: "19,99 PLN",
         discountPrice: "14,99 PLN",
         cta: "Buy E-Book with 25% Discount →",
@@ -288,8 +321,8 @@ const CONFIG = {
       intimacy: {
         title: "E-Book: Intimacy & Passion Over the Years",
         subtitle: "How to want again — and be wanted",
-        desc: "Your score points to a need to nurture physical intimacy and passion. Learn the essence of keeping closeness alive.",
-        badge: "Recommended for Your Result • 25% off — already in the link!",
+        desc: "A practical guide to gently rekindling tenderness and desire when exhaustion, routine, and kids have cooled down the bedroom.",
+        badge: "Recommended for your score • 25% off",
         price: "19,99 PLN",
         discountPrice: "14,99 PLN",
         cta: "Buy E-Book with 25% Discount →",
@@ -298,22 +331,22 @@ const CONFIG = {
         coverAlt: "Intimacy & Passion e-book cover"
       },
       trust: {
-        title: "E-Book: Partner or Children?",
-        subtitle: "How not to lose your couple bond in family life",
-        desc: "Trust and security flourish when your partner becomes your primary focus again. A condensed guide on keeping the relationship at the centre of the family.",
-        badge: "Recommended for Your Result • 25% off — already in the link!",
+        title: "E-Book: Difficult Conversations",
+        subtitle: "How to listen, speak and stay together",
+        desc: "Rebuilding emotional safety starts with open, judgment-free conversations. Condensed insights and guiding questions for couples.",
+        badge: "Recommended for your score • 25% off",
         price: "19,99 PLN",
         discountPrice: "14,99 PLN",
         cta: "Buy E-Book with 25% Discount →",
-        link: "https://cart.easy.tools/checkout/kcygan/partner-czy-dzieci-jak-nie-zgubic-dwojki-w-rodzinie?promo=BAROMETR",
-        coverImage: "../ebook/okladka-partner-czy-dzieci.jpg",
-        coverAlt: "Partner or Children e-book cover"
+        link: "https://cart.easy.tools/checkout/kcygan/trudne-rozmowy-jak-sluchac-mowic-i-zostac-razem?promo=BAROMETR",
+        coverImage: "../ebook/okladka-trudne-rozmowy.jpg",
+        coverAlt: "Difficult Conversations e-book cover"
       },
       vision: {
         title: "E-Book: Partner or Children?",
-        subtitle: "Partner or children? How not to lose your bond in daily routine",
-        desc: "Shared vision and quality time for just the two of you is the true core of a resilient family.",
-        badge: "Recommended for Your Result • 25% off — already in the link!",
+        subtitle: "How not to lose your couple bond in family life",
+        desc: "For couples who have become a great parenting team, but miss just being partners. 10 questions to help put the couple back at the center.",
+        badge: "Recommended for your score • 25% off",
         price: "19,99 PLN",
         discountPrice: "14,99 PLN",
         cta: "Buy E-Book with 25% Discount →",
@@ -323,9 +356,9 @@ const CONFIG = {
       },
       crisisBundle: {
         title: "Bundle: Complete Relationship Bond (3 E-Books)",
-        subtitle: "All 3 condensed guides (Essence + Reflection Questions for Couples)",
-        desc: "Your score indicates a deep crisis. We recommend the complete 3-guide bundle. 25% discount is applied automatically!",
-        badge: "Top Recommendation • 25% off — already in the link!",
+        subtitle: "All 3 condensed guides (Essence + Reflection Questions)",
+        desc: "A complete toolkit to guide you through repairing communication, reviving physical closeness, and restoring balance in your daily life.",
+        badge: "Complete Bundle • 25% off",
         price: "44,99 PLN",
         discountPrice: "33,74 PLN",
         cta: "Buy 3 E-Book Bundle with 25% Discount →",
@@ -337,8 +370,9 @@ const CONFIG = {
   }
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  const lang = document.documentElement.lang === "en" ? "en" : "pl";
+function initBarometr() {
+  const isEn = document.documentElement.lang === "en" || window.location.pathname.includes("/en/");
+  const lang = isEn ? "en" : "pl";
   const t = CONFIG[lang];
 
   let currentQuestionIndex = 0;
@@ -381,11 +415,11 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       screenWelcome.style.display = "none";
       screenQuiz.style.display = "block";
+      showQuestion();
       setTimeout(() => {
         screenQuiz.classList.add("active");
-        showQuestion();
       }, 50);
-    }, 400);
+    }, 300);
 
     if (typeof gtag === 'function') {
       gtag('event', 'barometr_start');
@@ -541,7 +575,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Handle tie cases and ensure we don't display a very low score as a "strength"
     const strengthFeedback = t.categoryFeedback[maxCat].strength;
     const workFeedback = t.categoryFeedback[minCat].work;
     const isGlobalCrisis = totalScore <= 12;
@@ -549,21 +582,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // Render Dynamic Diagnostic Boxes
     if (diagnosticStrengthBox) {
       if (maxVal < 35 || isGlobalCrisis) {
-        // If the best category is still very low, or there is a general deep crisis, don't show a fake "strength"
         diagnosticStrengthBox.innerHTML = `
           <strong style="display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 1.15rem; margin-bottom: 0.5rem; color: #3b82f6;">
-            ℹ Budowanie fundamentów
+            ${lang === 'en' ? 'Where to Start' : 'Od czego zacząć'}
           </strong>
           <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.5;">
-            ${document.documentElement.lang === 'en' 
-              ? 'Your relationship is currently in a phase where all key pillars require attention and rebuilding. Focus on small steps to restore connection.' 
-              : 'Wasza relacja znajduje się obecnie w fazie, w której wszystkie kluczowe filary wymagają uwagi i odbudowy. Skupcie się na małych krokach, aby powoli przywracać bliskość.'}
+            ${lang === 'en' 
+              ? 'When tension is high across multiple areas, trying to fix everything at once causes overwhelm. Start with small, safe steps in communication and listening.' 
+              : 'Gdy w relacji pojawia się silny kryzys, próba naprawienia wszystkiego naraz przytłacza. Warto zacząć od małych kroków — przede wszystkim od zatrzymania wzajemnych pretensji i bezpiecznej rozmowy.'}
           </p>
         `;
       } else {
         diagnosticStrengthBox.innerHTML = `
           <strong style="display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 1.15rem; margin-bottom: 0.5rem; color: #10b981;">
-            ✓ ${t.categories[maxCat]} (${maxVal}%) — Siła Waszej relacji
+            ✓ ${t.categories[maxCat]} (${maxVal}%) — ${lang === 'en' ? 'Your Greatest Strength' : 'Wasz najsilniejszy obszar'}
           </strong>
           <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.5;">${strengthFeedback}</p>
         `;
@@ -571,12 +603,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (diagnosticWorkBox) {
-      diagnosticWorkBox.innerHTML = `
-        <strong style="display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 1.15rem; margin-bottom: 0.5rem; color: var(--color-primary);">
-          ⚠ ${t.categories[minCat]} (${minVal}%) — Obszar wymagający pracy
-        </strong>
-        <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.5;">${workFeedback}</p>
-      `;
+      if (minVal >= 75) {
+        diagnosticWorkBox.innerHTML = `
+          <strong style="display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 1.15rem; margin-bottom: 0.5rem; color: #8b5cf6;">
+            ✨ ${lang === 'en' ? 'Nurturing Your Closeness' : 'Jak dbać o tę więź'}
+          </strong>
+          <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.5;">
+            ${lang === 'en'
+              ? 'Your relationship rests on healthy, secure foundations. Keep nurturing couple time and daily affection so that closeness stays vibrant across the years.'
+              : 'Wszystkie obszary funkcjonują bardzo dobrze. Najważniejsze to nie popadać w rutynę — pielęgnujcie wspólny czas tylko we dwoje i codzienną czułość, by ta bliskość nie gasła.'}
+          </p>
+        `;
+      } else {
+        const patternName = t.categoryFeedback[minCat].patternName;
+        const headerTitle = patternName
+          ? `⚠ ${patternName} • ${t.categories[minCat]} (${minVal}%)`
+          : `⚠ ${t.categories[minCat]} (${minVal}%) — ${lang === 'en' ? 'Area to Work On' : 'Obszar do pracy'}`;
+
+        diagnosticWorkBox.innerHTML = `
+          <strong style="display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 1.15rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+            ${headerTitle}
+          </strong>
+          <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.5;">${workFeedback}</p>
+        `;
+      }
     }
 
     // Render Dynamic E-book Recommendation Box
@@ -585,8 +635,15 @@ document.addEventListener("DOMContentLoaded", () => {
       let recKey = minCat;
       if (totalScore <= 12) {
         recKey = "crisisBundle";
+      } else if (minVal >= 75) {
+        recKey = "intimacy";
       }
       const rec = t.ebookRecommendations[recKey] || t.ebookRecommendations.communication;
+      const recDesc = minVal >= 75
+        ? (lang === 'en'
+            ? 'Your relationship has a wonderful foundation. This guide will help you keep romance, passion, and closeness alive through the years.'
+            : 'Wasz związek ma wspaniałe fundamenty. Ten przewodnik pomoże Wam zadbać o to, by codzienne obowiązki nie przygasiły Waszej bliskości i pożądania.')
+        : rec.desc;
 
       recommendationContainer.innerHTML = `
         <div class="recommendation-card" style="display: flex; gap: 1.5rem; align-items: flex-start;">
@@ -598,7 +655,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <span class="recommendation-badge">✦ ${rec.badge}</span>
             <h3 class="recommendation-title">${rec.title}</h3>
             <div class="recommendation-subtitle">${rec.subtitle}</div>
-            <p class="recommendation-desc">${rec.desc}</p>
+            <p class="recommendation-desc">${recDesc}</p>
             <div class="recommendation-pricing-row">
               <div class="recommendation-price">
                 <span class="price-regular">${rec.price}</span>
@@ -606,11 +663,12 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
               <a href="${rec.link}" target="_blank" rel="noopener" class="btn-recommendation">
                 <span>${rec.cta}</span>
-                <span>→</span>
               </a>
             </div>
             <div style="margin-top: 0.85rem; background: rgba(229,147,149,0.12); border: 1px dashed #E59395; border-radius: 0.75rem; padding: 0.6rem 1rem; text-align: center; font-size: 0.82rem; color: #2D2825;">
-              ✅ Rabat 25% zostanie zastosowany <strong>automatycznie</strong> po kliknięciu przycisku
+              ${lang === 'en' 
+                ? '✅ 25% discount is applied <strong>automatically</strong> upon clicking the button' 
+                : '✅ Rabat 25% zostanie naliczony <strong>automatycznie</strong> po kliknięciu przycisku'}
             </div>
           </div>
         </div>
@@ -657,4 +715,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }
-});
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initBarometr);
+} else {
+  initBarometr();
+}

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dziękujemy! Twój e-book czeka | Katarzyna Cygan</title>
+    <meta name="description" content="Dziękujemy za pobranie darmowego e-booka. Kliknij poniżej, aby pobrać PDF.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/png" href="/public/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <!-- Google Consent Mode v2 — must be first, before GA4 loads -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      // 1. Safe defaults (all denied)
+      gtag('consent', 'default', {
+        'ad_storage':          'denied',
+        'ad_user_data':        'denied',
+        'ad_personalization':  'denied',
+        'analytics_storage':   'denied',
+        'wait_for_update':     500
+      });
+
+      // 2. Restore previously saved consent (same key as main site)
+      (function() {
+        try {
+          var saved = JSON.parse(localStorage.getItem('kcygan_consent'));
+          if (saved !== null) {
+            gtag('consent', 'update', {
+              'analytics_storage':  saved.analytics ? 'granted' : 'denied',
+              'ad_storage':         'denied',
+              'ad_user_data':       'denied',
+              'ad_personalization': 'denied'
+            });
+          }
+        } catch(e) {}
+      })();
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TEXVN0KVB9"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-TEXVN0KVB9');
+    </script>
+
+    <style>
+        :root {
+            --color-bg: rgb(248, 239, 224);
+            --color-primary: rgb(229, 147, 149);
+            --color-primary-hover: rgb(209, 127, 129);
+            --color-text: rgb(30, 28, 24);
+            --color-heading: #000000;
+            --color-text-muted: rgba(54, 51, 46, 0.75);
+            --color-border: rgba(54, 51, 46, 0.1);
+            --font-main: 'League Spartan', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-main);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            position: sticky;
+            top: 0;
+            background: rgba(248, 239, 224, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--color-border);
+            z-index: 100;
+            padding: 1.2rem 2rem;
+        }
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--color-heading);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .nav-back {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+        .nav-back:hover { color: var(--color-primary); }
+        .nav-back svg { width: 16px; height: 16px; }
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+        }
+        .card {
+            background: #fff;
+            border-radius: 2rem;
+            padding: 3.5rem;
+            max-width: 620px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+            border: 1px solid rgba(229,147,149,0.2);
+            text-align: center;
+            animation: fadeUp 0.6s ease forwards;
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .success-icon {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, rgba(229,147,149,0.15), rgba(229,147,149,0.05));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.8rem auto;
+            border: 2px solid rgba(229,147,149,0.3);
+            animation: popIn 0.5s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+        }
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(0.5); }
+            to   { opacity: 1; transform: scale(1); }
+        }
+        .success-icon svg { width: 36px; height: 36px; color: var(--color-primary); }
+        .tag {
+            display: inline-block;
+            background: rgba(229,147,149,0.12);
+            color: var(--color-primary);
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.35rem 1rem;
+            border-radius: 99px;
+            margin-bottom: 1.2rem;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.7rem, 4vw, 2.2rem);
+            color: var(--color-heading);
+            line-height: 1.25;
+            margin-bottom: 1rem;
+        }
+        .subtitle {
+            color: var(--color-text-muted);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 2.2rem;
+        }
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            background: var(--color-primary);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 1rem 2.2rem;
+            border-radius: 99px;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 20px rgba(229,147,149,0.35);
+            margin-bottom: 1rem;
+            width: 100%;
+            justify-content: center;
+        }
+        .btn-download:hover {
+            background: var(--color-primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(229,147,149,0.45);
+        }
+        .btn-download svg { width: 20px; height: 20px; flex-shrink: 0; }
+        .hint {
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+            margin-bottom: 2.5rem;
+        }
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--color-border);
+        }
+        .divider span {
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+            white-space: nowrap;
+        }
+        .more-label {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            border: 1.5px solid var(--color-primary);
+            color: var(--color-primary);
+            background: transparent;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 0.75rem 1.8rem;
+            border-radius: 99px;
+            transition: all 0.25s ease;
+            width: 100%;
+        }
+        .btn-outline:hover {
+            background: rgba(229,147,149,0.08);
+            transform: translateY(-1px);
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem 2rem;
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+            border-top: 1px solid var(--color-border);
+        }
+        footer a { color: var(--color-primary); text-decoration: none; }
+        @media (max-width: 480px) {
+            .card { padding: 2.5rem 1.8rem; border-radius: 1.5rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="logo">KC.</a>
+            <a href="/#ebook" class="nav-back">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/>
+                </svg>
+                Powrót do sklepu
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="card">
+            <div class="success-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+                </svg>
+            </div>
+
+            <span class="tag">Darmowy e-book</span>
+
+            <h1>Twój e-book czeka!</h1>
+
+            <p class="subtitle">
+                Dziękuję, że jesteś! Kliknij poniżej, aby pobrać e-book w formacie PDF prosto na swoje urządzenie.
+            </p>
+
+            <a
+                id="download-btn"
+                href="/ebook/ebook-dlaczego-po-latach-partner-zaczy-nas-odpychac.pdf"
+                download="Katarzyna-Cygan-Dlaczego-po-latach-partner-nas-odpycha.pdf"
+                class="btn-download"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+                </svg>
+                Pobierz PDF (darmowy)
+            </a>
+
+            <p class="hint">Plik PDF · ~1.8 MB · Możesz go otworzyć na telefonie, tablecie lub komputerze</p>
+
+            <div class="divider">
+                <span>Jeśli podobał Ci się e-book</span>
+            </div>
+
+            <p class="more-label">Odkryj pozostałe e-booki Katarzyny Cygan →</p>
+
+            <a href="/#ebook" class="btn-outline">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:16px;height:16px">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+                </svg>
+                Zobacz wszystkie e-booki
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 <a href="/">Katarzyna Cygan</a> · Coach Intymności &amp; Terapeuta dla par ·
+        <a href="/">kcygan.eu</a>
+    </footer>
+    <!-- GA4 Conversion Tracking -->
+    <script>
+      // Stripe product reference
+      var STRIPE_PRODUCT_ID = 'prod_V42Io97YFAvFn4';
+      var EBOOK_NAME = 'Dlaczego po latach partner zaczal nas odpychac';
+
+      // Event 1: generate_lead — fires when user lands on this page
+      // (= they completed the Stripe $0 checkout and got here via redirect)
+      gtag('event', 'generate_lead', {
+        currency: 'PLN',
+        value: 0,
+        item_id: STRIPE_PRODUCT_ID,
+        item_name: EBOOK_NAME,
+        content_type: 'ebook_free'
+      });
+
+      // Event 2: file_download — fires when user clicks the PDF button
+      var downloadBtn = document.getElementById('download-btn');
+      if (downloadBtn) {
+        downloadBtn.addEventListener('click', function() {
+          gtag('event', 'file_download', {
+            file_name: 'ebook-dlaczego-po-latach-partner-zaczy-nas-odpychac.pdf',
+            file_extension: 'pdf',
+            item_id: STRIPE_PRODUCT_ID,
+            item_name: EBOOK_NAME,
+            link_text: 'Pobierz PDF (darmowy)'
+          });
+        });
+      }
+    </script>
+
+</body>
+</html>

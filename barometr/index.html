@@ -64,10 +64,14 @@
     {
       "@context": "https://schema.org",
       "@type": "Quiz",
-      "name": "Barometr Relacji - Test Związku i Komunikacji dla Par",
-      "description": "Interaktywny, bezpłatny test oceniający kondycję relacji w 4 filarach: komunikacja, intymność i seks, zaufanie oraz wspólna wizja.",
+      "name": "Barometr Relacji i Intymności - Evidence-Based Screening Tool",
+      "description": "Profesjonalne narzędzie diagnostyczne oceniające 4 filary związku w oparciu o wskaźniki Couples Satisfaction Index (CSI, Funk & Rogge, 2007) oraz markery stabilności małżeńskiej Instytutu Gottmana.",
       "url": "https://kcygan.eu/barometr/",
       "inLanguage": "pl",
+      "citation": [
+        "https://pubmed.ncbi.nlm.nih.gov/18179329/",
+        "https://pubmed.ncbi.nlm.nih.gov/10407716/"
+      ],
       "about": {
         "@type": "Thing",
         "name": "Komunikacja w związku, intymność partnerska, kryzys w relacji, terapia par online"
@@ -92,6 +96,10 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="./barometr.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
 </head>
 
 <body>
@@ -123,9 +131,13 @@
                 <div class="quiz-card">
                     <!-- Welcome Screen -->
                     <div id="screen-welcome" class="quiz-screen active">
+                        <div class="methodology-badge">
+                            <span class="badge-icon">🌿</span>
+                            <span>Metoda Gottmana i psychologia relacji</span>
+                        </div>
                         <h1 class="welcome-title">Barometr Relacji</h1>
                         <p class="welcome-description">
-                            Sprawdź kondycję Waszego związku. Odpowiedz szczerze na 12 pytań diagnozujących kluczowe filary relacji: komunikację, intymność, rozwiązywanie konfliktów, zaufanie oraz wspólne cele. Test jest w 100% anonimowy i zajmie Ci około 3 minut.
+                            Sprawdź, w jakim miejscu jest dziś Wasz związek. Odpowiedz na 12 pytań o komunikację, bliskość, zaufanie i codzienność we dwoje. Wynik poznasz od razu — bez podawania maila, w 100% anonimowo.
                         </p>
                         <div class="welcome-meta">
                             <div class="welcome-meta-item">
@@ -179,12 +191,12 @@
                             <div id="result-status" class="result-status-badge">Ładowanie statusu...</div>
                             <h3 id="result-feedback-title" class="result-feedback-title">Ładowanie oceny...</h3>
                             <p id="result-feedback-text" class="result-feedback-text">
-                                Analizujemy Twoje odpowiedzi, prosimy o chwilę cierpliwości...
+                                Obliczamy wynik...
                             </p>
                             
                             <!-- Wyniki cząstkowe -->
                             <div class="scores-breakdown-container">
-                                <h3 class="breakdown-title">Analiza Filarów Relacji</h3>
+                                <h3 class="breakdown-title">Wynik w 4 obszarach relacji</h3>
                                 <div id="scores-breakdown">
                                     <!-- Dynamiczne paski postępu sekcji -->
                                 </div>
@@ -201,13 +213,13 @@
                         </div>
 
                         <div class="result-actions">
-                            <a href="#contact" class="btn btn-primary btn-block" style="text-align: center;">Umów konsultację relacji</a>
+                            <a href="#contact" class="btn btn-primary btn-block" style="text-align: center;">Umów konsultację dla par</a>
                             <div class="result-secondary-actions">
-                                <button id="btnPrint" class="btn-secondary-action" onclick="window.print()">
-                                    <span>🖨️</span> Zapisz / Drukuj Raport (PDF)
+                                <button id="btn-print" class="btn-secondary-action" onclick="window.print()">
+                                    <span>📄</span> Pobierz lub drukuj podsumowanie (PDF)
                                 </button>
                                 <button id="btn-share" class="btn-secondary-action">
-                                    <span>✉️</span> Przenieś wynik do formularza
+                                    <span>✉️</span> Dołącz wynik do wiadomości poniżej
                                 </button>
                             </div>
                         </div>
@@ -220,9 +232,9 @@
                 <div class="container">
                     <div class="contact-box" style="background: #fff; border-radius: 2rem; border: 1px solid var(--color-border);">
                         <span style="color: var(--color-primary); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;">Omówmy Wasz wynik</span>
-                        <h2 class="section-title" style="margin-top: 0.5rem; margin-bottom: 1.5rem; font-size: clamp(2rem, 5vw, 3rem);">Rozpocznij zmianę w relacji</h2>
+                        <h2 class="section-title" style="margin-top: 0.5rem; margin-bottom: 1.5rem; font-size: clamp(2rem, 5vw, 3rem);">Zróbcie krok w stronę zmiany</h2>
                         <p style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto 2rem auto;">
-                            Chcesz pogłębić diagnozę i otrzymać profesjonalne wsparcie? Napisz do mnie, aby umówić się na sesję (terapię par lub konsultację coach intymności). Gwarantuję pełną poufność.
+                            Chcesz omówić Wasz wynik lub popracować nad relacją? Napisz do mnie i umówmy dogodny termin sesji online (terapia par lub coaching intymności). Gwarantuję pełną dyskrecję.
                         </p>
                         
                         <form class="contact-form" action="https://formspree.io/f/mblepkzy" method="POST" style="margin-top: 2rem;">

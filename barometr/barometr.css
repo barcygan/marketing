@@ -48,6 +48,26 @@
 }
 
 /* Welcome Screen */
+.methodology-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(229, 147, 149, 0.12);
+  border: 1px solid rgba(229, 147, 149, 0.35);
+  color: #924043;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  margin: 0 auto 1.5rem auto;
+  line-height: 1.4;
+  text-align: center;
+  max-width: fit-content;
+}
+
 .welcome-title {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(2rem, 4vw, 2.75rem);

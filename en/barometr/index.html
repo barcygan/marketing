@@ -64,10 +64,14 @@
     {
       "@context": "https://schema.org",
       "@type": "Quiz",
-      "name": "Relationship Barometer - Couples Connection Test",
-      "description": "An interactive, free test evaluating relationship health across 4 pillars: communication, intimacy & sex, trust, and shared vision.",
+      "name": "Relationship Barometer - Evidence-Based Couples Screening Tool",
+      "description": "An interactive, evidence-based relationship screening tool assessing 4 key pillars of connection based on Couples Satisfaction Index (CSI, Funk & Rogge, 2007) and Gottman marital stability research.",
       "url": "https://kcygan.eu/en/barometr/",
       "inLanguage": "en",
+      "citation": [
+        "https://pubmed.ncbi.nlm.nih.gov/18179329/",
+        "https://pubmed.ncbi.nlm.nih.gov/10407716/"
+      ],
       "about": {
         "@type": "Thing",
         "name": "Relationship communication, couples intimacy, relationship crisis, online couples counseling"
@@ -92,6 +96,10 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../../barometr/barometr.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
 </head>
 
 <body>
@@ -123,9 +131,13 @@
                 <div class="quiz-card">
                     <!-- Welcome Screen -->
                     <div id="screen-welcome" class="quiz-screen active">
+                        <div class="methodology-badge">
+                            <span class="badge-icon">🌿</span>
+                            <span>Based on Gottman Method &amp; Couples Psychology</span>
+                        </div>
                         <h1 class="welcome-title">Relationship Barometer</h1>
                         <p class="welcome-description">
-                            Check the health of your relationship. Honestly answer 12 questions diagnosing key pillars of your bond: communication, intimacy, conflict resolution, trust, and shared values. The test is 100% anonymous and takes about 3 minutes.
+                            See where your relationship stands today. Answer 12 honest questions about communication, intimacy, trust, and couple life. Immediate results — 100% free and confidential.
                         </p>
                         <div class="welcome-meta">
                             <div class="welcome-meta-item">
@@ -179,12 +191,12 @@
                             <div id="result-status" class="result-status-badge">Loading status...</div>
                             <h3 id="result-feedback-title" class="result-feedback-title">Loading assessment...</h3>
                             <p id="result-feedback-text" class="result-feedback-text">
-                                Analyzing your answers, please wait a moment...
+                                Calculating results...
                             </p>
                             
                             <!-- Category Breakdown -->
                             <div class="scores-breakdown-container">
-                                <h3 class="breakdown-title">Relationship Pillars Analysis</h3>
+                                <h3 class="breakdown-title">Results Across 4 Relationship Areas</h3>
                                 <div id="scores-breakdown">
                                     <!-- Dynamic section progress bars -->
                                 </div>
@@ -201,13 +213,13 @@
                         </div>
 
                         <div class="result-actions">
-                            <a href="#contact" class="btn btn-primary btn-block" style="text-align: center;">Book a Relationship Consultation</a>
+                            <a href="#contact" class="btn btn-primary btn-block" style="text-align: center;">Book a Couples Consultation</a>
                             <div class="result-secondary-actions">
-                                <button id="btnPrint" class="btn-secondary-action" onclick="window.print()">
-                                    <span>🖨️</span> Save / Print Report (PDF)
+                                <button id="btn-print" class="btn-secondary-action">
+                                    <span>📄</span> Download or Print Summary (PDF)
                                 </button>
                                 <button id="btn-share" class="btn-secondary-action">
-                                    <span>✉️</span> Transfer score to form
+                                    <span>✉️</span> Include score in message below
                                 </button>
                             </div>
                         </div>
@@ -219,10 +231,10 @@
             <section id="contact" class="contact section" style="background: var(--color-bg); margin-top: 4rem;">
                 <div class="container">
                     <div class="contact-box" style="background: #fff; border-radius: 2rem; border: 1px solid var(--color-border);">
-                        <span style="color: var(--color-primary); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;">Discuss your score</span>
-                        <h2 class="section-title" style="margin-top: 0.5rem; margin-bottom: 1.5rem; font-size: clamp(2rem, 5vw, 3rem);">Start a Change in Your Relationship</h2>
+                        <span style="color: var(--color-primary); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;">Let's discuss your score</span>
+                        <h2 class="section-title" style="margin-top: 0.5rem; margin-bottom: 1.5rem; font-size: clamp(2rem, 5vw, 3rem);">Take a Step Toward Change</h2>
                         <p style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto 2rem auto;">
-                            Looking to deepen the diagnosis and receive professional guidance? Write to me to schedule an online session (couples therapy or a intimacy coaching consultation). Full confidentiality guaranteed.
+                            Want to discuss your score or work on your bond? Reach out to schedule an online session (couples therapy or intimacy coaching). Complete confidentiality guaranteed.
                         </p>
                         
                         <form class="contact-form" action="https://formspree.io/f/mblepkzy" method="POST" style="margin-top: 2rem;">

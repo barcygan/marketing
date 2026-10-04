@@ -2,23 +2,49 @@ import './style.css'
 
 console.log('Summit Strategy loaded');
 
-// Mobile Menu
+// Mobile Menu & Backdrop
 const mobileToggle = document.querySelector('.mobile-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 if (mobileToggle && navLinks) {
-    mobileToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+    let navBackdrop = document.querySelector('.nav-backdrop');
+    if (!navBackdrop) {
+        navBackdrop = document.createElement('div');
+        navBackdrop.className = 'nav-backdrop';
+        document.body.appendChild(navBackdrop);
+    }
+
+    function closeMenu() {
+        navLinks.classList.remove('active');
+        mobileToggle.classList.remove('active');
+        navBackdrop.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function toggleMenu() {
+        const isOpen = navLinks.classList.toggle('active');
         mobileToggle.classList.toggle('active');
+        navBackdrop.classList.toggle('active', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
 
         // Animate links
         const links = navLinks.querySelectorAll('a');
         links.forEach((link, index) => {
-            if (link.style.animation) {
-                link.style.animation = '';
+            if (isOpen) {
+                link.style.animation = `fadeUp 0.35s ease forwards ${index / 8 + 0.15}s`;
             } else {
-                link.style.animation = `fadeUp 0.5s ease forwards ${index / 7 + 0.3}s`;
+                link.style.animation = '';
             }
+        });
+    }
+
+    mobileToggle.addEventListener('click', toggleMenu);
+    navBackdrop.addEventListener('click', closeMenu);
+
+    // Auto-close menu when tapping any navigation link
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            closeMenu();
         });
     });
 }
@@ -115,9 +141,12 @@ if (sliderTrack && slides.length > 0) {
         // So moving 33.333% should be correct including the gap if the gap is distributed?
         // Actually, gap is between items.
         // Let's just use a simpler calculation:
-        // TranslateX = -(currentSlide * (100 / slidesPerView))%
-
-        sliderTrack.style.transform = `translateX(-${currentSlide * (100 / slidesPerView)}%)`;
+        // Use precise translation accounting for gaps
+        if (slidesPerView === 1) {
+            sliderTrack.style.transform = `translateX(calc(-${currentSlide} * (100% + 2rem)))`;
+        } else {
+            sliderTrack.style.transform = `translateX(-${currentSlide * (100 / slidesPerView)}%)`;
+        }
 
         // Update dots
         // Re-query dots in case we rebuilt them (we didn't here, but good practice)
@@ -190,48 +219,24 @@ if (sliderTrack && slides.length > 0) {
     updateSlides();
 }
 
-// Language Auto-detection and Redirection
+// Language Detection and Redirection
 function checkLanguage() {
     const userLang = localStorage.getItem('user_lang');
-    const browserLang = navigator.language || navigator.userLanguage;
+    // Only auto-redirect if user has explicitly saved a language preference
+    if (!userLang) return;
+
     const currentPath = window.location.pathname;
     const baseUrl = import.meta.env.BASE_URL; // e.g., '/marketing/' or '/'
-
-    // Determine preferred language
-    let preferredLang = userLang;
-    if (!preferredLang) {
-        preferredLang = browserLang.startsWith('pl') ? 'pl' : 'en';
-    }
-
-    // Determine current language based on path
-    // We check if the path includes the English subdirectory relative to base
-    // Construct the expected English prefix: baseUrl + 'en/'
     const enPrefix = baseUrl + 'en/';
     const isEnglishPath = currentPath.includes(enPrefix);
     const isPolishPath = !isEnglishPath;
 
     // Redirect logic
-    if (preferredLang === 'pl' && isEnglishPath) {
-        // Redirect to Polish (Root)
-        // Replace '/marketing/en/' with '/marketing/'
+    if (userLang === 'pl' && isEnglishPath) {
         let newPath = currentPath.replace(enPrefix, baseUrl);
         window.location.href = newPath;
-    } else if (preferredLang === 'en' && isPolishPath) {
-        // Redirect to English (/en/)
-        // Replace '/marketing/' with '/marketing/en/'
-        // We need to be careful not to replace multiple occurrences if any, 
-        // but usually base is at start.
-        // Also handle if currentPath is exactly baseUrl
-
-        let newPath;
-        if (currentPath === baseUrl) {
-            newPath = enPrefix;
-        } else {
-            // If currentPath is /marketing/index.html, we want /marketing/en/index.html
-            // We can replace the first occurrence of baseUrl with enPrefix
-            newPath = currentPath.replace(baseUrl, enPrefix);
-        }
-
+    } else if (userLang === 'en' && isPolishPath) {
+        let newPath = (currentPath === baseUrl) ? enPrefix : currentPath.replace(baseUrl, enPrefix);
         window.location.href = newPath;
     }
 }
