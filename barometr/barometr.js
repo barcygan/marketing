@@ -172,16 +172,16 @@ const CONFIG = {
         coverAlt: "Okładka e-booka Partner czy dzieci?"
       },
       crisisBundle: {
-        title: "Pakiet 3 E-Booków: Kompletna Więź",
-        subtitle: "Trzy skondensowane przewodniki relacyjne (Esencja + Pytania dla Pary)",
-        desc: "Kompleksowy pakiet poradników, który krok po kroku pomaga popracować nad rozmową, bliskością w sypialni i przestrzenią dla Waszej dwójki.",
-        badge: "Kompletny pakiet • Rabat 25%",
-        price: "44,99 PLN",
-        discountPrice: "33,74 PLN",
-        cta: "Kup Pakiet 3 E-Booków ze Zniżką →",
-        link: "https://cart.easy.tools/checkout/kcygan/kompletna-wiez-wszystkie-3-e-booki-o-relacji-partnerskiej?promo=BAROMETR",
+        title: "Pakiet Wszystkich 6 E-Booków: Kompletna Biblioteka",
+        subtitle: "Wszystkie poradniki relacyjne i rodzicielskie (Bestseller + 5 Przewodników z Pytaniami)",
+        desc: "Kompleksowa biblioteka wiedzy relacyjnej: od wyjścia z rutyny i trudnych rozmów, przez bliskość w sypialni, po hierarchię w rodzinie i świadome rodzicielstwo.",
+        badge: "Wszystkie 6 e-booków • Rabat z Barometru",
+        price: "69,99 PLN",
+        discountPrice: "52,49 PLN",
+        cta: "Kup Pakiet 6 E-Booków z Kodem (-25%) →",
+        link: "https://cart.easy.tools/checkout/kcygan/kompletna-wiez-wszystkie-6-e-booki-o-relacji-partnerskiej-i-rodzicielstwie?promo=BAROMETR",
         coverImage: "../ebook/okladka-partner-czy-dzieci.jpg",
-        coverAlt: "Okładki wszystkich 3 e-booków"
+        coverAlt: "Pakiet wszystkich 6 e-booków"
       }
     }
   },
@@ -355,16 +355,16 @@ const CONFIG = {
         coverAlt: "Partner or Children e-book cover"
       },
       crisisBundle: {
-        title: "Bundle: Complete Relationship Bond (3 E-Books)",
-        subtitle: "All 3 condensed guides (Essence + Reflection Questions)",
-        desc: "A complete toolkit to guide you through repairing communication, reviving physical closeness, and restoring balance in your daily life.",
-        badge: "Complete Bundle • 25% off",
-        price: "44,99 PLN",
-        discountPrice: "33,74 PLN",
-        cta: "Buy 3 E-Book Bundle with 25% Discount →",
-        link: "https://cart.easy.tools/checkout/kcygan/kompletna-wiez-wszystkie-3-e-booki-o-relacji-partnerskiej?promo=BAROMETR",
+        title: "Complete Library: All 6 E-Books Bundle",
+        subtitle: "All relationship and family guides (Bestseller + 5 Guides with Reflection Questions)",
+        desc: "A complete toolkit covering daily connection, tough conversations, renewed intimacy, family balance, and conscious parenting.",
+        badge: "All 6 Guides • Barometer Discount",
+        price: "69,99 PLN",
+        discountPrice: "52,49 PLN",
+        cta: "Buy All 6 E-Books with 25% Discount →",
+        link: "https://cart.easy.tools/checkout/kcygan/kompletna-wiez-wszystkie-6-e-booki-o-relacji-partnerskiej-i-rodzicielstwie?promo=BAROMETR",
         coverImage: "../ebook/okladka-partner-czy-dzieci.jpg",
-        coverAlt: "All 3 e-book covers"
+        coverAlt: "All 6 e-book covers"
       }
     }
   }
