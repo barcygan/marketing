@@ -1,0 +1,233 @@
+/* ==========================================================================
+   Klaro Consent Manager Styles (Dark Overlay Modal with Site Blur & Custom Buttons)
+   ========================================================================== */
+
+/* 1. Rozmycie tła strony za oknem modalnym */
+.klaro .cookie-modal-backdrop,
+.klaro .cookie-notice-backdrop {
+  background: rgba(18, 18, 18, 0.6) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 999998 !important;
+}
+
+/* 2. Główny kontener okienka modalnego (Ciemny grafit jak na screenie) */
+.klaro .cookie-modal,
+.klaro .cookie-notice {
+  background-color: #383838 !important;
+  color: #ffffff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  font-family: inherit !important;
+  max-width: 620px !important;
+  width: 92% !important;
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0 !important;
+  padding: 24px 28px !important;
+  z-index: 999999 !important;
+  box-sizing: border-box !important;
+}
+
+/* 3. Nagłówek i treść */
+.klaro .cookie-modal h2,
+.klaro .cookie-notice h2,
+.klaro .cm-title {
+  color: #ffffff !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  margin: 0 0 12px 0 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.klaro .cookie-modal p,
+.klaro .cookie-notice p,
+.klaro .cm-description {
+  color: #c4c4c4 !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  margin: 0 0 16px 0 !important;
+}
+
+/* 4. Lista usług / przełącznik analityki */
+.klaro .cm-body,
+.klaro .cm-services,
+.klaro .cm-purposes {
+  border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  padding: 16px 0 !important;
+  margin: 16px 0 !important;
+}
+
+.klaro .cm-purpose .cm-name,
+.klaro .cm-service .cm-name {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+}
+
+.klaro .cm-purpose p,
+.klaro .cm-service p {
+  color: #9e9e9e !important;
+  font-size: 13px !important;
+  margin-top: 4px !important;
+}
+
+.klaro .cm-purpose a,
+.klaro .cm-service a {
+  color: #4ade80 !important; /* Zielonkawy link jak na screenie */
+  text-decoration: none !important;
+  font-size: 13px !important;
+}
+
+/* Przełącznik (Switch) */
+.klaro .cm-switch .slider {
+  background-color: #e2e8f0 !important;
+  border-radius: 24px !important;
+}
+
+.klaro .cm-switch input:checked + .slider {
+  background-color: #e59395 !important;
+}
+
+/* 5. Pasek przycisków na dole */
+.klaro .cm-footer,
+.klaro .cm-modal-footer,
+.klaro .cn-ok,
+.klaro .cn-buttons {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin-top: 18px !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+/* Wszystkie przyciski */
+.klaro .cm-btn {
+  font-family: inherit !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  padding: 12px 20px !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  text-align: center !important;
+  outline: none !important;
+  border: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 44px !important;
+  box-sizing: border-box !important;
+}
+
+/* Przycisk 1: "Odrzuć opcjonalne" (Biały prostokąt z zaokrąglonymi rogami) */
+.klaro .cm-btn-decline,
+.klaro .cm-btn-danger {
+  background-color: #f3f4f6 !important;
+  color: #1f2937 !important;
+  flex: 1 1 auto !important;
+}
+
+.klaro .cm-btn-decline:hover,
+.klaro .cm-btn-danger:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Przycisk 2: "Zaakceptuj wybrane" (Środkowy link/tekst) */
+.klaro .cm-btn-save {
+  background: transparent !important;
+  color: #9e9e9e !important;
+  text-decoration: underline !important;
+  padding: 8px 12px !important;
+  flex: 0 1 auto !important;
+}
+
+.klaro .cm-btn-save:hover {
+  color: #ffffff !important;
+}
+
+/* Przycisk 3: "Zaakceptuj wszystkie" (Czysty różowy/łososiowy akcent) */
+.klaro .cm-btn-success,
+.klaro .cm-btn-accept-all,
+.klaro .cm-btn-accept {
+  background-color: #e59395 !important;
+  color: #ffffff !important;
+  flex: 1 1 auto !important;
+  box-shadow: 0 4px 12px rgba(229, 147, 149, 0.3) !important;
+}
+
+.klaro .cm-btn-success:hover,
+.klaro .cm-btn-accept-all:hover,
+.klaro .cm-btn-accept:hover {
+  background-color: #d17f81 !important;
+  box-shadow: 0 6px 16px rgba(229, 147, 149, 0.45) !important;
+}
+
+/* "Dostosuj zgody" (jeśli występuje w notice) */
+.klaro .cm-btn-learn-more,
+.klaro .cm-btn-info {
+  background: transparent !important;
+  color: #9e9e9e !important;
+  text-decoration: underline !important;
+  padding: 8px 12px !important;
+}
+
+/* Branding footer */
+.klaro .cm-powered-by {
+  font-size: 11px !important;
+  color: #71717a !important;
+  width: 100% !important;
+  text-align: right !important;
+  margin-top: 10px !important;
+}
+
+.klaro .cm-powered-by a {
+  color: #71717a !important;
+  text-decoration: none !important;
+}
+
+/* 6. Responsywność mobilna */
+@media (max-width: 640px) {
+  .klaro .cookie-modal,
+  .klaro .cookie-notice {
+    width: calc(100% - 24px) !important;
+    padding: 18px 18px !important;
+    border-radius: 12px !important;
+  }
+
+  .klaro .cookie-modal h2,
+  .klaro .cookie-notice h2,
+  .klaro .cm-title {
+    font-size: 20px !important;
+  }
+
+  .klaro .cm-footer,
+  .klaro .cm-modal-footer,
+  .klaro .cn-ok,
+  .klaro .cn-buttons {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+  }
+
+  .klaro .cm-btn {
+    width: 100% !important;
+  }
+
+  .klaro .cm-btn-save,
+  .klaro .cm-btn-learn-more {
+    order: 3 !important;
+    text-align: center !important;
+  }
+}

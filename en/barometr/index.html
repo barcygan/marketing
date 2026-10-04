@@ -3,41 +3,59 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- Google Consent Mode v2 -->
+    <!-- Google Consent Mode v2 — must be first, before GA4 loads -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+
+      // 1. Set safe defaults (all denied)
       gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+        'ad_storage':          'denied',
+        'ad_user_data':        'denied',
+        'ad_personalization':  'denied',
+        'analytics_storage':   'denied',
+        'wait_for_update':     500
       });
+
+      // 2. Restore previously saved consent SYNCHRONOUSLY before GA4 loads
+      (function() {
+        try {
+          var saved = JSON.parse(localStorage.getItem('kcygan_consent'));
+          if (saved !== null) {
+            gtag('consent', 'update', {
+              'analytics_storage':  saved.analytics ? 'granted' : 'denied',
+              'ad_storage':         'denied',
+              'ad_user_data':       'denied',
+              'ad_personalization': 'denied'
+            });
+          }
+        } catch(e) {}
+      })();
     </script>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="248184b3-7db5-4faf-bdd0-2deacecb88fd" data-blockingmode="auto" type="text/javascript"></script>
-    
-    <!-- Google tag (gtag.js) -->
+    <script defer src="/consent.js"></script>
+
+    <!-- Google tag (gtag.js) — loads after consent defaults are set -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TEXVN0KVB9"></script>
     <script>
       gtag('js', new Date());
       gtag('config', 'G-TEXVN0KVB9');
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marriage Barometer - Online Relationship Test | Katarzyna Cygan</title>
-    <meta name="description" content="Check the condition of your relationship with the Marriage Barometer. A free, 100% anonymous relationship test evaluating communication, intimacy, and trust in your marriage.">
-    <meta name="keywords" content="marriage barometer, relationship test, online couples therapy, sexologist cabinet, relationship crisis test, marriage communication">
+    <title>Relationship Barometer - Free Online Test for Couples | Katarzyna Cygan</title>
+    <meta name="description" content="Take the free Relationship Barometer. An anonymous, quick test for couples evaluating 4 key pillars of connection: communication, intimacy, trust, and shared vision.">
+    <meta name="keywords" content="relationship barometer, relationship test, couple quiz online, relationship crisis check, communication in relationship, intimacy test for couples">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kcygan.eu/en/barometr/">
-    <meta property="og:title" content="Marriage Barometer - Diagnose Your Relationship | Katarzyna Cygan">
-    <meta property="og:description" content="Answer 12 questions and get an immediate assessment of your relationship pillars: communication, intimacy, and trust.">
+    <meta property="og:title" content="Relationship Barometer - Diagnose Your Relationship Closeness | Katarzyna Cygan">
+    <meta property="og:description" content="Answer 12 questions and get an immediate, professional assessment of your relationship pillars.">
     <meta property="og:image" content="https://kcygan.eu/assets/hero_relationship.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://kcygan.eu/en/barometr/">
-    <meta property="twitter:title" content="Marriage Barometer - Diagnose Your Relationship | Katarzyna Cygan">
+    <meta property="twitter:title" content="Relationship Barometer - Diagnose Your Relationship Closeness">
     <meta property="twitter:description" content="Answer 12 questions and get an immediate assessment of your relationship pillars.">
     <meta property="twitter:image" content="https://kcygan.eu/assets/hero_relationship.png">
 
@@ -45,19 +63,27 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Marriage Barometer - Relationship Test",
-      "description": "An interactive test evaluating relationship health across 4 pillars: communication, intimacy & sex, trust, and shared vision.",
+      "@type": "Quiz",
+      "name": "Relationship Barometer - Evidence-Based Couples Screening Tool",
+      "description": "An interactive, evidence-based relationship screening tool assessing 4 key pillars of connection based on Couples Satisfaction Index (CSI, Funk & Rogge, 2007) and Gottman marital stability research.",
       "url": "https://kcygan.eu/en/barometr/",
       "inLanguage": "en",
+      "citation": [
+        "https://pubmed.ncbi.nlm.nih.gov/18179329/",
+        "https://pubmed.ncbi.nlm.nih.gov/10407716/"
+      ],
       "about": {
         "@type": "Thing",
-        "name": "Couples therapy, sexology, relationship communication"
+        "name": "Relationship communication, couples intimacy, relationship crisis, online couples counseling"
+      },
+      "educationalAlignment": {
+        "@type": "AlignmentObject",
+        "educationalFramework": "Relationship coaching & couples therapy"
       },
       "author": {
         "@type": "Person",
         "name": "Katarzyna Cygan",
-        "jobTitle": "Sexologist & Couples Therapist"
+        "jobTitle": "Intimacy Coach & Couples Therapist"
       }
     }
     </script>
@@ -68,10 +94,14 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     
     <!-- Stylesheets -->
-  <script type="module" crossorigin src="/assets/main-hU18u7hV.js"></script>
-  <script type="module" crossorigin src="/assets/barometr-B8L-t205.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-D783mOlI.css">
-  <link rel="stylesheet" crossorigin href="/assets/barometr-DxusZWyW.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+  <script type="module" crossorigin src="/assets/main-cOpctQbk.js"></script>
+  <script type="module" crossorigin src="/assets/barometr-DUISXmUG.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-CrQPwUOl.css">
+  <link rel="stylesheet" crossorigin href="/assets/barometr-dDLqhmtS.css">
 </head>
 
 <body>
@@ -82,9 +112,8 @@
                 <a href="../" class="logo">KC.</a>
                 <div class="nav-links">
                     <a href="../">Home & Therapy</a>
-                    <a href="#" class="active" style="color: var(--color-primary);">Marriage Barometer</a>
-                    <a href="../marketing">Marketing</a>
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="#" class="active" style="color: var(--color-primary);">Relationship Barometer</a>
+                                        <a href="#contact" class="btn btn-primary">Get in Touch</a>
                     <div class="lang-switch">
                         <a href="#" class="lang-link active">EN</a>
                         <span class="lang-separator">|</span>
@@ -104,9 +133,13 @@
                 <div class="quiz-card">
                     <!-- Welcome Screen -->
                     <div id="screen-welcome" class="quiz-screen active">
-                        <h1 class="welcome-title">Marriage Barometer</h1>
+                        <div class="methodology-badge">
+                            <span class="badge-icon">🌿</span>
+                            <span>Based on Gottman Method &amp; Couples Psychology</span>
+                        </div>
+                        <h1 class="welcome-title">Relationship Barometer</h1>
                         <p class="welcome-description">
-                            Check the health of your relationship. Honestly answer 12 questions diagnosing key pillars of your bond: communication, intimacy, conflict resolution, trust, and shared values. The test is 100% anonymous and takes about 3 minutes.
+                            See where your relationship stands today. Answer 12 honest questions about communication, intimacy, trust, and couple life. Immediate results — 100% free and confidential.
                         </p>
                         <div class="welcome-meta">
                             <div class="welcome-meta-item">
@@ -122,7 +155,7 @@
                                 <strong>100% Anonymous</strong>
                             </div>
                         </div>
-                        <button id="btn-start" class="btn btn-primary btn-large btn-block">Start Barometer</button>
+                        <button id="btn-start" class="btn btn-primary btn-large btn-block">Start Relationship Barometer</button>
                     </div>
 
                     <!-- Quiz Questions Screen -->
@@ -160,12 +193,12 @@
                             <div id="result-status" class="result-status-badge">Loading status...</div>
                             <h3 id="result-feedback-title" class="result-feedback-title">Loading assessment...</h3>
                             <p id="result-feedback-text" class="result-feedback-text">
-                                Analyzing your answers, please wait a moment...
+                                Calculating results...
                             </p>
                             
                             <!-- Category Breakdown -->
                             <div class="scores-breakdown-container">
-                                <h3 class="breakdown-title">Relationship Pillars Analysis</h3>
+                                <h3 class="breakdown-title">Results Across 4 Relationship Areas</h3>
                                 <div id="scores-breakdown">
                                     <!-- Dynamic section progress bars -->
                                 </div>
@@ -182,13 +215,13 @@
                         </div>
 
                         <div class="result-actions">
-                            <a href="#contact" class="btn btn-primary btn-block" style="text-align: center;">Book a Relationship Consultation</a>
+                            <a href="#contact" class="btn btn-primary btn-block" style="text-align: center;">Book a Couples Consultation</a>
                             <div class="result-secondary-actions">
-                                <button id="btnPrint" class="btn-secondary-action" onclick="window.print()">
-                                    <span>🖨️</span> Save / Print Report (PDF)
+                                <button id="btn-print" class="btn-secondary-action">
+                                    <span>📄</span> Download or Print Summary (PDF)
                                 </button>
                                 <button id="btn-share" class="btn-secondary-action">
-                                    <span>✉️</span> Transfer score to form
+                                    <span>✉️</span> Include score in message below
                                 </button>
                             </div>
                         </div>
@@ -200,10 +233,10 @@
             <section id="contact" class="contact section" style="background: var(--color-bg); margin-top: 4rem;">
                 <div class="container">
                     <div class="contact-box" style="background: #fff; border-radius: 2rem; border: 1px solid var(--color-border);">
-                        <span style="color: var(--color-primary); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;">Discuss your score</span>
-                        <h2 class="section-title" style="margin-top: 0.5rem; margin-bottom: 1.5rem; font-size: clamp(2rem, 5vw, 3rem);">Start a Change in Your Relationship</h2>
+                        <span style="color: var(--color-primary); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;">Let's discuss your score</span>
+                        <h2 class="section-title" style="margin-top: 0.5rem; margin-bottom: 1.5rem; font-size: clamp(2rem, 5vw, 3rem);">Take a Step Toward Change</h2>
                         <p style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto 2rem auto;">
-                            Looking to deepen the diagnosis and receive professional guidance? Write to me to schedule an online session (couples therapy or a sexology consultation). Full confidentiality guaranteed.
+                            Want to discuss your score or work on your bond? Reach out to schedule an online session (couples therapy or intimacy coaching). Complete confidentiality guaranteed.
                         </p>
                         
                         <form class="contact-form" action="https://formspree.io/f/mblepkzy" method="POST" style="margin-top: 2rem;">
@@ -214,7 +247,7 @@
                                 <input type="email" name="email" placeholder="Your email address" required>
                             </div>
                             <div class="form-group">
-                                <textarea id="message" name="message" placeholder="How can I help you? You can also paste your Marriage Barometer score here..." rows="4" required></textarea>
+                                <textarea id="message" name="message" placeholder="How can I help you? You can also paste your Relationship Barometer score here..." rows="4" required></textarea>
                             </div>
                             <div class="form-group" style="display: flex; align-items: flex-start; gap: 0.75rem; text-align: left;">
                                 <input type="checkbox" id="gdpr-consent" name="gdpr-consent" required
