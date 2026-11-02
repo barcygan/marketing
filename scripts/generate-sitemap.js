@@ -24,7 +24,7 @@ function getHtmlFiles(dir, files = []) {
         continue;
       }
       getHtmlFiles(filePath, files);
-    } else if (file.endsWith('.html') && !file.endsWith('backup.html')) {
+    } else if (file.endsWith('.html') && !file.endsWith('backup.html') && file !== 'media-kit.html') {
       files.push(filePath);
     }
   }

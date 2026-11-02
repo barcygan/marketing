@@ -11,3 +11,6 @@ Sitemap: https://kcygan.eu/sitemap.xml
 Disallow: /node_modules/
 Disallow: /dist/
 Disallow: /.git/
+Disallow: /media-kit
+Disallow: /media-kit.html
+Disallow: /Katarzyna_Cygan_Media_Kit.xlsx

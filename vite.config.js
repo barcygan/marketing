@@ -35,6 +35,7 @@ export default defineConfig({
                 'en/barometr': path.resolve(__dirname, 'en/barometr/index.html'),
                 ebook: path.resolve(__dirname, 'public/ebook/ebook-dlaczego-po-latach-partner-zaczy-nas-odpychac.html'),
                 dziekujemyEbook: path.resolve(__dirname, 'dziekujemy-ebook.html'),
+                mediaKit: path.resolve(__dirname, 'media-kit.html'),
             },
         },
     },

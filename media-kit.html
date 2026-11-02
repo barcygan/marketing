@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Kit & Współpraca | Katarzyna Cygan (@_kasiacygan)</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="description"
+        content="Oficjalny Media Kit i propozycje współpracy z Katarzyną Cygan. Ponad 23,5 tys. zaangażowanej społeczności kobiet (88% kobiety w wieku 25–44 lata). Rolki, Stories, Collab, ManyChat.">
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="canonical" href="https://kcygan.eu/media-kit" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        .mk-hero {
+            padding: 8rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mk-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(229, 147, 149, 0.15);
+            border: 1px solid rgba(229, 147, 149, 0.4);
+            color: #C6686B;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.4rem 1rem;
+            border-radius: 99px;
+            margin-bottom: 1.5rem;
+        }
+
+        .mk-badge .pulse {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #E59395;
+            box-shadow: 0 0 0 3px rgba(229, 147, 149, 0.35);
+        }
+
+        .mk-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.3rem, 5vw, 4rem);
+            line-height: 1.18;
+            color: var(--color-text);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .mk-title em {
+            font-style: italic;
+            color: var(--color-primary);
+            font-weight: 400;
+        }
+
+        .mk-lead {
+            font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+            color: var(--color-text-muted);
+            line-height: 1.65;
+            max-width: 740px;
+            margin-bottom: 2.5rem;
+        }
+
+        .mk-kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .mk-kpi-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(54, 51, 46, 0.08);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .mk-kpi-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px rgba(30, 28, 24, 0.06);
+        }
+
+        .mk-kpi-val {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 3.5vw, 3rem);
+            font-weight: 700;
+            color: var(--color-text);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .mk-kpi-val.highlight {
+            color: #C6686B;
+        }
+
+        .mk-kpi-lbl {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--color-text-muted);
+            margin-bottom: 0.4rem;
+        }
+
+        .mk-kpi-sub {
+            font-size: 0.88rem;
+            color: var(--color-text-muted);
+            opacity: 0.85;
+        }
+
+        /* Pillars */
+        .mk-pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .mk-pillar-box {
+            background: #fff;
+            border-radius: 1.5rem;
+            border: 1px solid var(--color-border);
+            padding: 2.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .mk-pillar-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            line-height: 1;
+        }
+
+        .mk-pillar-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-text);
+        }
+
+        .mk-pillar-desc {
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+
+        /* Demographics visual */
+        .mk-demo-wrap {
+            background: #fff;
+            border-radius: 2rem;
+            border: 1px solid var(--color-border);
+            padding: 3rem;
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        @media (max-width: 900px) {
+            .mk-demo-wrap {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+                gap: 2rem;
+            }
+        }
+
+        .mk-bar-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .mk-bar-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .mk-bar-track {
+            height: 10px;
+            background: rgba(54, 51, 46, 0.08);
+            border-radius: 99px;
+            overflow: hidden;
+        }
+
+        .mk-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #E59395, #D17F81);
+            border-radius: 99px;
+        }
+
+        /* Case Studies */
+        .mk-case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.8rem;
+            margin-top: 2.5rem;
+        }
+
+        .mk-case-card {
+            background: #fff;
+            border-radius: 1.5rem;
+            border: 1px solid var(--color-border);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .mk-case-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-primary);
+            box-shadow: 0 16px 36px rgba(30, 28, 24, 0.08);
+        }
+
+        .mk-case-reach-box {
+            background: linear-gradient(135deg, rgba(229, 147, 149, 0.20) 0%, rgba(209, 127, 129, 0.08) 100%);
+            border: 1px solid rgba(229, 147, 149, 0.40);
+            border-radius: 1.1rem;
+            padding: 1rem 1.25rem;
+            margin: 1.2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mk-case-reach-val {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #B8585B;
+            line-height: 1;
+        }
+
+        .mk-case-reach-lbl {
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-text-muted);
+            margin-bottom: 0.25rem;
+        }
+
+        .mk-case-grid-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.75rem;
+            padding: 0.8rem 0;
+            border-top: 1px solid rgba(54, 51, 46, 0.08);
+            margin-bottom: 1rem;
+        }
+
+        .mk-case-stat-num {
+            font-weight: 800;
+            font-size: 1.05rem;
+            color: var(--color-text);
+            line-height: 1.2;
+        }
+
+        .mk-case-stat-lbl {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: var(--color-text-muted);
+            letter-spacing: 0.04em;
+            margin-top: 0.15rem;
+        }
+
+        /* Formaty współpracy (bez sztywnych cen) */
+        .mk-pkg-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .mk-pkg-card {
+            background: #fff;
+            border-radius: 1.5rem;
+            border: 1px solid var(--color-border);
+            padding: 2.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .mk-pkg-card.featured {
+            border: 2px solid var(--color-primary);
+            box-shadow: 0 12px 36px rgba(229, 147, 149, 0.18);
+        }
+
+        .mk-pkg-badge {
+            position: absolute;
+            top: -12px;
+            right: 24px;
+            background: var(--color-primary);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .mk-pkg-features {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0 2rem 0;
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+
+        .mk-pkg-features li {
+            margin-bottom: 0.6rem;
+            display: flex;
+            gap: 0.6rem;
+        }
+
+        .mk-pkg-features li::before {
+            content: "✓";
+            color: var(--color-primary);
+            font-weight: 800;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <nav class="nav container">
+                <a href="/" class="logo">KC.</a>
+                <div class="nav-links">
+                    <a href="#kpi">Liczby</a>
+                    <a href="#demografia">Odbiorczynie</a>
+                    <a href="#case-studies">Top Rolki</a>
+                    <a href="#formaty">Jak współpracujemy?</a>
+                    <a href="#kontakt" class="btn btn-primary">Napisz do mnie</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Hero (Perspektywa 1. osoby) -->
+            <section class="mk-hero">
+                <div class="container">
+                    <div class="mk-badge">
+                        <span class="pulse"></span>
+                        Katarzyna Cygan • Media Kit
+                    </div>
+                    <h1 class="mk-title">
+                        Tworzę przestrzeń dla kobiet, które szukają <em>bliskości, spokoju i zrozumienia</em>.
+                    </h1>
+                    <p class="mk-lead">
+                        Cześć, tu Kasia. Na co dzień pomagam parom i małżeństwom rozmawiać o trudnych emocjach, odbudowywać pożądanie i dbać o relację po latach i po narodzinach dzieci. Na moim profilu <strong>@_kasiacygan</strong> gromadzę zaangażowaną społeczność ponad <strong>23,5 tysiąca kobiet</strong>. Polecam wyłącznie produkty i usługi, z których sama korzystam lub w które szczerze wierzę.
+                    </p>
+
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                        <a href="#kontakt" class="btn btn-primary btn-large">Porozmawiajmy o współpracy</a>
+                        <a href="mailto:kasia@kcygan.eu?subject=Pro%C5%9Bba%20o%20szczeg%C3%B3%C5%82owy%20arkusz%20danych%20Media%20Kit" class="btn btn-outline btn-large">
+                            Poproś o pełny arkusz (XLSX) ✉
+                        </a>
+                        <a href="https://www.instagram.com/_kasiacygan/" target="_blank" rel="noopener" style="font-weight: 700; color: var(--color-primary); text-decoration: none; padding-left: 0.5rem;">
+                            Zobacz mój profil na Instagramie →
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KPI Grid -->
+            <section id="kpi" class="section" style="padding-top: 1rem; padding-bottom: 3rem;">
+                <div class="container">
+                    <div class="mk-kpi-grid">
+                        <div class="mk-kpi-card">
+                            <div class="mk-kpi-lbl">Moja Społeczność</div>
+                            <div class="mk-kpi-val">23 585</div>
+                            <div class="mk-kpi-sub">Organicznie rosnące grono odbiorczyń</div>
+                        </div>
+
+                        <div class="mk-kpi-card" style="border: 2px solid rgba(229,147,149,0.5);">
+                            <div class="mk-kpi-lbl">Wskaźnik Zaangażowania</div>
+                            <div class="mk-kpi-val highlight">4.51%</div>
+                            <div class="mk-kpi-sub">Wyjątkowo aktywna, reagująca społeczność</div>
+                        </div>
+
+                        <div class="mk-kpi-card">
+                            <div class="mk-kpi-lbl">Średnio Polubień / Rolka</div>
+                            <div class="mk-kpi-val">1 010</div>
+                            <div class="mk-kpi-sub">Łącznie ponad 80 000 polubień pod filmami</div>
+                        </div>
+
+                        <div class="mk-kpi-card">
+                            <div class="mk-kpi-lbl">Główna Grupa Odbiorczyń</div>
+                            <div class="mk-kpi-val">88.6%</div>
+                            <div class="mk-kpi-sub">Kobiety w wieku 25–44 lata (mamy, mężatki)</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dlaczego warto ze mną współpracować? -->
+            <section class="section" style="background: rgba(255, 255, 255, 0.45); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+                <div class="container">
+                    <span style="color: var(--color-primary); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.85rem; display: block; margin-bottom: 0.5rem;">Moje Podejście</span>
+                    <h2 class="section-title" style="text-align: left; font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 1rem;">
+                        Dlaczego moje polecenia cieszą się zaufaniem?
+                    </h2>
+                    <p style="color: var(--color-text-muted); max-width: 680px; font-size: 1.05rem;">
+                        Nie publikuję przypadkowych reklam. Zależy mi na tym, aby każde lokowanie było naturalną częścią mojego przekazu o relacjach, spokoju w domu i dbaniu o siebie.
+                    </p>
+
+                    <div class="mk-pillars">
+                        <div class="mk-pillar-box">
+                            <div class="mk-pillar-num">01</div>
+                            <h3 class="mk-pillar-title">Zaufanie i Autentyczność</h3>
+                            <p class="mk-pillar-desc">
+                                O intymności i trudnych momentach w związku mówię szczerze, bez tabu, ale z dużym taktem. Moje obserwatorki wiedzą, że polecam tylko to, co sama sprawdziłam i co ma dla nich sens.
+                            </p>
+                        </div>
+
+                        <div class="mk-pillar-box">
+                            <div class="mk-pillar-num">02</div>
+                            <h3 class="mk-pillar-title">Dopracowana Estetyka Wideo</h3>
+                            <p class="mk-pillar-desc">
+                                Moje materiały mają spokojny, kobiecy klimat i czytelną formę. Unikam krzykliwego montażu — Twoja marka pojawia się w uporządkowanym, estetycznym otoczeniu.
+                            </p>
+                        </div>
+
+                        <div class="mk-pillar-box">
+                            <div class="mk-pillar-num">03</div>
+                            <h3 class="mk-pillar-title">Treści, Które Zostają na Dłużej</h3>
+                            <p class="mk-pillar-desc">
+                                Dzielę się praktycznymi wskazówkami, dlatego kobiety masowo zapisują moje rolki w telefonach, wracają do nich po czasie i przesyłają je swoim partnerom czy przyjaciółkom.
+                            </p>
+                        </div>
+
+                        <div class="mk-pillar-box">
+                            <div class="mk-pillar-num">04</div>
+                            <h3 class="mk-pillar-title">Bezpośredni Kontakt (ManyChat)</h3>
+                            <p class="mk-pillar-desc">
+                                Jeśli przygotujesz dla moich odbiorczyń kod rabatowy lub dedykowaną stronę, mogę ustawić automatyczną wysyłkę w prywatnej wiadomości (DM) po wpisaniu słowa-klucza w komentarzu pod rolką.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Demografia Odbiorczyń -->
+            <section id="demografia" class="section">
+                <div class="container">
+                    <span style="color: var(--color-primary); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.85rem; display: block; margin-bottom: 0.5rem;">Moje Odbiorczynie</span>
+                    <h2 class="section-title" style="text-align: left; font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 0.5rem;">
+                        Kto ogląda i czyta moje treści?
+                    </h2>
+                    <p style="color: var(--color-text-muted); max-width: 680px; font-size: 1.05rem;">
+                        Moja społeczność to przede wszystkim dorosłe kobiety — w związkach, małżeństwach, często młode mamy, które dbają o swój dom, zdrowie, rozwój i relację z partnerem.
+                    </p>
+
+                    <div class="mk-demo-wrap">
+                        <!-- Lewa kolumna: Wiek -->
+                        <div>
+                            <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; font-weight: 700;">Przedziały wiekowe (Kobiety: 88.6%)</h3>
+                            
+                            <div class="mk-bar-item">
+                                <div class="mk-bar-labels">
+                                    <span>25 – 34 lata</span>
+                                    <span>53.4%</span>
+                                </div>
+                                <div class="mk-bar-track">
+                                    <div class="mk-bar-fill" style="width: 53.4%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="mk-bar-item">
+                                <div class="mk-bar-labels">
+                                    <span>35 – 44 lata</span>
+                                    <span>33.8%</span>
+                                </div>
+                                <div class="mk-bar-track">
+                                    <div class="mk-bar-fill" style="width: 33.8%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="mk-bar-item">
+                                <div class="mk-bar-labels">
+                                    <span>45 – 54 lata</span>
+                                    <span>7.2%</span>
+                                </div>
+                                <div class="mk-bar-track">
+                                    <div class="mk-bar-fill" style="width: 7.2%; opacity: 0.7;"></div>
+                                </div>
+                            </div>
+
+                            <div class="mk-bar-item">
+                                <div class="mk-bar-labels">
+                                    <span>18 – 24 lata</span>
+                                    <span>3.8%</span>
+                                </div>
+                                <div class="mk-bar-track">
+                                    <div class="mk-bar-fill" style="width: 3.8%; opacity: 0.5;"></div>
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 2rem; padding: 1.2rem; background: var(--color-bg); border-radius: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+                                💡 <strong>87.2% mojej społeczności</strong> to kobiety w przedziale 25–44 lata — samodzielne finansowo, podejmujące codzienne decyzje zakupowe dla siebie i swojej rodziny.
+                            </div>
+                        </div>
+
+                        <!-- Prawa kolumna: Miasta & Zainteresowania -->
+                        <div>
+                            <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; font-weight: 700;">Główne Miasta Odbiorczyń</h3>
+
+                            <div style="display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.95rem;">
+                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(54,51,46,0.15); padding-bottom: 0.4rem;">
+                                    <span>Warszawa i okolice</span>
+                                    <strong>19.8%</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(54,51,46,0.15); padding-bottom: 0.4rem;">
+                                    <span>Kraków i Małopolska</span>
+                                    <strong>11.4%</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(54,51,46,0.15); padding-bottom: 0.4rem;">
+                                    <span>Wrocław i Dolny Śląsk</span>
+                                    <strong>9.6%</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(54,51,46,0.15); padding-bottom: 0.4rem;">
+                                    <span>Poznań i Wielkopolska</span>
+                                    <strong>7.6%</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(54,51,46,0.15); padding-bottom: 0.4rem;">
+                                    <span>Trójmiasto (Gdańsk, Sopot, Gdynia)</span>
+                                    <strong>7.2%</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(54,51,46,0.15); padding-bottom: 0.4rem;">
+                                    <span>Śląsk (Katowice i aglomeracja)</span>
+                                    <strong>6.9%</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(54,51,46,0.15); padding-bottom: 0.4rem;">
+                                    <span>Polonia UK (Londyn i okolice)</span>
+                                    <strong>4.6%</strong>
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                <span style="background: rgba(54,51,46,0.06); padding: 0.35rem 0.8rem; border-radius: 99px; font-size: 0.8rem; font-weight: 600;">#relacje</span>
+                                <span style="background: rgba(54,51,46,0.06); padding: 0.35rem 0.8rem; border-radius: 99px; font-size: 0.8rem; font-weight: 600;">#rodzicielstwo</span>
+                                <span style="background: rgba(54,51,46,0.06); padding: 0.35rem 0.8rem; border-radius: 99px; font-size: 0.8rem; font-weight: 600;">#bliskość</span>
+                                <span style="background: rgba(54,51,46,0.06); padding: 0.35rem 0.8rem; border-radius: 99px; font-size: 0.8rem; font-weight: 600;">#dbanieosiebie</span>
+                                <span style="background: rgba(54,51,46,0.06); padding: 0.35rem 0.8rem; border-radius: 99px; font-size: 0.8rem; font-weight: 600;">#dom</span>
+                                <span style="background: rgba(54,51,46,0.06); padding: 0.35rem 0.8rem; border-radius: 99px; font-size: 0.8rem; font-weight: 600;">#książki</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dodatkowy panel: Kraje, Godziny Aktywności i Psychografia z Barometru -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem; margin-top: 2rem;">
+                        <div style="background: #fff; border-radius: 1.5rem; border: 1px solid var(--color-border); padding: 2rem;">
+                            <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-primary); margin-bottom: 0.5rem;">Zasięg Geograficzny</div>
+                            <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.2rem;">Kraje Odbiorczyń</h4>
+                            <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.95rem;">
+                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(54,51,46,0.12); padding-bottom: 0.35rem;">
+                                    <span>🇵🇱 Polska</span>
+                                    <strong>89.2%</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(54,51,46,0.12); padding-bottom: 0.35rem;">
+                                    <span>🇬🇧 Wielka Brytania (Polonia)</span>
+                                    <strong>4.6%</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(54,51,46,0.12); padding-bottom: 0.35rem;">
+                                    <span>🇩🇪 Niemcy</span>
+                                    <strong>2.1%</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(54,51,46,0.12); padding-bottom: 0.35rem;">
+                                    <span>🇪🇺 Inne kraje UE (IE, NL, NO)</span>
+                                    <strong>4.1%</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="background: #fff; border-radius: 1.5rem; border: 1px solid var(--color-border); padding: 2rem;">
+                            <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-primary); margin-bottom: 0.5rem;">Nawyki & Doba</div>
+                            <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.8rem;">Szczyt Aktywności</h4>
+                            <p style="font-size: 0.92rem; color: var(--color-text-muted); line-height: 1.55; margin-bottom: 1rem;">
+                                Moje odbiorczynie są najbardziej aktywne wieczorami w godzinach <strong>20:00 – 23:00</strong> oraz w <strong>niedzielne wieczory</strong>.
+                            </p>
+                            <div style="background: var(--color-bg); padding: 1rem; border-radius: 1rem; font-size: 0.88rem; color: var(--color-text);">
+                                🌙 To czas wyciszenia domu, gdy dzieci już śpią, a kobiety mają moment na rozwój osobisty i refleksję o związku.
+                            </div>
+                        </div>
+
+                        <div style="background: #fff; border-radius: 1.5rem; border: 1px solid var(--color-border); padding: 2rem;">
+                            <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-primary); margin-bottom: 0.5rem;">Dane z Barometru Relacji</div>
+                            <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.8rem;">Sytuacja Życiowa</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.92rem; color: var(--color-text-muted); line-height: 1.6;">
+                                <li style="margin-bottom: 0.5rem;">💍 <strong>82%</strong> jest w relacji lub małżeństwie o stażu <strong>5–15 lat</strong></li>
+                                <li style="margin-bottom: 0.5rem;">👶 <strong>76%</strong> wychowuje małe dzieci (w wieku 1–7 lat)</li>
+                                <li>💼 Kobiety decyzyjne zakupowo, dbające o dom, zdrowie i bliskość</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Moje publikacje i zasięgi -->
+            <section id="case-studies" class="section" style="background: rgba(255, 255, 255, 0.45); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+                <div class="container">
+                    <span style="color: var(--color-primary); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.85rem; display: block; margin-bottom: 0.5rem;">Przykłady Publikacji</span>
+                    <h2 class="section-title" style="text-align: left; font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 0.5rem;">
+                        Moje Najpopularniejsze Rolki & Zasięgi
+                    </h2>
+                    <p style="color: var(--color-text-muted); max-width: 680px; font-size: 1.05rem;">
+                        Wszystkie poniższe materiały wygenerowały swoje wyniki w <strong>100% organicznie</strong> — bez budżetów reklamowych.
+                    </p>
+
+                    <!-- Baner Zasięgowy -->
+                    <div style="background: linear-gradient(135deg, #1E1C18 0%, #2D2825 100%); color: #fff; border-radius: 1.75rem; padding: clamp(1.8rem, 3vw, 2.8rem); margin: 2rem 0 2.5rem 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; box-shadow: 0 16px 40px rgba(0,0,0,0.12);">
+                        <div style="max-width: 580px;">
+                            <span style="color: #E59395; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; display: inline-block; margin-bottom: 0.4rem;">Organiczne Zasięgi</span>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 2.8vw, 2.3rem); color: #fff; line-height: 1.25; margin-bottom: 0.75rem;">
+                                Ponad 1 500 000 wyświetleń w kluczowych publikacjach
+                            </h3>
+                            <p style="color: rgba(255,255,255,0.78); font-size: 0.98rem; line-height: 1.55;">
+                                Moje rolki docierają daleko poza grono stałych obserwatorek — algorytm Instagrama promuje je organicznie, dzięki czemu pojedyncze publikacje osiągają od <strong>35 000 do ponad 380 000 unikalnych kont</strong>.
+                            </p>
+                        </div>
+                        <div style="display: flex; gap: clamp(1.5rem, 3vw, 3rem); flex-wrap: wrap;">
+                            <div style="border-left: 2px solid rgba(229,147,149,0.4); padding-left: 1.5rem;">
+                                <div style="font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 3.5vw, 3rem); font-weight: 700; color: #E59395; line-height: 1;">380 000+</div>
+                                <div style="font-size: 0.78rem; text-transform: uppercase; color: rgba(255,255,255,0.65); letter-spacing: 0.08em; font-weight: 700; margin-top: 0.4rem;">Rekord Zasięgu (1 Rolka)</div>
+                            </div>
+                            <div style="border-left: 2px solid rgba(255,255,255,0.2); padding-left: 1.5rem;">
+                                <div style="font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 3.5vw, 3rem); font-weight: 700; color: #fff; line-height: 1;">74.2%</div>
+                                <div style="font-size: 0.78rem; text-transform: uppercase; color: rgba(255,255,255,0.65); letter-spacing: 0.08em; font-weight: 700; margin-top: 0.4rem;">Nowe Osoby (Non-Followers)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Siatka 6 Publikacji -->
+                    <div class="mk-case-grid">
+                        <!-- Rolka 1 -->
+                        <a href="https://www.instagram.com/reel/DdtZwPIuNEf/" target="_blank" rel="noopener" class="mk-case-card">
+                            <div>
+                                <span style="font-size: 0.78rem; color: #C6686B; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em;">Budowa & Dom</span>
+                                <h3 style="font-size: 1.15rem; margin-top: 0.5rem; line-height: 1.35; font-weight: 700;">
+                                    Dom 120 m² za 400 tysięcy złotych systemem gospodarczym...
+                                </h3>
+                            </div>
+                            <div>
+                                <div class="mk-case-reach-box">
+                                    <div>
+                                        <div class="mk-case-reach-lbl">Organiczny Zasięg</div>
+                                        <div class="mk-case-reach-val">380 000+</div>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <div class="mk-case-reach-lbl">Wyświetlenia</div>
+                                        <div style="font-size: 1.2rem; font-weight: 800; color: var(--color-text);">540 000+</div>
+                                    </div>
+                                </div>
+                                <div class="mk-case-grid-stats">
+                                    <div>
+                                        <div class="mk-case-stat-num">16 488</div>
+                                        <div class="mk-case-stat-lbl">Polubień</div>
+                                    </div>
+                                    <div>
+                                        <div class="mk-case-stat-num">1 056</div>
+                                        <div class="mk-case-stat-lbl">Komentarzy</div>
+                                    </div>
+                                    <div>
+                                        <div class="mk-case-stat-num">6 200+</div>
+                                        <div class="mk-case-stat-lbl">Zapisów</div>
+                                    </div>
+                                </div>
+                                <span style="color: var(--color-primary); font-weight: 700; font-size: 0.85rem;">Obejrzyj na Instagramie →</span>
+                            </div>
+                        </a>
+
+                        <!-- Rolka 2 -->
+                        <a href="https://www.instagram.com/reel/DUk-BhejIzL/" target="_blank" rel="noopener" class="mk-case-card">
+                            <div>
+                                <span style="font-size: 0.78rem; color: #C6686B; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em;">Rodzicielstwo & Dzieci</span>
+                                <h3 style="font-size: 1.15rem; margin-top: 0.5rem; line-height: 1.35; font-weight: 700;">
+                                    Jak ogromny wpływ ma telefon od najmłodszych lat na rozwój dziecka...
+                                </h3>
+                            </div>
+                            <div>
+                                <div class="mk-case-reach-box">
+                                    <div>
+                                        <div class="mk-case-reach-lbl">Organiczny Zasięg</div>
+                                        <div class="mk-case-reach-val">230 000+</div>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <div class="mk-case-reach-lbl">Wyświetlenia</div>
+                                        <div style="font-size: 1.2rem; font-weight: 800; color: var(--color-text);">310 000+</div>
+                                    </div>
+                                </div>
+                                <div class="mk-case-grid-stats">
+                                    <div>
+                                        <div class="mk-case-stat-num">9 813</div>
+                                        <div class="mk-case-stat-lbl">Polubień</div>
+                                    </div>
+                                    <div>
+                                        <div class="mk-case-stat-num">260</div>
+                                        <div class="mk-case-stat-lbl">Komentarzy</div>
+                                    </div>
+                                    <div>
+                                        <div class="mk-case-stat-num">4 100+</div>
+                                        <div class="mk-case-stat-lbl">Zapisów</div>
+                                    </div>
+                                </div>
+                                <span style="color: var(--color-primary); font-weight: 700; font-size: 0.85rem;">Obejrzyj na Instagramie →</span>
+                            </div>
+                        </a>
+
+                        <!-- Rolka 3 -->
+                        <a href="https://www.instagram.com/reel/DaD4CGIO85u/" target="_blank" rel="noopener" class="mk-case-card">
+                            <div>
+                                <span style="font-size: 0.78rem; color: #C6686B; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em;">Relacje & Bliskość</span>
+                                <h3 style="font-size: 1.15rem; margin-top: 0.5rem; line-height: 1.35; font-weight: 700;">
+                                    Czy znacie zasadę 72 godzin w relacji? Czasem to nie kłótnie niszczą związek...
+                                </h3>
+                            </div>
+                            <div>
+                                <div class="mk-case-reach-box">
+                                    <div>
+                                        <div class="mk-case-reach-lbl">Organiczny Zasięg</div>
+                                        <div class="mk-case-reach-val">195 000+</div>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <div class="mk-case-reach-lbl">Wyświetlenia</div>
+                                        <div style="font-size: 1.2rem; font-weight: 800; color: var(--color-text);">260 000+</div>
+                                    </div>
+                                </div>
+                                <div class="mk-case-grid-stats">
+                                    <div>
+                                        <div class="mk-case-stat-num">8 505</div>
+                                        <div class="mk-case-stat-lbl">Polubień</div>
+                                    </div>
+                                    <div>
+                                        <div class="mk-case-stat-num">450</div>
+                                        <div class="mk-case-stat-lbl">Komentarzy</div>
+                                    </div>
+                                    <div>
+                                        <div class="mk-case-stat-num">3 800+</div>
+                                        <div class="mk-case-stat-lbl">Zapisów</div>
+                                    </div>
+                                </div>
+                                <span style="color: var(--color-primary); font-weight: 700; font-size: 0.85rem;">Obejrzyj na Instagramie →</span>
+                            </div>
+                        </a>
+
+                        <!-- Rolka 4 -->
+                        <a href="https://www.instagram.com/reel/DZ-ubEvuWrw/" target="_blank" rel="noopener" class="mk-case-card">
+                            <div>
+                                <span style="font-size: 0.78rem; color: #C6686B; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em;">Podróże & Czas z Rodziną</span>
+                                <h3 style="font-size: 1.15rem; margin-top: 0.5rem; line-height: 1.35; font-weight: 700;">
+                                    Tydzień w Toskanii z dwójką dzieci własnym samochodem i apartamentem...
+                                </h3>
+                            </div>
+                            <div>
+                                <div class="mk-case-reach-box">
+                                    <div>
+                                        <div class="mk-case-reach-lbl">Organiczny Zasięg</div>
+                                        <div class="mk-case-reach-val">110 000+</div>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <div class="mk-case-reach-lbl">Wyświetlenia</div>
+                                        <div style="font-size: 1.2rem; font-weight: 800; color: var(--color-text);">155 000+</div>
+                                    </div>
+                                </div>
+                                <div class="mk-case-grid-stats">
+                                    <div>
+                                        <div class="mk-case-stat-num">4 511</div>
+                                        <div class="mk-case-stat-lbl">Polubień</div>
+                                    </div>
+                                    <div>
+                                        <div class="mk-case-stat-num">545</div>
+                                        <div class="mk-case-stat-lbl">Komentarzy</div>
+                                    </div>
+                                    <div>
+                                        <div class="mk-case-stat-num">2 400+</div>
+                                        <div class="mk-case-stat-lbl">Zapisów</div>
+                                    </div>
+                                </div>
+                                <span style="color: var(--color-primary); font-weight: 700; font-size: 0.85rem;">Obejrzyj na Instagramie →</span>
+                            </div>
+                        </a>
+
+                        <!-- Rolka 5 -->
+                        <a href="https://www.instagram.com/reel/DbaJgX1M73H/" target="_blank" rel="noopener" class="mk-case-card">
+                            <div>
+                                <span style="font-size: 0.78rem; color: #C6686B; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em;">Wychowanie & Granice</span>
+                                <h3 style="font-size: 1.15rem; margin-top: 0.5rem; line-height: 1.35; font-weight: 700;">
+                                    Jak wychować samodzielne dziecko w świecie, w którym może mieć niemal wszystko...
+                                </h3>
+                            </div>
+                            <div>
+                                <div class="mk-case-reach-box">
+                                    <div>
+                                        <div class="mk-case-reach-lbl">Organiczny Zasięg</div>
+                                        <div class="mk-case-reach-val">85 000+</div>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <div class="mk-case-reach-lbl">Wyświetlenia</div>
+                                        <div style="font-size: 1.2rem; font-weight: 800; color: var(--color-text);">120 000+</div>
+                                    </div>
+                                </div>
+                                <div class="mk-case-grid-stats">
+                                    <div>
+                                        <div class="mk-case-stat-num">3 464</div>
+                                        <div class="mk-case-stat-lbl">Polubień</div>
+                                    </div>
+                                    <div>
+                                        <div class="mk-case-stat-num">89</div>
+                                        <div class="mk-case-stat-lbl">Komentarzy</div>
+                                    </div>
+                                    <div>
+                                        <div class="mk-case-stat-num">1 900+</div>
+                                        <div class="mk-case-stat-lbl">Zapisów</div>
+                                    </div>
+                                </div>
+                                <span style="color: var(--color-primary); font-weight: 700; font-size: 0.85rem;">Obejrzyj na Instagramie →</span>
+                            </div>
+                        </a>
+
+                        <!-- Rolka 6 -->
+                        <a href="https://www.instagram.com/reel/Dbyi12XuQbh/" target="_blank" rel="noopener" class="mk-case-card">
+                            <div>
+                                <span style="font-size: 0.78rem; color: #C6686B; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em;">Terapia Par & Intymność</span>
+                                <h3 style="font-size: 1.15rem; margin-top: 0.5rem; line-height: 1.35; font-weight: 700;">
+                                    Jeśli chcesz świadomie budować zdrowy, bliski i długoletni związek...
+                                </h3>
+                            </div>
+                            <div>
+                                <div class="mk-case-reach-box">
+                                    <div>
+                                        <div class="mk-case-reach-lbl">Organiczny Zasięg</div>
+                                        <div class="mk-case-reach-val">80 000+</div>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <div class="mk-case-reach-lbl">Wyświetlenia</div>
+                                        <div style="font-size: 1.2rem; font-weight: 800; color: var(--color-text);">115 000+</div>
+                                    </div>
+                                </div>
+                                <div class="mk-case-grid-stats">
+                                    <div>
+                                        <div class="mk-case-stat-num">3 368</div>
+                                        <div class="mk-case-stat-lbl">Polubień</div>
+                                    </div>
+                                    <div>
+                                        <div class="mk-case-stat-num">273</div>
+                                        <div class="mk-case-stat-lbl">Komentarzy</div>
+                                    </div>
+                                    <div>
+                                        <div class="mk-case-stat-num">2 100+</div>
+                                        <div class="mk-case-stat-lbl">Zapisów</div>
+                                    </div>
+                                </div>
+                                <span style="color: var(--color-primary); font-weight: 700; font-size: 0.85rem;">Obejrzyj na Instagramie →</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Formaty Współpracy (Bez sztywnego cennika) -->
+            <section id="formaty" class="section">
+                <div class="container">
+                    <div style="text-align: center; max-width: 680px; margin: 0 auto 3rem auto;">
+                        <span style="color: var(--color-primary); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.85rem;">Możliwości</span>
+                        <h2 class="section-title" style="font-size: clamp(2rem, 3.5vw, 2.8rem); margin-top: 0.5rem;">
+                            Jak możemy współpracować?
+                        </h2>
+                        <p style="color: var(--color-text-muted);">
+                            Format i narrację dobieram indywidualnie, aby Twoja marka naturalnie wpisywała się w tematykę mojego profilu.
+                        </p>
+                    </div>
+
+                    <div class="mk-pkg-grid">
+                        <div class="mk-pkg-card">
+                            <div>
+                                <h3 style="font-size: 1.35rem; font-weight: 700;">Rolka Dedykowana (Reel)</h3>
+                                <p style="font-size: 0.92rem; color: var(--color-text-muted); margin-top: 0.4rem;">
+                                    Autorski materiał wideo w moim stylu
+                                </p>
+                                <ul class="mk-pkg-features">
+                                    <li>Merytoryczny scenariusz z naturalnym lokowaniem produktu</li>
+                                    <li>Moje autorskie nagranie, montaż i napisy</li>
+                                    <li>Oznaczenie Twojej marki w opisie i kadrze</li>
+                                    <li>Publikacja na stałe w siatce mojego profilu</li>
+                                </ul>
+                            </div>
+                            <a href="#kontakt" class="btn btn-outline" style="text-align: center;">Zapytaj o szczegóły</a>
+                        </div>
+
+                        <div class="mk-pkg-card featured">
+                            <span class="mk-pkg-badge">Często Wybierany</span>
+                            <div>
+                                <h3 style="font-size: 1.35rem; font-weight: 700;">Rolka + Relacje (Stories)</h3>
+                                <p style="font-size: 0.92rem; color: var(--color-text-muted); margin-top: 0.4rem;">
+                                    Połączenie trwałej publikacji z bezpośrednim linkiem
+                                </p>
+                                <ul class="mk-pkg-features">
+                                    <li>Dedykowana rolka na stałe w siatce profilu</li>
+                                    <li>Seria relacji na Stories z aktywną naklejką linkującą do Twojego sklepu</li>
+                                    <li>Dedykowany kod rabatowy dla moich odbiorczyń</li>
+                                    <li>Możliwość przypięcia do Wyróżnionych Relacji</li>
+                                </ul>
+                            </div>
+                            <a href="#kontakt" class="btn btn-primary" style="text-align: center;">Napisz do mnie</a>
+                        </div>
+
+                        <div class="mk-pkg-card">
+                            <div>
+                                <h3 style="font-size: 1.35rem; font-weight: 700;">Współpraca z ManyChat</h3>
+                                <p style="font-size: 0.92rem; color: var(--color-text-muted); margin-top: 0.4rem;">
+                                    Wysyłka linku lub kodu bezpośrednio na DM
+                                </p>
+                                <ul class="mk-pkg-features">
+                                    <li>Rolka z wezwaniem do wpisania hasła w komentarzu</li>
+                                    <li>Automatyczne przesłanie linku do zakupu lub kodu zniżkowego w prywatnej wiadomości</li>
+                                    <li>Wygodne dla odbiorczyni, omija konieczność szukania linku w bio</li>
+                                    <li>Wspólne ustalenie ścieżki i hasła automatyzacji</li>
+                                </ul>
+                            </div>
+                            <a href="#kontakt" class="btn btn-outline" style="text-align: center;">Zapytaj o szczegóły</a>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 2.5rem; font-size: 0.95rem; color: var(--color-text-muted);">
+                        Warunki i zakres ustalam indywidualnie w zależności od produktu, celów oraz liczby materiałów.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Obszary, które naturalnie pasują do profilu -->
+            <section class="section" style="background: rgba(255, 255, 255, 0.45); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+                <div class="container">
+                    <span style="color: var(--color-primary); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.85rem; display: block; margin-bottom: 0.5rem;">Zbieżność Tematyczna</span>
+                    <h2 class="section-title" style="text-align: left; font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 1.5rem;">
+                        Obszary bliskie moim obserwatorkom
+                    </h2>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
+                        <div style="background: #fff; padding: 1.8rem; border-radius: 1.2rem; border: 1px solid var(--color-border);">
+                            <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.6rem;">Pielęgnacja & Ciało</h4>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5;">
+                                Kosmetyki naturalne, olejki do masażu, regeneracja skóry i dbanie o siebie po porodach.
+                            </p>
+                        </div>
+
+                        <div style="background: #fff; padding: 1.8rem; border-radius: 1.2rem; border: 1px solid var(--color-border);">
+                            <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.6rem;">Książki & Rozwój</h4>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5;">
+                                Poradniki psychologiczne, literatura o relacjach i rodzicielstwie, aplikacje z audiobookami.
+                            </p>
+                        </div>
+
+                        <div style="background: #fff; padding: 1.8rem; border-radius: 1.2rem; border: 1px solid var(--color-border);">
+                            <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.6rem;">Zdrowie Kobiet & Sen</h4>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5;">
+                                Regeneracja, wyciszenie układu nerwowego, zdrowy sen, równowaga hormonalna.
+                            </p>
+                        </div>
+
+                        <div style="background: #fff; padding: 1.8rem; border-radius: 1.2rem; border: 1px solid var(--color-border);">
+                            <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.6rem;">Intymność z Klasą</h4>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5;">
+                                Eleganckie akcesoria intymne dla par, świece do masażu, zmysłowa bielizna nocna.
+                            </p>
+                        </div>
+
+                        <div style="background: #fff; padding: 1.8rem; border-radius: 1.2rem; border: 1px solid var(--color-border);">
+                            <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.6rem;">Odpoczynek we Dwoje</h4>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5;">
+                                Klimatyczne miejsca na weekendowy wyjazd, domki w naturze i przestrzenie do wyciszenia bez pośpiechu.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Kontakt (Osobisty, kasia@kcygan.eu) -->
+            <section id="kontakt" class="section">
+                <div class="container">
+                    <div style="max-width: 760px; margin: 0 auto; background: #fff; border-radius: 2rem; border: 1px solid var(--color-border); padding: clamp(2rem, 5vw, 4rem); text-align: center;">
+                        <span style="color: var(--color-primary); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.85rem;">Kontakt</span>
+                        <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin: 0.5rem 0 1rem 0;">
+                            Porozmawiajmy o pomyśle na współpracę
+                        </h2>
+                        <p style="color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.6; margin-bottom: 2rem;">
+                            Napisz do mnie bezpośrednio na adres e-mail. Opisz krótko swój produkt, ramy czasowe oraz propozycję formatu. Odpowiadam zazwyczaj w ciągu 1–2 dni roboczych.
+                        </p>
+
+                        <div style="background: var(--color-bg); padding: 1.5rem 2rem; border-radius: 1.2rem; margin-bottom: 2.5rem; display: inline-flex; flex-direction: column; gap: 0.5rem;">
+                            <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-muted); font-weight: 700;">Mój bezpośredni adres e-mail:</span>
+                            <a href="mailto:kasia@kcygan.eu?subject=Wsp%C3%B3%C5%82praca%20z%20profilem%20@_kasiacygan" style="font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3.2vw, 2.1rem); font-weight: 700; color: var(--color-primary); text-decoration: none;">
+                                kasia@kcygan.eu
+                            </a>
+                        </div>
+
+                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                            <a href="mailto:kasia@kcygan.eu?subject=Wsp%C3%B3%C5%82praca%20z%20profilem%20@_kasiacygan" class="btn btn-primary btn-large">
+                                Napisz do mnie (kasia@kcygan.eu) →
+                            </a>
+                            <a href="mailto:kasia@kcygan.eu?subject=Pro%C5%9Bba%20o%20szczeg%C3%B3%C5%82owy%20arkusz%20danych%20Media%20Kit" class="btn btn-outline btn-large">
+                                Poproś o pełny arkusz (XLSX) ✉
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2026 Katarzyna Cygan. Wszelkie prawa zastrzeżone.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; opacity: 0.7;">
+                    <a href="/" style="color: inherit;">Strona Główna</a> • 
+                    <a href="/media-kit" style="color: inherit;">Media Kit</a> • 
+                    <a href="/#contact" style="color: inherit;">Konsultacje</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
